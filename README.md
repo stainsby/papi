@@ -37,7 +37,7 @@ lead to software that's faithful to requirements, understandable,
 maintainable, testable, and reliable. Perhaps even more so than traditional
 approaches.
 
-## Components
+### Components
 
 > Components are the building blocks of PAPI projects, and in PAPI 
 have a very broad definition: they can be software components, whole
@@ -51,6 +51,12 @@ Capabilities are the features or functions that a component provides.
 > All interdependencies between components are specified as a capability in one
 component depending on a capability in another. This is what wires the whole
 project together.
+
+## How to use
+
+Clone or download the project. Add the `instructions` and `skills` directories
+to your AI scaffolding settings, and then use as needed.
+E.g. Let's create an app to do XYZ using PAPI".
 
 ## But does it work?
 
