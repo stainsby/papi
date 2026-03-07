@@ -2,23 +2,30 @@
 
 **PAPI** (*Proceed As Per Instructions*) is an opinionated, 
 hand-crafted, collection of agentic skills to facilitate work with AI
-agents on software engineering tasks.
+agents on substantial and ongoing software engineering tasks. If one-shotting
+simple games is your thing, then PAPI is not for you.
 
 ## Please, no, not another one!
 
-> Be assured: this is not slop.
+PAPI is my attempt to distil and share 40+ years of software development
+experience into something unique, practical, and designed to work well
+with current AIs.
 
-PAPI is my attempt to distil 40+ years of software development experience
-into something unique, practical, and designed to work well with current
-AIs. I'd like to share it.
+## Opinionated you say
+
+It's opinionated because, for example, it expects code to maintain
+links (typically in the  code comments) back to *capabilities* (feature
+points, etc.) in the specs, and it expects all work to be planned as
+executed as *tasks*.
 
 ## The essentials
 
 As AI-assisted devs, our role is becoming more about keeping the specs in sync
-with the code, than writing the actual lines. I think the trick is to enable
-an AI with limited context to work easily on parts of the project, without
-needing to understand the whole thing. To facilitate this, PAPI allows AI to
-navigate between bite-sized components and pieces of spec, and to understand
+with the code, than writing the actual lines. I think the trick to keep
+this scalable and avoiding context melt-down is to enable an AI to work
+easily on parts of the project, without needing to understand the
+whole thing. To facilitate this, PAPI allows AI to navigate between
+bite-sized components and their corresponding specs, and to understand
 the 'nearest' dependencies between them.
 
 PAPI is designed to:
@@ -42,21 +49,50 @@ approaches.
 > Components are the building blocks of PAPI projects, and in PAPI 
 have a very broad definition: they can be software components, whole
 applications, and also databases, runtimes, libraries, even documents
-or whole OSes. The top-level component is typically the whole project.
+or whole OSes.
+
+Components can be esoteric e.g. an 'MVP Release' can be a component.
+The top-level component is typically the whole project.
+See the *Reference Architectures* doc for some more examples.
 
 ### Capabilities
 
 Capabilities are the features or functions that a component provides.
 
 > All interdependencies between components are specified as a capability in one
-component depending on a capability in another. This is what wires the whole
-project together.
+component depending on a capability in another.
+
+Each component specification has a *capability matrix* that forms a dependency
+DAG. Often this is close to a tree structure. The DAG is what wires the
+whole project together. There is a skill and script to check the DAG.
 
 ## How to use
 
 Clone or download the project. Add the `instructions` and `skills` directories
 to your AI scaffolding settings, and then use as needed.
 E.g. Let's create an app to do XYZ using PAPI".
+
+### What to watch out for
+
+Current AI is not always great at following instructions, hence this section.
+Be familiar with the core concepts and component model docs (see links below).
+
+For example, correct it and/or revert changes when:
+
+- It tries to do any non-trivial work without creating a task for it.
+- It tries to skip the testing (red phase) part of TDD, or
+  it's red phase tests are superficial.
+- It tries to shortcut template use by just reading the template
+  and one-shotting the output doc from memory.
+  Certain PAPI skills rely on minimal skill text with a good
+  deal of instruction embedded into templates. The AI is supposed
+  to copy the template verbatim then edit the copy section-by-section.
+- It has a propensity to try to be lazy and write-off some capabilities as
+  'non-functional requirements' (and then mostly ignore them). This usually
+  means components and/or capabilities are missing that need to be added to
+  cover these requirements.
+
+There are also audit skills you should use regularly.
 
 ## But does it work?
 
