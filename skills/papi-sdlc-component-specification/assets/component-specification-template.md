@@ -15,8 +15,6 @@
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI SDLC template: `component-specification-template.md`.
 
 ## Editions

@@ -11,8 +11,6 @@
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI template: `base-template.md`.
 
 ## Status

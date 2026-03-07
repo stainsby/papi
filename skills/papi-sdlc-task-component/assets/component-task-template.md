@@ -24,8 +24,6 @@ changes to other components.]
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI SDLC template: `component-task-template.md`.
 
 ## Status

@@ -22,8 +22,6 @@ to identify process improvement opportunities and propose corrective actions.]
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI template: `process-improvement-audit-task-template.md`.
 
 ## Status

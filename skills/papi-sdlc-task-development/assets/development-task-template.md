@@ -20,8 +20,6 @@ infrastructure changes.]
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI SDLC template: `development-task-template.md`.
 
 ## Status

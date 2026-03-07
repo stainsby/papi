@@ -13,8 +13,6 @@
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI template: `basic-task-template.md`.
 
 ## Status

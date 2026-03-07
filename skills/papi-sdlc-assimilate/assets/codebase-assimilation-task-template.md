@@ -35,8 +35,6 @@ ongoing work can follow PAPI SDLC processes.]
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI SDLC template: `codebase-assimilation-task-template.md`.
 
 ## Status

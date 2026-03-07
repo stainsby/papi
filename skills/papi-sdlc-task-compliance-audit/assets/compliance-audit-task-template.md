@@ -30,8 +30,6 @@ to implement the capabilities of the specifications.]
 
 ## Template
 
-[Copy verbatim]
-
 This document was based on the PAPI SDLC template: `compliance-audit-task-template.md`.
 
 ## Status
