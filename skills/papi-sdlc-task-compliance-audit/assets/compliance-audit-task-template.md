@@ -2,8 +2,8 @@
 **ONE SECTION AT A TIME**, FOLLOWING THE INSTRUCTIONS IN EACH SECTION]
 
 [Use this template to verify that implemented components match their specifications.
-This is a separate consideration from testing, which comes later.
-Code and other component artefacts must be examined in detail to determine if they at least attempt
+This is a separate consideration from testing: code and other component
+artefacts must be examined in detail to determine if they at least attempt
 to implement the capabilities of the specifications.]
 
 [Use this template only when appropriate:

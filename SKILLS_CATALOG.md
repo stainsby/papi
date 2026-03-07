@@ -2,7 +2,7 @@
 
 Complete listing of all instructions and skills with their descriptions and contents.
 
-Generated: Fri Mar  6 15:12:26 AEST 2026
+Generated: Sat Mar  7 16:26:50 AEST 2026
 
 ## Instructions
 
@@ -78,6 +78,15 @@ Create or work with development tasks for work spanning multiple components or i
 
 Contents:
 - [assets/development-task-template.md](skills/papi-sdlc-task-development/assets/development-task-template.md)
+
+### papi-sdlc-task-fulfilment-audit
+
+Create or work with fulfilment audit tasks to assess how well implemented capabilities satisfy user stories. [PAPI SDLC]
+
+[skills/papi-sdlc-task-fulfilment-audit/SKILL.md](skills/papi-sdlc-task-fulfilment-audit/SKILL.md)
+
+Contents:
+- [assets/fulfilment-audit-task-template.md](skills/papi-sdlc-task-fulfilment-audit/assets/fulfilment-audit-task-template.md)
 
 ### papi-sdlc-understand
 
