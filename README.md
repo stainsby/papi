@@ -64,13 +64,13 @@ component depending on a capability in another.
 
 Each component specification has a *capability matrix* that forms a dependency
 DAG. Often this is close to a tree structure. The DAG is what wires the
-whole project together. There is a skill and script to check the DAG.
+whole project together. There is a skill (with a script) to check the DAG.
 
 ## How to use
 
 Clone or download the project. Add the `instructions` and `skills` directories
 to your AI scaffolding settings, and then use as needed.
-E.g. Let's create an app to do XYZ using PAPI".
+E.g. "Let's do <some SDLC task> ... use PAPI".
 
 ### What to watch out for
 
