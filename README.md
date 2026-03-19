@@ -13,10 +13,9 @@ with current AIs.
 
 ## Opinionated you say
 
-It's opinionated because, for example, it expects code to maintain
-links (typically in the  code comments) back to *capabilities* (feature
-points, etc.) in the specs, and it expects all work to be planned as
-executed as *tasks*.
+PAPI is quite an opinionated framework. For example, it maintains links
+from code comments back to feature points in the specs. And it expects all
+work to be planned and executed as *tasks*.
 
 ## The essentials
 
