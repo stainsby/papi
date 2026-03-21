@@ -36,10 +36,7 @@ Examples: Proposed, In Progress, Completed, Failed, Abandoned.]
 
 ## Purpose
 
-This fulfilment audit assesses whether:
-- Users can actually perform the actions described in user stories.
-- Acceptance criteria for each story are satisfied by the current
-  implementation.
+See the skill.
 
 ## Audit Scope
 

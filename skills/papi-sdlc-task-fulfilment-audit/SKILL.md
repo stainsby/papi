@@ -3,6 +3,24 @@ name: papi-sdlc-task-fulfilment-audit
 description: Create or work with fulfilment audit tasks to assess how well implemented capabilities satisfy user stories. [PAPI SDLC]
 ---
 
+## Purpose
+
+A fulfilment audit is a task that assesses how well the implementation satisfies the user stories in a given scope.
+
+- For each user story, the AI and/or human user performing the audit:
+  - MUST assume the matching role(s) and attempt to perform the story
+  - MUST only use the interfaces and capabilities that would be available to that role in a real-world scenario
+  - MUST NOT look at the implementation, code, documents or other artefacts that the
+    role would not normally have occasion to see to determine fulfilment
+      - of course these may have already been seen, so at least attempt to imagine
+        the scenario where they have not been seen
+  - MUST, during this performance, reason in good faith whether the role would
+    have had the knowledge and access needed to perform the story
+  - it is allowable to work outside of these constraints to determine whether the acceptance criteria are satisfied
+    - this is not preferred and should be noted in the audit output when exercised
+
+## Actions
+
 - For any reasonably complex audit, it is advisable to develop a customised
   audit template for the project in question, based on the default
   template provided by this skill.

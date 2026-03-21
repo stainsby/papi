@@ -1,7 +1,20 @@
 ---
 name: papi-sdlc-task-compliance-audit
-description: Create or work with compliance audit tasks to verify component implementations match specifications. [PAPI SDLC]
+description: Create or work with compliance audit tasks to verify implementations match specifications. [PAPI SDLC]
 ---
+
+## Purpose
+
+This compliance audit verifies that, within the provided scope (e.g., a release):
+- the implementation matches the relevant capabilities in the component specifications
+- all code is properly linked to capabilities
+- all capabilities are links to some code
+- the capability DAG is valid
+- tests exist and pass for all implemented capabilities
+
+**CRITICAL:** No component specification can be considered 'completed' until a compliance audit has been conducted and passed.
+
+## Action
 
 - Copy and use the template (provided here under `assets`) if appropriate.
 - the audit REQUIRES that you verify that implementation matches

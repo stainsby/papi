@@ -40,14 +40,7 @@ If the audit fails, note critical issues preventing completion.]
 
 ## Purpose
 
-This compliance audit verifies that:
-- All capabilities marked as completed in component specifications have been fully implemented
-- Implementation matches the specification's interface contracts and requirements
-- Code is properly linked to capability codes
-- Tests exist and pass for all implemented capabilities
-- External dependencies (if audited) are at latest stable versions or discrepancies are explained
-
-**CRITICAL:** No component specification can be considered 'completed' until a compliance audit has been conducted and passed.
+See the skill.
 
 ## Audit Scope
 
