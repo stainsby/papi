@@ -87,12 +87,6 @@ MVP-scope limitations.]
 This audit takes the user's perspective: for each story, can the described
 workflow actually be performed end-to-end using the current implementation?
 
-The audit examines:
-
-1. **Functional coverage:** Does the implementation provide the behaviour the story describes?
-2. **Test coverage:** Are there tests that verify the story's acceptance criteria?
-3. **End-to-end viability:** Can the story be exercised through the actual user interface (UI, CLI, API, etc.), not just via unit tests?
-
 This audit does NOT:
 - Re-verify implementation correctness (that is the compliance audit's job)
 - Evaluate code quality or architecture
@@ -120,19 +114,16 @@ This audit does NOT:
 
 For each story in scope:
 
-- **Read the story** — understand the actor, goal, and outcome
+- **Read the story** — understand the user story, goal, and outcome
 - **Check acceptance criteria** — list the specific criteria that must hold
-- **End-to-end verification:**
-   - Where feasible, exercise the story through the actual user interface (GUI, CLI, API, etc.)
-   - External dependencies might be unavailable (or unusable because of protocol), and may require the use of realistic mocked interfaces (mocked APIs/services, etc.)
-   - For stories that cannot be automated and require human interaction (e.g., AI-guided workflows), guide a a manual walkthrough
+- **Veryfy user story**
 - **Classify the story:** Fully Met, Partially Met, or Not Met. Document reason if not fully met.
 
 ### Special Considerations
 
 [Note any stories that require special handling
 * Stories with known limitations due to release scope (annotated in the story catalogue)
-* Stories that depend on external systems not available in the test environment]
+* Stories that depend on external systems that are not available
 
 ## Audit Execution
 
@@ -148,12 +139,10 @@ For each story in scope:
 
 | Criterion | Met? | Evidence |
 |-----------|------|----------|
-| [criterion from story] | Yes/No/Partial | [test name, manual observation, or gap note] |
+| [criterion from story] | Yes/No/Partial | [evidence or references to] |
 | ... | ... | ... |
 
 **Functional Coverage:** [Brief assessment — does the implementation provide what the story describes?]
-
-**Test Coverage:** [Brief assessment — are there tests for the acceptance criteria?]
 
 **End-to-End Viability:** [Brief assessment — can this be exercised through the real interface?]
 
@@ -230,7 +219,6 @@ For each, note whether the gap requires:
 * USER_STORIES component or story format
 * Fulfilment audit task template
 * Relationship between compliance audits and fulfilment audits
-* Testing strategies
 * Story-writing practices
 
 If none, state "No changes identified".]

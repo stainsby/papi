@@ -31,3 +31,10 @@ This compliance audit verifies that, within the provided scope (e.g., a release)
     - You may need to skeleton the components in the output doc(s) first, and then flesh them out section by section
 - Assets within this skill:
   - **Audit template**: `assets/compliance-audit-task-template.md`
+
+
+## Outputs
+
+- some artefact produced during the audit may be valuable to maintain for future audits (scripts, test data etc.)
+  - if so, these shoudl be tracked a PAPI components
+
