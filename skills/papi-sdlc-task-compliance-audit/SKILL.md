@@ -3,7 +3,7 @@ name: papi-sdlc-task-compliance-audit
 description: Create or work with compliance audit tasks to verify component implementations match specifications. [PAPI SDLC]
 ---
 
-- Read and and use the template if appropriate.
+- Copy and use the template (provided here under `assets`) if appropriate.
 - the audit REQUIRES that you verify that implementation matches
   specification and that tests cover all capabilities that must be
   supported from the relevant specs
@@ -12,3 +12,11 @@ description: Create or work with compliance audit tasks to verify component impl
 - Generally, this is a full audit, unless otherwise specified.
   - For a full audit, DO NOT look at older audit docs to work
     incrementally—start from scratch.
+- An audit may be a large task, and sub-tasks may be warranted
+
+
+## Assets
+
+Assets found within this skill:
+
+- **Audit template**: `assets/compliance-audit-task-template.md`

@@ -3,8 +3,18 @@ name: papi-sdlc-task-fulfilment-audit
 description: Create or work with fulfilment audit tasks to assess how well implemented capabilities satisfy user stories. [PAPI SDLC]
 ---
 
-- Read the template.
-- Use the template if appropriate.
+- For any reasonably complex audit, it is advisable to develop a customised
+  audit template for the project in question, based on the default
+  template provided by this skill.
+  - This allows, for example, the ongoing refinement of an audit
+    test plan that may have many automated, AI, and/or human-driven steps.
+  - This custom template should be a (PAPI) component in the project
+  - It is likely the template will need to be adjusted after each audit to reflect lessons learned
+- Check is there is a custom fulfilment audit template (see below)
+  - if not, use the one in assets
+  - Read the template.
+  - Copy and use the template if appropriate.
+- An audit may be a large task, and sub-tasks may be warranted
 
 ## Notes
 
@@ -20,3 +30,10 @@ description: Create or work with fulfilment audit tasks to assess how well imple
 - Generally, this is a full audit, unless otherwise specified.
   - For a full audit, DO NOT look at older audit docs to work
     incrementally—start from scratch.
+
+
+## Assets
+
+Assets found within this skill:
+
+- **Default audit template**: `assets/compliance-audit-task-template.md`
