@@ -14,7 +14,10 @@ description: Create or work with fulfilment audit tasks to assess how well imple
   - if not, use the one in assets
   - Read the template.
   - Copy and use the template if appropriate.
-- An audit may be a large task, and sub-tasks may be warranted
+- An audit may be a large task, and sub-tasks (even a tree) may be warranted
+  - The output doc (from the template) can also be made into parts if it is anticipated to get too long
+    - Always follow PAPI and copy the template structure and sections, and then edit section-by-section, even if you split it into parts.
+    - You may need to skeleton the user stories in the output doc(s) first, and then flesh them out section by section
 
 ## Notes
 

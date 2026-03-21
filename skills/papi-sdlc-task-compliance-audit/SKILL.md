@@ -12,11 +12,9 @@ description: Create or work with compliance audit tasks to verify component impl
 - Generally, this is a full audit, unless otherwise specified.
   - For a full audit, DO NOT look at older audit docs to work
     incrementally—start from scratch.
-- An audit may be a large task, and sub-tasks may be warranted
-
-
-## Assets
-
-Assets found within this skill:
-
-- **Audit template**: `assets/compliance-audit-task-template.md`
+- An audit may be a large task, and sub-tasks (even a tree) may be warranted
+  - The output doc (from the template) can also be made into parts if it is anticipated to get too long
+    - Always follow PAPI and copy the template structure and sections, and then edit section-by-section, even if you split it into parts.
+    - You may need to skeleton the components in the output doc(s) first, and then flesh them out section by section
+- Assets within this skill:
+  - **Audit template**: `assets/compliance-audit-task-template.md`

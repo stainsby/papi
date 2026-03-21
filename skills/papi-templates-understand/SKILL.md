@@ -3,8 +3,6 @@ name: papi-templates-understand
 description: Understand and manage templates—read this EACH time you consider/encounter them or wish to update them, delete them, or create new ones. [PAPI]
 ---
 
-# PAPI Templates
-
 - A PAPI template is both a template for creating a document, and a process outline.
 - Process *guidelines* are provided in the template.
 - Guidelines can include:
@@ -14,6 +12,8 @@ description: Understand and manage templates—read this EACH time you consider/
   - Other relevant information.
   - Often, guidelines are in `[…]` delimiters, but not if they need to be retained in the output doc.
 - If your instruction do not EXPLICITLY include the locations for template docs, inform the user.
+- Assets within this skill:
+  - **Base template**: `assets/base-template.md`
 
 ## Managing templates
 
