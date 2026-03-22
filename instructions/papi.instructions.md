@@ -23,8 +23,8 @@ Specifications are the primary source of truth: code is written to satisfy specs
 - When you identify ambiguities, gaps, or mistakes, INFORM THE USER with suggested improvements.
 - Work autonomously: continue working as long as possible; only stop when truly necessary and leave project in resumable state.
 - File operations: use `--update=none` option for `cp` and `mv` commands
-  - these avoid overwriting existing files, and
-  - are typically auto approved, saving us all time.
+  - these avoid overwriting existing files
+  - if source control such as `git` is in use, prefer using that for moving tracked files
 - Date, time, and timestamps: always use the `date` command for these EVERY time; do not guess or estimate or work from memory.
 - Language and style: maintain professionalism, avoid emojis.
 
