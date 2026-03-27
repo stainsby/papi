@@ -2,7 +2,7 @@
 
 Complete listing of all instructions and skills with their descriptions and contents.
 
-Generated: Sat Mar  7 16:26:50 AEST 2026
+Generated: Fri Mar 27 12:31:27 AEST 2026
 
 ## Instructions
 
@@ -43,6 +43,15 @@ Manage a specification for a component. [PAPI SDLC]
 Contents:
 - [assets/component-specification-template.md](skills/papi-sdlc-component-specification/assets/component-specification-template.md)
 
+### papi-sdlc-fix
+
+Create or work with defect fix tasks — diagnose a defect, plan the fix, and identify improvements to leave the affected area in a better state. [PAPI]
+
+[skills/papi-sdlc-fix/SKILL.md](skills/papi-sdlc-fix/SKILL.md)
+
+Contents:
+- [assets/fix-task-template.md](skills/papi-sdlc-fix/assets/fix-task-template.md)
+
 ### papi-sdlc-onboard
 
 Onboard a new or existing project into the PAPI methodology by establishing its component hierarchy and reference architecture. [PAPI SDLC]
@@ -54,7 +63,7 @@ Contents:
 
 ### papi-sdlc-task-compliance-audit
 
-Create or work with compliance audit tasks to verify component implementations match specifications. [PAPI SDLC]
+Create or work with compliance audit tasks to verify implementations match specifications. [PAPI SDLC]
 
 [skills/papi-sdlc-task-compliance-audit/SKILL.md](skills/papi-sdlc-task-compliance-audit/SKILL.md)
 
@@ -98,6 +107,16 @@ Contents:
 - [references/component-model.md](skills/papi-sdlc-understand/references/component-model.md)
 - [references/core-principles.md](skills/papi-sdlc-understand/references/core-principles.md)
 
+### papi-sdlc-user-story
+
+Create or work with user stories — define a single actor goal, its interface, and falsifiable acceptance criteria. [PAPI SDLC]
+
+[skills/papi-sdlc-user-story/SKILL.md](skills/papi-sdlc-user-story/SKILL.md)
+
+Contents:
+- [assets/user-stories-template.md](skills/papi-sdlc-user-story/assets/user-stories-template.md)
+- [assets/user-story-template.md](skills/papi-sdlc-user-story/assets/user-story-template.md)
+
 ### papi-sdlc-validate-capabilities-dag
 
 Validate that capability dependencies defined across component specifications form a valid Directed Acyclic Graph (DAG). [PAPI SDLC]
@@ -124,9 +143,3 @@ Understand and manage templates—read this EACH time you consider/encounter the
 
 Contents:
 - [assets/base-template.md](skills/papi-templates-understand/assets/base-template.md)
-
-### papi-templates-use-a-template
-
-Use a PAPI template to create ('instantiate') a document. [PAPI]
-
-[skills/papi-templates-use-a-template/SKILL.md](skills/papi-templates-use-a-template/SKILL.md)
