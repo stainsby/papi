@@ -21,14 +21,16 @@ This document was based on the PAPI SDLC template: `user-story-template.md`.
 
 [Link to the parent user stories document that indexes this story.]
 
+---
+
 ## Interfaces
 
 [What parts of the system the actor interacts with for this story.
 Most simple user stories will only list one.]
 
-- [interface 1]
-- [interface 2]
-- …
+* [interface 1]
+* [interface 2]
+* …
 
 ## Entry Point
 
@@ -46,21 +48,17 @@ or system state before the interaction.]
 [List falsifiable benefits — outcomes that can be confirmed or refuted
 through the interface, not internal state or implementation details.]
 
-- [falsifiable benefit 1]
-- [falsifiable benefit 2]
-- …
-
-## Interface
-
-[How the actor interacts with the system and what they can observe in return.]
+* [falsifiable benefit 1]
+* [falsifiable benefit 2]
+* …
 
 ## Acceptance Criteria
 
 [Each criterion must assert an outcome observable through the interface above.
 One criterion per statement. Cover at least one negative or boundary case.]
 
-- [ ] Given / When / Then
-- [ ] Given / When / Then (negative/boundary)
+* [ ] Given / When / Then
+* [ ] Given / When / Then (negative/boundary)
 
 ## Notes
 

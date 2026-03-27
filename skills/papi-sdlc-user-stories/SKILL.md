@@ -1,5 +1,5 @@
 ---
-name: papi-sdlc-user-story
+name: papi-sdlc-user-stories
 description: Create or work with user stories — define a single actor goal, its interface, and falsifiable acceptance criteria. [PAPI SDLC]
 ---
 
