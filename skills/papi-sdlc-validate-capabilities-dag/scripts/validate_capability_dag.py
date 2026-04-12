@@ -18,7 +18,7 @@ import argparse
 import re
 import sys
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 import yaml
 
@@ -27,6 +27,9 @@ try:
 except ImportError:
     print("ERROR: networkx is required. Install with: pip install networkx", file=sys.stderr)
     sys.exit(1)
+
+# Known fields in capability matrix YAML blocks (per component-specification-template.md)
+KNOWN_YAML_FIELDS = {'component', 'dependencies'}
 
 
 def extract_yaml_blocks(markdown_content: str) -> List[str]:
@@ -44,7 +47,7 @@ def extract_yaml_blocks(markdown_content: str) -> List[str]:
     return matches
 
 
-def parse_dependencies(yaml_content: str) -> Tuple[str, Dict[str, List[Tuple[str, str]]]]:
+def parse_dependencies(yaml_content: str, source_file: Optional[Path] = None) -> Tuple[str, Dict[str, List[Tuple[str, str]]], List[str]]:
     """
     Parse the dependencies section from a YAML block.
     
@@ -60,30 +63,42 @@ def parse_dependencies(yaml_content: str) -> Tuple[str, Dict[str, List[Tuple[str
     
     Args:
         yaml_content: YAML content as string
+        source_file: Optional path to the source file (for diagnostics)
         
     Returns:
-        Tuple of (component_code, dependencies_dict) where:
+        Tuple of (component_code, dependencies_dict, warnings) where:
         - component_code: The component code from the YAML
         - dependencies_dict: Maps capability codes to list of (component, capability) tuples
+        - warnings: List of warning messages (e.g. unknown fields)
     """
     try:
         data = yaml.safe_load(yaml_content)
         if not data or not isinstance(data, dict):
-            return "", {}
+            return "", {}, []
+        
+        warnings: List[str] = []
         
         component_code = data.get('component', '')
         if not component_code:
-            print("WARNING: No 'component' field in YAML block", file=sys.stderr)
-            return "", {}
+            location = f" in {source_file}" if source_file else ""
+            print(f"WARNING: No 'component' field in YAML block{location}", file=sys.stderr)
+            return "", {}, []
+        
+        # Validate fields against known set
+        unknown_fields = set(data.keys()) - KNOWN_YAML_FIELDS
+        for field in sorted(unknown_fields):
+            msg = f"Unknown field '{field}' in capability matrix of {component_code}"
+            warnings.append(msg)
+            print(f"WARNING: {msg}", file=sys.stderr)
         
         if 'dependencies' not in data:
-            return component_code, {}
+            return component_code, {}, warnings
         
         deps = data['dependencies']
         if not isinstance(deps, dict):
             print(f"WARNING: 'dependencies' is not a dict in {component_code}, "
                   f"got {type(deps).__name__}", file=sys.stderr)
-            return component_code, {}
+            return component_code, {}, warnings
         
         result: Dict[str, List[Tuple[str, str]]] = {}
         
@@ -106,10 +121,10 @@ def parse_dependencies(yaml_content: str) -> Tuple[str, Dict[str, List[Tuple[str
                 result[cap] = parsed_deps
             else:
                 result[cap] = []
-        return component_code, result
+        return component_code, result, warnings
     except yaml.YAMLError as e:
         print(f"WARNING: Failed to parse YAML: {e}", file=sys.stderr)
-        return "", {}
+        return "", {}, []
 
 
 def extract_component_code(markdown_content: str) -> str:
@@ -152,7 +167,7 @@ def find_spec_files(specs_dir: Path) -> List[Path]:
     return spec_files
 
 
-def build_dependency_graph(specs_dir: Path) -> Tuple[nx.DiGraph, Dict[str, Path], Set[str]]:
+def build_dependency_graph(specs_dir: Path) -> Tuple[nx.DiGraph, Dict[str, Path], Set[str], List[str]]:
     """
     Build a directed graph with two node types:
     - Component nodes (e.g., CMP.A, CMP.B)
@@ -171,10 +186,11 @@ def build_dependency_graph(specs_dir: Path) -> Tuple[nx.DiGraph, Dict[str, Path]
         specs_dir: Directory containing component specifications
         
     Returns:
-        Tuple of (graph, file_map, all_capabilities)
+        Tuple of (graph, file_map, all_capabilities, all_warnings)
         - graph: NetworkX directed graph with node_type attribute
         - file_map: Mapping of qualified capability codes to their source files
         - all_capabilities: Set of all qualified capability codes defined
+        - all_warnings: List of warning messages from parsing
     """
     spec_files = find_spec_files(specs_dir)
     print(f"Found {len(spec_files)} specification files")
@@ -182,6 +198,7 @@ def build_dependency_graph(specs_dir: Path) -> Tuple[nx.DiGraph, Dict[str, Path]
     # --- First pass: collect all component codes and parsed data ---
     parsed_specs: List[Tuple[Path, str, Dict[str, List[Tuple[str, str]]]]] = []
     all_component_codes: Set[str] = set()
+    all_warnings: List[str] = []
     
     for spec_file in spec_files:
         try:
@@ -189,7 +206,8 @@ def build_dependency_graph(specs_dir: Path) -> Tuple[nx.DiGraph, Dict[str, Path]
             yaml_blocks = extract_yaml_blocks(content)
             
             for yaml_block in yaml_blocks:
-                component_code, deps = parse_dependencies(yaml_block)
+                component_code, deps, warnings = parse_dependencies(yaml_block, spec_file)
+                all_warnings.extend(warnings)
                 if component_code:
                     all_component_codes.add(component_code)
                     parsed_specs.append((spec_file, component_code, deps))
@@ -223,7 +241,7 @@ def build_dependency_graph(specs_dir: Path) -> Tuple[nx.DiGraph, Dict[str, Path]
         return ref  # unresolved — use as-is
     
     # --- Second pass: build graph with qualified capability names ---
-    G = nx.DiGraph()
+    G: nx.DiGraph = nx.DiGraph()
     file_map: Dict[str, Path] = {}
     all_capabilities: Set[str] = set()
     
@@ -259,15 +277,16 @@ def build_dependency_graph(specs_dir: Path) -> Tuple[nx.DiGraph, Dict[str, Path]
                 qualified_dep_cap = f"{resolved_dep}.{dep_capability}"
                 G.add_edge(qualified_cap, qualified_dep_cap)
     
-    return G, file_map, all_capabilities
+    return G, file_map, all_capabilities, all_warnings
 
 
-def validate_graph(G: nx.DiGraph, all_capabilities: Set[str]) -> dict:
+def validate_graph(G: nx.DiGraph, all_capabilities: Set[str], all_warnings: Optional[List[str]] = None) -> dict:
     """
     Validate the dependency graph and collect issues.
     Args:
         G: Directed graph of dependencies
         all_capabilities: Set of all defined capability codes
+        all_warnings: Optional list of warnings from parsing (e.g. unknown fields)
         
     Returns:
         Dictionary containing validation results and issues
@@ -295,11 +314,12 @@ def validate_graph(G: nx.DiGraph, all_capabilities: Set[str]) -> dict:
             else:
                 internal_capabilities.add(node)
     
-    results = {
+    results: Dict[str, Any] = {
         'is_dag': True,
         'cycles': [],
         'orphans': [],
         'invalid_refs': [],
+        'unknown_fields': all_warnings or [],
         'total_capabilities': len(all_capabilities),
         'total_edges': G.number_of_edges(),
         'internal_components': len(internal_components),
@@ -338,7 +358,7 @@ def validate_graph(G: nx.DiGraph, all_capabilities: Set[str]) -> dict:
     return results
 
 
-def generate_report(results: dict, output_file: Path = None) -> str:
+def generate_report(results: dict, output_file: Optional[Path] = None) -> str:
     """
     Generate a human-readable validation report.
     Args:
@@ -398,9 +418,22 @@ def generate_report(results: dict, output_file: Path = None) -> str:
     else:
         lines.append("✓ No invalid references")
         lines.append("")
+    # Unknown fields in capability matrix YAML
+    if results['unknown_fields']:
+        lines.append("UNKNOWN FIELDS:")
+        lines.append("-" * 80)
+        lines.append("(Fields in capability matrix YAML not in the known set: "
+                      f"{', '.join(sorted(KNOWN_YAML_FIELDS))})")
+        for warning in results['unknown_fields']:
+            lines.append(f"  - {warning}")
+        lines.append("")
+    else:
+        lines.append("✓ No unknown fields in capability matrices")
+        lines.append("")
     # Summary
     lines.append("=" * 80)
-    total_issues = len(results['cycles']) + len(results['orphans']) + len(results['invalid_refs'])
+    total_issues = (len(results['cycles']) + len(results['orphans'])
+                    + len(results['invalid_refs']) + len(results['unknown_fields']))
     if total_issues == 0 and results['is_dag']:
         lines.append("✓ VALIDATION PASSED - No issues found")
     else:
@@ -433,16 +466,17 @@ def main():
         print(f"ERROR: Specifications directory not found: {args.specs_dir}", file=sys.stderr)
         sys.exit(1)
     print("Building dependency graph...")
-    graph, file_map, all_capabilities = build_dependency_graph(args.specs_dir)
+    graph, file_map, all_capabilities, all_warnings = build_dependency_graph(args.specs_dir)
     print("Validating graph...")
-    results = validate_graph(graph, all_capabilities)
+    results = validate_graph(graph, all_capabilities, all_warnings)
     print("\nGenerating report...")
     report = generate_report(results, args.output)
     if not args.output:
         print("\n")
         print(report)
     # Exit with error code if validation failed
-    total_issues = len(results['cycles']) + len(results['invalid_refs'])
+    total_issues = (len(results['cycles']) + len(results['invalid_refs'])
+                    + len(results['unknown_fields']))
     if not results['is_dag'] or total_issues > 0:
         sys.exit(1)
     sys.exit(0)
