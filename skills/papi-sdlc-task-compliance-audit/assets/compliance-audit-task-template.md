@@ -186,13 +186,18 @@ For each component in scope:
    - [ ] Check that consumed capabilities are actually used in implementation
    - [ ] Confirm no unlisted dependencies exist
 
-5. **Non-Functional Constraints Verification**
+5. **Capabilities DAG Validation**
+   - [ ] Run the DAG validation script (see `papi-sdlc-validate-capabilities-dag` skill) against the project's component specifications directory
+   - [ ] Confirm zero issues: no cycles, no orphans, no invalid references
+   - [ ] If issues found: resolve in the affected specification files before proceeding
+
+6. **Non-Functional Constraints Verification**
    - [ ] Verify technology constraints are met
    - [ ] Check performance constraints (if tests exist)
    - [ ] Verify security constraints
    - [ ] Confirm compatibility constraints
 
-6. **External Dependencies Audit** (Optional)
+7. **External Dependencies Audit** (Optional)
    For each external component:
    - [ ] Identify current version in use
    - [ ] Look up latest stable version (MUST SEARCH, not from memory)
