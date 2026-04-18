@@ -22,9 +22,10 @@ Specifications are the primary source of truth: code is written to satisfy specs
 - Avoid creating code or docs over 1000 lines - suggest splitting any that exceed this, or may exceed this after editing.
 - When you identify ambiguities, gaps, or mistakes, INFORM THE USER with suggested improvements.
 - Work autonomously: continue working as long as possible; only stop when truly necessary and leave project in resumable state.
+  - However be proactive with flagging pre-existing errors or issues, or adding suggestions, in the final output
 - File operations: use `--update=none` option for `cp` and `mv` commands
   - these avoid overwriting existing files
-  - if source control such as `git` is in use, prefer using that for moving tracked files
+  - if source control such as `git` is in use, use `git mv` for moving tracked files
 - Date, time, and timestamps: always use the `date` command for these EVERY time; do not guess or estimate or work from memory.
 - Language and style: maintain professionalism, avoid emojis.
 
@@ -50,3 +51,12 @@ Specifications are the primary source of truth: code is written to satisfy specs
   - ANY text not in `[…]` should be retained.
   - Sometimes guidelines are not in `[…]` — these should be retained to guide future edits.
 - REMEMBER: go slow and steady: complete one section at a time
+
+### Checklists
+
+- Use the following for the status of items in a checklist:
+  - [ ] Not considered/checked yet (to do)
+  - [✔] Completed
+  - [✘] Failed, or not completed
+  - [?] Uncertain, unknown or unable to be determined
+  - [~] Partially completed or in progress
