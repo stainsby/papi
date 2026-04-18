@@ -17,9 +17,9 @@
 
 # Task: Fulfilment Audit - [Release/Scope Name]
 
-**Audit Scope:** [Release milestone, e.g., "MVP" or "Edition 2", OR a subset of stories]
-**Audit Date:** YYYY-MM-DD
-**Status:** [Proposed, In Progress, Completed]
+**Audit Scope:** [Release milestone, e.g., "MVP" or "Edition 2", OR a subset of stories]  
+**Audit Date:** YYYY-MM-DD  
+**Status:** [Proposed, In Progress, Completed]  
 
 ## Synopsis
 

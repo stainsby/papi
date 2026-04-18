@@ -9,10 +9,10 @@ because those belong in individual sub-task documents, not the sprint parent.]
 
 # Task: SPRINT-NNN — [Sprint title]
 
-**External Tracking:** [e.g., JIRA epic, GitHub milestone, or "None"]
-**Impacted Components:** [List component codes affected]
-**Status:** [Planned | Active | Completed]
-**Created:** [Date]
+**External Tracking:** [e.g., JIRA epic, GitHub milestone, or "None"]  
+**Impacted Components:** [List component codes affected]  
+**Status:** [Planned | Active | Completed]  
+**Created:** [Date]  
 
 ## Synopsis
 

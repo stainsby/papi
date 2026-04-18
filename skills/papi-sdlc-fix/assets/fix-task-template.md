@@ -15,11 +15,11 @@ improvements — not the symptom alone.]
 
 # Task: [Fix — short description of the defect]
 
-**External Tracking:** [e.g., JIRA-123, GitHub Issue #456, audit finding ref, or "None"]
-**Impacted Components:** [List CMP codes affected, or "Multiple"]
-**Severity:** [Critical / High / Medium / Low — assess against: correctness, data integrity, usability, cosmetic]
-**Scope:** [Spec only / Implementation only / Both spec and implementation]
-**Status:** [Status indicator]
+**External Tracking:** [e.g., JIRA-123, GitHub Issue #456, audit finding ref, or "None"]  
+**Impacted Components:** [List CMP codes affected, or "Multiple"]  
+**Severity:** [Critical / High / Medium / Low — assess against: correctness, data integrity, usability, cosmetic]  
+**Scope:** [Spec only / Implementation only / Both spec and implementation]  
+**Status:** [Status indicator]  
 
 ## Synopsis
 

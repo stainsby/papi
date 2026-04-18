@@ -10,8 +10,8 @@ interfaces it involves, and falsifiable acceptance criteria.]
 
 # User Story: [ID] — [title]
 
-**Epic/Release:** [epic or release ID/code/name]
-**Status:** Draft / Ready / In Progress / Done
+**Epic/Release:** [epic or release ID/code/name]  
+**Status:** Draft / Ready / In Progress / Done  
 
 ## Template
 
