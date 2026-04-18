@@ -3,6 +3,15 @@ name: papi-sdlc-sprint
 description: Create or work with sprint tasks — plan, execute, verify, and close a bounded cycle of development work with post-completion quality gates. [PAPI SDLC]
 ---
 
+## Dependencies
+
+These skills should also be read to use the current skill.
+
+- PAPI skill `papi-tasks-understand`
+- PAPI skill `papi-templates-understand`
+- PAPI skill `papi-sdlc-task-compliance-audit`
+- PAPI skill `papi-sdlc-validate-capabilities-dag`
+
 ## Purpose
 
 A sprint is a bounded cycle of related development work (fixes, features,

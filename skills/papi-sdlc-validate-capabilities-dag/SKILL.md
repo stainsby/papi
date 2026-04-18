@@ -3,6 +3,12 @@ name: papi-sdlc-validate-capabilities-dag
 description: Validate that capability dependencies defined across component specifications form a valid Directed Acyclic Graph (DAG). [PAPI SDLC]
 ---
 
+## Dependencies
+
+These skills should also be read to use the current skill.
+
+- PAPI skill `papi-sdlc-understand`
+
 - Run `validate_capability_dag.py` against the project's component specifications directory.
 - The tool checks for:
   - **Cycles** — circular dependencies between capabilities (must be resolved before specs can be considered complete)

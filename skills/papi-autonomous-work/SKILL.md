@@ -3,6 +3,12 @@ name: papi-autonomous-work
 description: Perform work to complete tasks when asked to "work autonomously".
 ---
 
+## Dependencies
+
+These skills should also be read to use the current skill.
+
+- PAPI skill `papi-tasks-understand`
+
 ## Inputs
 
 - the tasks to consider

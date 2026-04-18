@@ -3,6 +3,13 @@ name: papi-sdlc-user-stories
 description: Create or work with user stories — define a single actor goal, its interface, and falsifiable acceptance criteria. [PAPI SDLC]
 ---
 
+## Dependencies
+
+These skills should also be read to use the current skill.
+
+- PAPI skill `papi-sdlc-understand`
+- PAPI skill `papi-templates-understand`
+
 - Read, copy and use the appropriate template.
 - Assets within this skill:
   - **Parent template** (overarching index + roles): `assets/user-stories-template.md`

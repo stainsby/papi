@@ -3,6 +3,14 @@ name: papi-sdlc-fix
 description: Create or work with defect fix tasks — diagnose a defect, plan the fix, and identify improvements to leave the affected area in a better state. [PAPI]
 ---
 
+## Dependencies
+
+These skills should also be read to use the current skill.
+
+- PAPI skill `papi-sdlc-understand`
+- PAPI skill `papi-tasks-understand`
+- PAPI skill `papi-templates-understand`
+
 - Read, copy and use the template.
 - Assets within this skill:
   - **Template**: `assets/fix-task-template.md`
