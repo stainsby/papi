@@ -57,6 +57,7 @@ Specifications are the primary source of truth: code is written to satisfy specs
 - Use the following for the status of items in a checklist:
   - [ ] Not considered/checked yet (to do)
   - [✔] Completed
+  - [~] Partially completed or in progress
   - [✘] Failed, or not completed
   - [?] Uncertain, unknown or unable to be determined
-  - [~] Partially completed or in progress
+  - [!] Blocked, or won't do, or not applicable
