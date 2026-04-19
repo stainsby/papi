@@ -292,6 +292,7 @@ processes, or ways of working. If none, state "No changes identified".]
 
 ## Completion Checklist
 
+[Items can be appended to this list but DO NOT remove any items.]
 [Before marking this task complete, verify ALL of the following:]
 
 - [ ] All acceptance criteria are met
