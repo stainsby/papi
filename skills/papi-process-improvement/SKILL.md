@@ -11,7 +11,7 @@ description: Audit completed tasks and documents to identify process improvement
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-tasks-understand`
 - PAPI skill `papi-templates-understand`

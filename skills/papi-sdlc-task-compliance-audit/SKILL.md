@@ -18,7 +18,7 @@ This compliance audit verifies that, within the provided scope (e.g., a release)
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-sdlc-validate-capabilities-dag`
 - PAPI skill `papi-tasks-understand`

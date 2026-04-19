@@ -19,10 +19,13 @@ phases, and exit gates.
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-tasks-understand`
 - PAPI skill `papi-templates-understand`
+
+Read these as needed:
+
 - PAPI skill `papi-sdlc-task-compliance-audit`
 - PAPI skill `papi-sdlc-validate-capabilities-dag`
 

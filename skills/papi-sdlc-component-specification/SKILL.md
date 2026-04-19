@@ -12,7 +12,7 @@ description: Manage a specification for a component. [PAPI SDLC]
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-sdlc-understand`
 - PAPI skill `papi-templates-understand`

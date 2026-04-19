@@ -10,7 +10,7 @@ description: Perform work to complete tasks when asked to "work autonomously".
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-tasks-understand`
 

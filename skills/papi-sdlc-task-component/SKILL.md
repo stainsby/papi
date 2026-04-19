@@ -12,7 +12,7 @@ description: Create or work with component development tasks for implementing a 
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-sdlc-understand`
 - PAPI skill `papi-tasks-understand`

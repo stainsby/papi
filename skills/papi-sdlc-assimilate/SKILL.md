@@ -12,9 +12,12 @@ description: Adopt existing project components (code, docs,…) into PAPI method
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-sdlc-understand`
 - PAPI skill `papi-tasks-understand`
 - PAPI skill `papi-templates-understand`
-- See also (peer): PAPI skill `papi-sdlc-onboard`
+
+Read these as needed:
+
+- PAPI skill `papi-sdlc-onboard` (peer)

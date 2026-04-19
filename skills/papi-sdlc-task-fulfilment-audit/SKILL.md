@@ -23,11 +23,14 @@ A fulfilment audit is a task that assesses how well the implementation satisfies
 
 ## Dependencies
 
-These skills should also be read to use the current skill.
+Reading these skills is REQUIRED to understand and execute this skill:
+
+- PAPI skill `papi-tasks-understand`
+- PAPI skill `papi-templates-understand`
+
+Read these as needed:
 
 - PAPI skill `papi-sdlc-task-compliance-audit` (prerequisite: run compliance audit first)
-- PAPI skill `papi-tasks-understand`
-- PAPI skill `papi-templates-understand
 
 ## Actions
 
