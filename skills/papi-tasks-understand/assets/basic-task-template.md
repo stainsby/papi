@@ -2,6 +2,8 @@
   - basic tasks that don't fit into more specific templates or
   - as the basis for a new template.]
 
+[This template is derived from `base-template.md`.]
+
 [This template is a guideline:
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may

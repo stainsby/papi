@@ -12,6 +12,8 @@ to implement the capabilities of the specifications.]
   existing one.
 * If this template seems obsolete or not useful, propose deleting it.]
 
+[This template is derived from `basic-task-template.md`.]
+
 [This template is a guideline:
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may

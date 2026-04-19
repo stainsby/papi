@@ -2,6 +2,8 @@
 such as Jira tickets, epics, refactoring work, cross-cutting features, or
 infrastructure changes.]
 
+[This template is derived from `basic-task-template.md`.]
+
 [This template is a guideline:
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may

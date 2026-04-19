@@ -12,6 +12,8 @@ ongoing work can follow PAPI SDLC processes.]
 * You are onboarding a new service, database, environment, or other
   component type that pre-dates PAPI adoption]
 
+[This template is derived from `basic-task-template.md`.]
+
 [This template supports two modes:
 * **Full assimilation:** Suitable for small projects. Discover, map, and spec
   everything in one pass.

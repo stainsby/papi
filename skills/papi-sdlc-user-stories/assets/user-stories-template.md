@@ -2,6 +2,8 @@
 system, or epic. It defines the roles that appear across all user stories and
 acts as the parent index for individual user story documents.]
 
+[This template is derived from `base-template.md`.]
+
 [This template is a guideline:
 
 * Unless otherwise specified, all parts are optional.

@@ -1,6 +1,8 @@
 
 [Use this template to manage a specification for a component.]
 
+[This template is derived from `base-template.md`.]
+
 [This template is a guideline:
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may

@@ -2,7 +2,7 @@
 work (fixes, features, infrastructure) that are planned, executed, verified,
 and closed as a unit.]
 
-[This template is based on `development-task-template.md` with sprint-specific
+[This template is derived from `development-task-template.md` with sprint-specific
 sections for sub-task management, verification gates, and post-completion
 reflection. It omits the SDLC Workflow Reminder and Testing Strategy sections
 because those belong in individual sub-task documents, not the sprint parent.]

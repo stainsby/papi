@@ -8,6 +8,8 @@ to identify process improvement opportunities and propose corrective actions.]
 * To categorize findings and propose concrete action tasks to fix root causes
 * To support Continuous Process Improvement (CPI) by making improvement systematic rather than ad-hoc]
 
+[This template is derived from `basic-task-template.md`.]
+
 [This template is a guideline:
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may

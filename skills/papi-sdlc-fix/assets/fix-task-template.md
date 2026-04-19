@@ -2,7 +2,7 @@
 or unintended behaviour that needs to be corrected, with improvements to leave
 the affected area in a better state.]
 
-[This template is based on `development-task-template.md` and follows the same
+[This template is derived from `development-task-template.md` and follows the same
 SDLC workflow. Fix tasks differ in that they begin with evidence capture and
 root-cause analysis, and Goals must address both the defect and related
 improvements — not the symptom alone.]

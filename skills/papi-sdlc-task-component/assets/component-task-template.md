@@ -4,6 +4,8 @@ UNLESS those changes to other components do not change the *function* of those c
 For example adding a extra parameter to an existing exposed method in this component may require
 changes to other components.]
 
+[This template is derived from `development-task-template.md`.]
+
 [This template is a guideline:
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may

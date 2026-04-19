@@ -1,6 +1,8 @@
 [Use this template for user stories — a single actor goal, the system
 interfaces it involves, and falsifiable acceptance criteria.]
 
+[This template is derived from `base-template.md`.]
+
 [This template is a guideline:
 
 * Unless otherwise specified, all parts are optional.
