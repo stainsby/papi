@@ -60,4 +60,4 @@ Specifications are the primary source of truth: code is written to satisfy specs
   - [~] Partially completed or in progress
   - [✘] Failed, or not completed
   - [?] Uncertain, unknown or unable to be determined
-  - [!] Blocked, or won't do, or not applicable
+  - [⚠] Blocked, or won't do, or not applicable
