@@ -3,6 +3,8 @@ name: papi-tasks-understand
 description: Understand tasks. Read this EACH time you consider/encounter doing ANY non-trivial work. [PAPI]
 ---
 
+# Tasks - Understand
+
 - Work is nominally planned, performed according to, and tracked by, task documents.
   - Some trivial work may be able to be performed without a task document, but check with the user if in doubt.
 - A new task document MUST be created from a relevant template that is the most specific for the task.

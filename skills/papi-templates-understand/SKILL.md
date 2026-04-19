@@ -3,6 +3,8 @@ name: papi-templates-understand
 description: Understand and manage templates—read this EACH time you consider/encounter them or wish to update them, delete them, or create new ones. [PAPI]
 ---
 
+# Templates - Understand
+
 - A PAPI template is both a template for creating a document, and a process outline.
 - Process *guidelines* are provided in the template.
 - Guidelines can include:

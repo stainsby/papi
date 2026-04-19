@@ -3,13 +3,7 @@ name: papi-sdlc-task-fulfilment-audit
 description: Create or work with fulfilment audit tasks to assess how well implemented capabilities satisfy user stories. [PAPI SDLC]
 ---
 
-## Dependencies
-
-These skills should also be read to use the current skill.
-
-- PAPI skill `papi-sdlc-task-compliance-audit` (prerequisite: run compliance audit first)
-- PAPI skill `papi-tasks-understand`
-- PAPI skill `papi-templates-understand`
+# SDLC Task - Fulfilment Audit`
 
 ## Purpose
 
@@ -26,6 +20,14 @@ A fulfilment audit is a task that assesses how well the implementation satisfies
     have had the knowledge and access needed to perform the story
   - it is allowable to work outside of these constraints to determine whether the acceptance criteria are satisfied
     - this is not preferred and should be noted in the audit output when exercised
+
+## Dependencies
+
+These skills should also be read to use the current skill.
+
+- PAPI skill `papi-sdlc-task-compliance-audit` (prerequisite: run compliance audit first)
+- PAPI skill `papi-tasks-understand`
+- PAPI skill `papi-templates-understand
 
 ## Actions
 

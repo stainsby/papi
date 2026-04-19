@@ -3,13 +3,7 @@ name: papi-sdlc-task-compliance-audit
 description: Create or work with compliance audit tasks to verify implementations match specifications. [PAPI SDLC]
 ---
 
-## Dependencies
-
-These skills should also be read to use the current skill.
-
-- PAPI skill `papi-sdlc-validate-capabilities-dag`
-- PAPI skill `papi-tasks-understand`
-- PAPI skill `papi-templates-understand`
+# SDLC Task - Compliance Audit
 
 ## Purpose
 
@@ -21,6 +15,14 @@ This compliance audit verifies that, within the provided scope (e.g., a release)
 - tests exist and pass for all implemented capabilities
 
 **CRITICAL:** No component specification can be considered 'completed' until a compliance audit has been conducted and passed.
+
+## Dependencies
+
+These skills should also be read to use the current skill.
+
+- PAPI skill `papi-sdlc-validate-capabilities-dag`
+- PAPI skill `papi-tasks-understand`
+- PAPI skill `papi-templates-understand`
 
 ## Action
 

@@ -3,6 +3,15 @@ name: papi-sdlc-user-stories
 description: Create or work with user stories — define a single actor goal, its interface, and falsifiable acceptance criteria. [PAPI SDLC]
 ---
 
+# SDLC Task - User Stories
+
+## When to use this skill
+
+Use this skill whenever a unit of product or system behaviour needs to be
+captured from the perspective of a specific actor — whether for backlog
+grooming, epic decomposition, or as the specification source for a development
+or component task.
+
 ## Dependencies
 
 These skills should also be read to use the current skill.
@@ -16,13 +25,6 @@ These skills should also be read to use the current skill.
   - **Child template** (individual story): `assets/user-story-template.md`
 - Create the parent document first if one does not yet exist for the product/epic.
 - Each individual story document links back to its parent, and the parent indexes all child stories.
-
-## When to use this skill
-
-Use this skill whenever a unit of product or system behaviour needs to be
-captured from the perspective of a specific actor — whether for backlog
-grooming, epic decomposition, or as the specification source for a development
-or component task.
 
 ## Core principles
 
