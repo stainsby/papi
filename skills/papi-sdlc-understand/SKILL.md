@@ -7,5 +7,5 @@ description: Understand SDLC core principles and component model. Read this EACH
 
 - Read 100% of ALL of the reference documents to understand PAPI SDLC methodology.
 - References found within this skill:
-  - **Core principles**: `skills/references/core-principles.md`
+  - **Core principles**: `references/core-principles.md`
   - **Component model**: `references/component-model.md`
