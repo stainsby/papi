@@ -15,11 +15,13 @@ description: Understand tasks. Read this EACH time you consider/encounter doing 
   - If your instructions do not EXPLICITLY include the locations for task docs, inform the user.
 - Where a task would take more than one *session*, or is excessively complex, sub-tasks should be created:
   - tasks should continue to be broken down until sizing/complexity for each task is appropriate
-- Assets within this skill:
-  - **Template**: `assets/basic-task-template.md`
 
 ## Basic Tasks
 
 - For basic tasks that don't fit into more specific templates:
   - read, copy and use `basic-task-template.md` or
   - suggest creating a new template if appropriate.
+
+## Skill artefacts
+
+- **Template**: `assets/basic-task-template.md`

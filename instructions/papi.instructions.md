@@ -52,6 +52,12 @@ Specifications are the primary source of truth: code is written to satisfy specs
   - Sometimes guidelines are not in `[…]` — these should be retained to guide future edits.
 - REMEMBER: go slow and steady: complete one section at a time
 
+## Skill artefacts
+
+Skill artefacts (assets, references, scripts,…) listed in a skill are listed 
+in the skill with a path that is relative to the directory containing the
+`SKILL.md` file.
+
 ### Checklists
 
 - Use the following for the status of items in a checklist:

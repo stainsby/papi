@@ -7,8 +7,6 @@ description: Adopt existing project components (code, docs,…) into PAPI method
 
 - Read, copy and use the template if appropriate.
 - If this is a new project, see the `papi-sdlc-onboard` skill.
-- Assets within this skill:
-  - **Template**: `assets/codebase-assimilation-task-template.md`
 
 ## Dependencies
 
@@ -21,3 +19,7 @@ Reading these skills is REQUIRED to understand and execute this skill:
 Read these as needed:
 
 - PAPI skill `papi-sdlc-onboard` (peer)
+
+## Skill artefacts
+
+- **Template**: `assets/codebase-assimilation-task-template.md`

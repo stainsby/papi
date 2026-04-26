@@ -12,19 +12,18 @@ captured from the perspective of a specific actor — whether for backlog
 grooming, epic decomposition, or as the specification source for a development
 or component task.
 
+## When to use this skill (continued)
+
+- Read, copy and use the appropriate template.
+- Create the parent document first if one does not yet exist for the product/epic.
+- Each individual story document links back to its parent, and the parent indexes all child stories.
+
 ## Dependencies
 
 Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-sdlc-understand`
 - PAPI skill `papi-templates-understand`
-
-- Read, copy and use the appropriate template.
-- Assets within this skill:
-  - **Parent template** (overarching index + roles): `assets/user-stories-template.md`
-  - **Child template** (individual story): `assets/user-story-template.md`
-- Create the parent document first if one does not yet exist for the product/epic.
-- Each individual story document links back to its parent, and the parent indexes all child stories.
 
 ## Core principles
 
@@ -93,3 +92,8 @@ with the task document.
 - [ ] Story contains exactly one actor and one primary goal (split if not)
 - [ ] Status set appropriately: Draft / Ready / In Progress / Done
 - [ ] Notes section used for dependencies or constraints (omit if none)
+
+## Skill artefacts
+
+- **Parent template** (overarching index + roles): `assets/user-stories-template.md`
+- **Child template** (individual story): `assets/user-story-template.md`

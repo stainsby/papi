@@ -7,8 +7,6 @@ description: Onboard a new or existing project into the PAPI methodology by esta
 
 - Read and use the reference architectures to determine the best component hierarchy for the project.
 - For existing projects, use this in conjunction with the `papi-sdlc-assimilate` skill.
-- References within this skill:
-  - **Reference architectures**: `references/reference-architectures.md`
 
 ## Dependencies
 
@@ -20,3 +18,7 @@ Reading these skills is REQUIRED to understand and execute this skill:
 Read these as needed:
 
 - PAPI skill `papi-sdlc-assimilate` (peer)
+
+## Skill artefacts
+
+- **Reference architectures**: `references/reference-architectures.md`

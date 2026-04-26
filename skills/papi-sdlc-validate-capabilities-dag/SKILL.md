@@ -15,11 +15,13 @@ description: Validate that capability dependencies defined across component spec
 - A non-zero exit code means validation failed; a zero exit code means the DAG is valid.
 - Run this after authoring or editing component specifications, and before marking any specification as completed.
 - If issues are found, work with the user to resolve them in the affected specification files before proceeding.
-- Script within this skill:
-  - `scripts/validate_capability_dag.py`
 
 ## Dependencies
 
 Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-sdlc-understand`
+
+## Skill artefacts
+
+- **Validation script**: `scripts/validate_capability_dag.py`

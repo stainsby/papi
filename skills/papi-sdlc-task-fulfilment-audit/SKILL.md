@@ -65,9 +65,6 @@ Read these as needed:
   - For a full audit, DO NOT look at older audit docs to work
     incrementally—start from scratch.
 
+## Skill artefacts
 
-## Assets
-
-Assets found within this skill:
-
-- **Default audit template**: `assets/compliance-audit-task-template.md`
+- **Default audit template**: `assets/fulfilment-audit-task-template.md`

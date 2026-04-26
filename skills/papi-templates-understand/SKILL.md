@@ -14,8 +14,6 @@ description: Understand and manage templates—read this EACH time you consider/
   - Other relevant information.
   - Often, guidelines are in `[…]` delimiters, but not if they need to be retained in the output doc.
 - If your instruction do not EXPLICITLY include the locations for template docs, inform the user.
-- Assets within this skill:
-  - **Base template**: `assets/base-template.md`
 
 ## Managing templates
 
@@ -38,3 +36,7 @@ description: Understand and manage templates—read this EACH time you consider/
 ### Deleting a template.
 
 - If other templates are based on the template being deleted, they each will need to be updated.
+
+## Skill artefacts
+
+- **Base template**: `assets/base-template.md`

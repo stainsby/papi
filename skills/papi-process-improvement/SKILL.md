@@ -6,8 +6,6 @@ description: Audit completed tasks and documents to identify process improvement
 # Process Improvement - Audit
 
 - Read, copy and use the template if appropriate.
-- Assets within this skill:
-  - **Template**: `assets/process-improvement-audit-task-template.md`
 
 ## Dependencies
 
@@ -15,3 +13,7 @@ Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-tasks-understand`
 - PAPI skill `papi-templates-understand`
+
+## Skill artefacts
+
+- **Template**: `assets/process-improvement-audit-task-template.md`

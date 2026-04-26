@@ -41,12 +41,13 @@ Reading these skills is REQUIRED to understand and execute this skill:
   - The output doc (from the template) can also be made into parts if it is anticipated to get too long
     - Always follow PAPI and copy the template structure and sections, and then edit section-by-section, even if you split it into parts.
     - You may need to skeleton the components in the output doc(s) first, and then flesh them out section by section
-- Assets within this skill:
-  - **Audit template**: `assets/compliance-audit-task-template.md`
-
 
 ## Outputs
 
 - some artefact produced during the audit may be valuable to maintain for future audits (scripts, test data etc.)
   - if so, these shoudl be tracked a PAPI components
+
+## Skill artefacts
+
+- **Audit template**: `assets/compliance-audit-task-template.md`
 

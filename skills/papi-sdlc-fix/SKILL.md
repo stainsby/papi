@@ -6,8 +6,6 @@ description: Create or work with defect fix tasks — diagnose a defect, plan th
 # SDLC Task - Fix
 
 - Read, copy and use the template.
-- Assets within this skill:
-  - **Template**: `assets/fix-task-template.md`
 
 ## When to use this skill
 
@@ -90,3 +88,7 @@ fix is verifiable and prevents regressions.
 - [ ] TDD approach was planned and used
 - [ ] Regression/verification tests included in Approach where applicable
 - [ ] Dependencies on other fix tasks noted
+
+## Skill artefacts
+
+- **Template**: `assets/fix-task-template.md`

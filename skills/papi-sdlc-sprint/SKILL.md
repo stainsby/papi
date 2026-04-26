@@ -40,10 +40,6 @@ Use this skill when:
 - A set of changes spans multiple components and needs coordinated
   verification.
 
-## Assets
-
-- **Sprint task template**: `assets/sprint-task-template.md`
-
 ## Sprint Lifecycle
 
 A sprint proceeds through four phases. Each phase has mandatory activities
@@ -163,3 +159,7 @@ and includes the following mandatory gates:
    without human approval. Create follow-on tasks instead.
 4. **Closing without reflection**: the Reflect and Improvement sections are
    not optional. Every sprint teaches something about the process.
+
+## Skill artefacts
+
+- **Sprint task template**: `assets/sprint-task-template.md`
