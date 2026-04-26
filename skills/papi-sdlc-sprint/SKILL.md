@@ -63,6 +63,10 @@ and exit criteria.
    these explicitly. At least one automated test must exercise the real round
    trip across each identified boundary by the end of the sprint.
 
+Please note, where creating individual tasks, do not link them to the sprint.
+The sprint can list tasks, not visa-versa. At time we may dynamically reallocate
+tasks between sprints, so task-to-sprint links are discouraged.
+
 ### Phase 2 — Execution
 
 1. Work sub-tasks in the sequenced order.
@@ -141,7 +145,7 @@ and includes the following mandatory gates:
     that the user stories are satisfied.
 - After a sprint that fixes audit findings, a follow-up audit should be
   planned (not necessarily immediately, but before the next release).
-- Sprints should NOT include full compliance or fulfilment audits as
+- Typical sprints shouldn't include full compliance or fulfilment audits as
   sub-tasks. The sprint's Gate 4 (compliance spot-check) is sufficient
   for in-sprint verification. Full audits are separate tasks created
   using their respective skills.

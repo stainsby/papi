@@ -55,9 +55,18 @@ Specifications are the primary source of truth: code is written to satisfy specs
 ### Checklists
 
 - Use the following for the status of items in a checklist:
-  - [ ] Not considered/checked yet (to do)
-  - [✔] Completed
-  - [~] Partially completed or in progress
-  - [✘] Failed, or not completed
-  - [?] Uncertain, unknown or unable to be determined
-  - [⚠] Blocked, or won't do, or not applicable
+  - non-final states:
+    - [ ] To do, not considered, not started or not checked yet. Optional agency indicators:
+      - [ ] ✨ intended for an AI
+      - [ ] 🏃 intended for a human
+    - ⏳ in progress or under consideration. Optional agency indicators:
+      - ⏳ ✨ by an AI
+      - ⏳ 🏃 by a human
+    - ⏸️ paused. Optional agency indicators:
+      - ⏸️ ✨ awaiting an AI
+      - ⏸️ 🏃 awaiting a human
+  - Finalised checklists should only contain these final states:
+    - ✅ Completed
+    - ❌ Failed, or not completed fully or satisfactorily
+    - ❓ Uncertain, unknown or unable to be determined
+    - 🚫 Blocked, or won't do, or not applicable
