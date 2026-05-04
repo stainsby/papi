@@ -29,6 +29,8 @@ Read these as needed:
 - PAPI skill `papi-sdlc-task-compliance-audit`
 - PAPI skill `papi-sdlc-validate-capabilities-dag`
 
+Also, consider this to be a controlled by the `papi-long-task` skill.
+
 ## When to use this skill
 
 Use this skill when:
