@@ -36,6 +36,7 @@ ONLY if the user asks for it, gate each subsequent subtask by:
 * summarising the results of the task just done
 * asking a multi-choice question on whether to continue to the next sub-task
   * should equate to a Yes/No/Other-style question
+* use the same gating mechanism if you have any queries that block progress
 
 ## Track additional items
 
