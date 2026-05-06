@@ -1,6 +1,6 @@
 ---
 name: papi-sdlc-onboard
-description: Onboard a new or existing project into the PAPI methodology by establishing its component hierarchy and reference architecture. [PAPI SDLC]
+description: Start a new project that will use, or onboard an existing project into, the PAPI methodology by establishing its component hierarchy and reference architecture. [PAPI SDLC]
 ---
 
 # SDLC Task - Onboard
@@ -18,6 +18,12 @@ Reading these skills is REQUIRED to understand and execute this skill:
 Read these as needed:
 
 - PAPI skill `papi-sdlc-assimilate` (peer)
+
+## Tasks
+
+Make sure the project tasks exist.
+Probably a release task is needed as well once the project is underway, which
+might initially be an MVP release.
 
 ## Skill artefacts
 

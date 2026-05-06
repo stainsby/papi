@@ -52,6 +52,15 @@ Specifications are the primary source of truth: code is written to satisfy specs
   - Sometimes guidelines are not in `[…]` — these should be retained to guide future edits.
 - REMEMBER: go slow and steady: complete one section at a time
 
+## Tasks
+
+There should always be one active task: the project task itself.
+This is project status tracking, including releases. It may also
+refer to related external projects, or to super-projects.
+
+Outside of very early stages, or after project end of life, 
+there will usually also be an active release task.
+
 ## Skill artefacts
 
 Skill artefacts (assets, references, scripts,…) listed in a skill are listed 
