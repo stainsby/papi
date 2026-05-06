@@ -2,7 +2,7 @@
 
 Complete listing of all instructions and skills with their descriptions and contents.
 
-Generated: Fri Mar 27 12:31:27 AEST 2026
+Generated: Wed May  6 16:15:36 AEST 2026
 
 ## Instructions
 
@@ -15,6 +15,12 @@ Generated: Fri Mar 27 12:31:27 AEST 2026
 Perform work to complete tasks when asked to "work autonomously".
 
 [skills/papi-autonomous-work/SKILL.md](skills/papi-autonomous-work/SKILL.md)
+
+### papi-long-task
+
+Manage a task with many repeated steps, or a long running task with many steps, so that it is tracked and resumable over more than one seesion if needed.
+
+[skills/papi-long-task/SKILL.md](skills/papi-long-task/SKILL.md)
 
 ### papi-process-improvement
 
@@ -54,12 +60,21 @@ Contents:
 
 ### papi-sdlc-onboard
 
-Onboard a new or existing project into the PAPI methodology by establishing its component hierarchy and reference architecture. [PAPI SDLC]
+Start a new project that will use, or onboard an existing project into, the PAPI methodology by establishing its component hierarchy and reference architecture. [PAPI SDLC]
 
 [skills/papi-sdlc-onboard/SKILL.md](skills/papi-sdlc-onboard/SKILL.md)
 
 Contents:
 - [references/reference-architectures.md](skills/papi-sdlc-onboard/references/reference-architectures.md)
+
+### papi-sdlc-sprint
+
+Create or work with sprint tasks — plan, execute, verify, and close a bounded cycle of development work with post-completion quality gates. [PAPI SDLC]
+
+[skills/papi-sdlc-sprint/SKILL.md](skills/papi-sdlc-sprint/SKILL.md)
+
+Contents:
+- [assets/sprint-task-template.md](skills/papi-sdlc-sprint/assets/sprint-task-template.md)
 
 ### papi-sdlc-task-compliance-audit
 
@@ -107,15 +122,15 @@ Contents:
 - [references/component-model.md](skills/papi-sdlc-understand/references/component-model.md)
 - [references/core-principles.md](skills/papi-sdlc-understand/references/core-principles.md)
 
-### papi-sdlc-user-story
+### papi-sdlc-user-stories
 
 Create or work with user stories — define a single actor goal, its interface, and falsifiable acceptance criteria. [PAPI SDLC]
 
-[skills/papi-sdlc-user-story/SKILL.md](skills/papi-sdlc-user-story/SKILL.md)
+[skills/papi-sdlc-user-stories/SKILL.md](skills/papi-sdlc-user-stories/SKILL.md)
 
 Contents:
-- [assets/user-stories-template.md](skills/papi-sdlc-user-story/assets/user-stories-template.md)
-- [assets/user-story-template.md](skills/papi-sdlc-user-story/assets/user-story-template.md)
+- [assets/user-stories-template.md](skills/papi-sdlc-user-stories/assets/user-stories-template.md)
+- [assets/user-story-template.md](skills/papi-sdlc-user-stories/assets/user-story-template.md)
 
 ### papi-sdlc-validate-capabilities-dag
 
@@ -125,6 +140,7 @@ Validate that capability dependencies defined across component specifications fo
 
 Contents:
 - [scripts/validate_capability_dag.py](skills/papi-sdlc-validate-capabilities-dag/scripts/validate_capability_dag.py)
+- [scripts/__pycache__/validate_capability_dag.cpython-313.pyc](skills/papi-sdlc-validate-capabilities-dag/scripts/__pycache__/validate_capability_dag.cpython-313.pyc)
 
 ### papi-tasks-understand
 
