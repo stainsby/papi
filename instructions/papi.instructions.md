@@ -37,12 +37,15 @@ Specifications are the primary source of truth: code is written to satisfy specs
 
 ## Using a template
 
+PAPI templates are also process documents. They contain instructions that
+must be followed exactly. Do not skip a section unless it is explicitly
+marked as optional.
+
 - FIRST: ALWAYS COPY the template verbatim to create the initial output document
   - DO NOT attempt to rewrite the document from memory
-  - DO NOT attempt to edit the output during the copy stage
   - DO use an tools (CLI command, IDE tool, etc.) to copy the template verbatim
-- NEXT: READ 100% of the template
-- THEN: proceed INCREMENTALLY through the template:
+- NEXT: READ the full template
+- THEN: proceed to INCREMENTALLY edit the template:
     - Read ONE section ONLY
     - Follow the section's instructions and fill in any details requested
     - Proceed to the next section and repeat until all sections are completed
@@ -50,7 +53,12 @@ Specifications are the primary source of truth: code is written to satisfy specs
   - Guidelines that are in `[…]` delimiters should be deleted from the output.
   - ANY text not in `[…]` should be retained.
   - Sometimes guidelines are not in `[…]` — these should be retained to guide future edits.
-- REMEMBER: go slow and steady: complete one section at a time
+
+**REMEMBER**:
+  - do not treat template copies like placeholders or shells
+  - do not blanket overwrite copied template contents
+  - go slow and steady: edit one section at a time
+  - folow all instructions in the template
 
 ## Tasks
 
@@ -85,3 +93,9 @@ in the skill with a path that is relative to the directory containing the
     - ❌ Failed, or not completed fully or satisfactorily
     - ❓ Uncertain, unknown or unable to be determined
     - 🚫 Blocked, or won't do, or not applicable
+
+## Feedback
+
+All templates provide a section to give suggestions for PAPI improvements.
+These should be used in and brought to the attention of the user whenever
+updated.
