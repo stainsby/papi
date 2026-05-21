@@ -61,9 +61,14 @@ and exit criteria.
    these explicitly. At least one automated test must exercise the real round
    trip across each identified boundary by the end of the sprint.
 
-Please note, where creating individual tasks, do not link them to the sprint.
-The sprint can list tasks, not visa-versa. At time we may dynamically reallocate
-tasks between sprints, so task-to-sprint links are discouraged.
+Please note, where creating individual tasks, do not link them to the sprint
+either by name or by content UNLESS there is a special reason. The sprint can
+list tasks, not visa-versa. At time we may dynamically reallocate tasks
+between sprints, so task-to-sprint links are discouraged. Thus, sub-task
+names here generally DON'T refer to the sprint.
+
+**IMPORTANT: To create sub-tasks ONE AT A TIME, following the PAPI copy first,
+and edit section-by-section method for EACH one.**
 
 ### Phase 2 — Execution
 
