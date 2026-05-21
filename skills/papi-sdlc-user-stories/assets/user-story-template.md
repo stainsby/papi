@@ -14,6 +14,7 @@ interfaces it involves, and falsifiable acceptance criteria.]
 
 **Epic/Release:** [epic or release ID/code/name]  
 **Status:** Draft / Ready / In Progress / Done  
+**Capabilities:** [capability ID(s) from the component spec this story helps fulfil]  
 
 ## Template
 
@@ -41,6 +42,9 @@ or system state before the interaction.]
 
 ## Narrative
 
+[Use words the named role would actually use. If the role would not
+recognise the vocabulary, rewrite.]
+
 **As a [specific role — not just "user"], I want to:**
 
 [single goal — what, not how].
@@ -64,4 +68,8 @@ One criterion per statement. Cover at least one negative or boundary case.]
 
 ## Notes
 
-[OMIT unless relevant. Dependencies, constraints, sizing.]
+[OMIT unless relevant. Dependencies, constraints, sizing.
+
+Do NOT record implementation notes, test results, fulfilment status, or
+audit findings here — those belong in task, testing, release, or audit
+artefacts. The Status field above is the story's only lifecycle signal.]

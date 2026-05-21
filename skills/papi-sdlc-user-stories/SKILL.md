@@ -71,13 +71,37 @@ negative case (e.g., invalid input, unauthorised access, resource not found)
 or a boundary condition. Stories with only happy-path criteria are
 incomplete.
 
-### Stories are not tasks
+### Stories are not tasks, and carry no evidence
 
 A user story is a specification artefact, not a work item. Once a story
 reaches **Ready** status, one or more development or component tasks are
 created to fulfil it. The story remains as the authoritative statement of
-intent and is linked from those tasks. Do not conflate the story document
-with the task document.
+intent and is linked from those tasks.
+
+The story document must not contain implementation notes, test results,
+fulfilment status, or audit findings. Those belong in task, testing,
+release, or audit artefacts. The story's only lifecycle signal is its
+**Status** field.
+
+### Stories link to capabilities
+
+Every story must cite the capability (or capabilities) from the component
+specification that it helps fulfil. A story with no capability link
+indicates either a missing spec entry or an out-of-scope story — resolve
+before marking **Ready**.
+
+### Stories are written in the actor's language
+
+Narrative, interface, and acceptance criteria must use vocabulary the
+named role would actually use. Reviewer check: would this role read the
+story and recognise their own world? If not, rewrite.
+
+### Status reflects scope
+
+A story's **Status** must be consistent with the scope of its parent
+epic/release. Stories outside current scope stay **Draft** (or are
+removed). Do not mark a story **Ready** unless its capability link and
+parent scope agree.
 
 ## Checklist when creating a user story
 
@@ -90,7 +114,10 @@ with the task document.
 - [ ] At least one negative or boundary acceptance criterion included
 - [ ] All criteria are assertable through the interface, not internal state
 - [ ] Story contains exactly one actor and one primary goal (split if not)
-- [ ] Status set appropriately: Draft / Ready / In Progress / Done
+- [ ] Capability link(s) recorded (component-spec capability ID)
+- [ ] Wording uses language the named role would recognise
+- [ ] No implementation / test / fulfilment / audit evidence in story body
+- [ ] Status (Draft / Ready / In Progress / Done) matches parent scope
 - [ ] Notes section used for dependencies or constraints (omit if none)
 
 ## Skill artefacts
