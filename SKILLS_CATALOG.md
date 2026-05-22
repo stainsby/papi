@@ -2,7 +2,7 @@
 
 Complete listing of all instructions and skills with their descriptions and contents.
 
-Generated: Fri 22 May 2026 11:07:06 AEST
+Generated: Fri 22 May 2026 13:37:17 AEST
 
 ## Instructions
 
@@ -84,6 +84,15 @@ Create or work with sprint tasks — plan, execute, verify, and close a bounded 
 
 Contents:
 - [assets/sprint-task-template.md](skills/papi-sdlc-sprint/assets/sprint-task-template.md)
+
+### papi-sdlc-task-charter-audit
+
+Create or work with charter audit tasks that check alignment between the project's Charter and its user stories — both top-down and bottom-up. [PAPI SDLC]
+
+[skills/papi-sdlc-task-charter-audit/SKILL.md](skills/papi-sdlc-task-charter-audit/SKILL.md)
+
+Contents:
+- [assets/charter-audit-task-template.md](skills/papi-sdlc-task-charter-audit/assets/charter-audit-task-template.md)
 
 ### papi-sdlc-task-compliance-audit
 
