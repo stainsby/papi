@@ -125,8 +125,10 @@ FFI bridges, IPC channels, file-based data exchange.]
 
 ### Gate 4 — Compliance Spot-Check
 
-[This is a lightweight check, not a full compliance audit. If significant
-drift is found, create a full audit task using the
+[This is a lightweight check, NOT a full two-phase compliance audit.
+It verifies surface alignment only — it does not include the bottom-up
+(Phase B) sweep that catches orphan artefacts. If significant drift is
+found, create a full audit task using the
 `papi-sdlc-task-compliance-audit` skill.]
 
 - [ ] Each modified component specification is in sync with the code

@@ -2,6 +2,12 @@
 
 This methodology defines how work is structured, specified, implemented, tested, and documented across the entire project. It coordinates components, capabilities, tasks, environments, tests, and documentation so that every change is traceable, well-specified, and verifiable.
 
+A project normally has a **Charter** — the highest-level document
+saying why the project exists, where it is going, and how it intends
+to get there. The Charter applies to everything in this methodology
+automatically; lower documents (user stories, component specs, tasks)
+do not need to cite it explicitly. See the `papi-sdlc-charter` skill.
+
 ## System Philosophy
 
 - DON'T BE LAZY: Assume you have near infinite resources: choose the right solution, not the easiest one.
@@ -147,3 +153,9 @@ Templates enforce task structure, acceptance criteria, alignment procedures, and
 
 - **Spec**  
   A specification document (typically under `docs/components/` or `docs/tasks/`) that formally defines a component, its capabilities and constraints, or a task, its context and acceptance criteria.
+
+- **Story** (user story)  
+  A specification artefact describing a single actor's goal and observable benefit. Written in the actor's vocabulary, links to the capabilities it helps fulfil, and carries no implementation or test evidence (that belongs in tasks and audits). Status reflects scope, not work done.
+
+- **Charter**  
+  The project's highest-level document, stating purpose, vision, ethos (the way of working, plus value statements used as decision tests), scope, alignment to bigger-picture documents, and project-level success indicators. Normally one per project; applies to everything below it automatically.

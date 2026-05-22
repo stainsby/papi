@@ -19,6 +19,16 @@ Reading these skills is REQUIRED to understand and execute this skill:
 Read these as needed:
 
 - PAPI skill `papi-sdlc-onboard` (peer)
+- PAPI skill `papi-sdlc-charter` (peer)
+
+## Charter
+
+As part of assimilation, draft or extract a project Charter from
+existing documentation — READMEs, vision or mission statements, code
+of conduct, contributor guides, etc. Use the `papi-sdlc-charter`
+skill. The Charter is the project's highest-level document; getting
+it in place early gives the rest of the assimilation something to
+orient against.
 
 ## Skill artefacts
 

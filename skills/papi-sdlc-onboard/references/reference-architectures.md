@@ -2,6 +2,11 @@
 
 When onboarding a new project or assimilating an existing one into the PAPI methodology, choosing the right component hierarchy is critical. The hierarchy must reflect containment, manage dependencies cleanly, and avoid "virtual" or empty grouping namespaces.
 
+All reference architectures below sit under a project **Charter** — the
+highest-level document stating purpose, vision, ethos, and scope (see
+the `papi-sdlc-charter` skill). The Charter is not part of the
+component tree; it governs all of it.
+
 Below are example hierarchies illustrating how the PAPI component model can be applied to common project types. These are starting points for discussion, not prescriptive rules — adapt them to the project at hand.
 
 ## 1. The Application with Release Cycles
