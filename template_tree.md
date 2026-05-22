@@ -16,7 +16,8 @@ base-template.md                               (papi-templates-understand)
 │   └── fulfilment-audit-task-template.md      (papi-sdlc-task-fulfilment-audit)
 ├── component-specification-template.md        (papi-sdlc-component-specification)
 ├── user-stories-template.md                   (papi-sdlc-user-stories)
-└── user-story-template.md                     (papi-sdlc-user-stories)
+├── user-story-template.md                     (papi-sdlc-user-stories)
+└── charter-template.md                        (papi-sdlc-charter)
 ```
 
 ## Notes
@@ -29,3 +30,7 @@ base-template.md                               (papi-templates-understand)
   basic-task-template.md. A compliance audit must precede a fulfilment
   audit in the SDLC process, but this is a workflow ordering, not a
   template derivation relationship.
+- charter-template.md is the project's top-level document. There is
+  normally one Charter per project. Lower documents (user stories,
+  component specs, tasks) do not point back to the Charter explicitly
+  — the Charter applies to everything below it automatically.

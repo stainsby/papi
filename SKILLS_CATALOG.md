@@ -2,7 +2,7 @@
 
 Complete listing of all instructions and skills with their descriptions and contents.
 
-Generated: Wed May  6 16:15:36 AEST 2026
+Generated: Fri 22 May 2026 11:07:06 AEST
 
 ## Instructions
 
@@ -39,6 +39,15 @@ Adopt existing project components (code, docs,…) into PAPI methodology, fully 
 
 Contents:
 - [assets/codebase-assimilation-task-template.md](skills/papi-sdlc-assimilate/assets/codebase-assimilation-task-template.md)
+
+### papi-sdlc-charter
+
+Create or work with a Project Charter — the highest-level document for a project, saying why it exists, where it is going, and how it intends to get there. [PAPI SDLC]
+
+[skills/papi-sdlc-charter/SKILL.md](skills/papi-sdlc-charter/SKILL.md)
+
+Contents:
+- [assets/charter-template.md](skills/papi-sdlc-charter/assets/charter-template.md)
 
 ### papi-sdlc-component-specification
 

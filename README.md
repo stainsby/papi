@@ -65,6 +65,14 @@ Each component specification has a *capability matrix* that forms a dependency
 DAG. Often this is close to a tree structure. The DAG is what wires the
 whole project together. There is a skill (with a script) to check the DAG.
 
+### Charter
+
+A project's *Charter* is its highest-level document — why the project
+exists, where it is going, and how it intends to get there. There is
+normally one Charter per project. It sits above user stories and
+component specs, and applies to everything below it automatically
+(lower documents don't need to point back to it).
+
 ## How to use
 
 Clone or download the project. Add the `instructions` and `skills` directories
@@ -118,6 +126,7 @@ much untested right now.
 - **[Instructions](./instructions/papi.instructions.md)** — Quick overview of PAPI and its key definitions - the only instruction file.
 - **[Core Principles](./skills/papi-sdlc-understand/references/core-principles.md)** — Philosophy and decision-making rules.
 - **[Component Model](./skills/papi-sdlc-understand/references/component-model.md)** — How to organize projects as a set of components.
+- **[Charter](./skills/papi-sdlc-charter/SKILL.md)** — The top-level project document: why it exists, where it's going, how it works.
 - **[Tasks](./skills/papi-tasks-understand/SKILL.md)** — Understand the task workflow.
 - **[Assimilate](./skills/papi-sdlc-assimilate/SKILL.md)** — Integrate existing projects into PAPI methodology.
 - **[Autonomous Work](./skills/papi-autonomous-work/SKILL.md)** — Work on all or some planned or active tasks autonomously (as much as is practicable)

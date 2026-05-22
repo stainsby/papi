@@ -33,6 +33,7 @@ Specifications are the primary source of truth: code is written to satisfy specs
 
 - **Session:**  A single contiguous span of work, up to approx. 20 minutes for a human or 5 minutes for pure, uninterrupted AI work.
 - **Task:** The fundamental unit of work in this methodology.
+- **Charter:** The project's highest-level document — why it exists, where it is going, and how it intends to get there. Normally one per project; applies to everything below it automatically.
 
 
 ## Using a template
