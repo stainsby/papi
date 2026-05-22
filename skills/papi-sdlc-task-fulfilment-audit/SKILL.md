@@ -21,6 +21,37 @@ A fulfilment audit is a task that assesses how well the implementation satisfies
   - it is allowable to work outside of these constraints to determine whether the acceptance criteria are satisfied
     - this is not preferred and should be noted in the audit output when exercised
 
+**This needs the PAPI long task skill.**
+
+## Two phases are mandatory
+
+A fulfilment audit MUST run in two directions and reconcile the results:
+
+- **Phase A — Top-down (story → surface):** for each user story in scope,
+  assume the role and exercise the story end-to-end through the real
+  user-facing interface; record pass/partial/fail with evidence.
+- **Phase B — Bottom-up (surface → story):** enumerate the user-visible
+  surface in scope (UI screens/flows, CLI commands, public API
+  endpoints, documented features); for each, identify the covering
+  story ID. Anything with no covering story is an **orphan candidate**.
+
+  Note: a tracked artefact that is also user-visible (e.g., a public
+  doc file or a CLI script) appears in both this Phase B sweep and the
+  compliance Phase B sweep — under different covering-artefact types
+  (story here, capability there).
+- **Phase C — Reconciliation:** merge Phase A gaps and Phase B orphan
+  candidates into a single findings list.
+
+Running only Phase A is a CRITICAL FAILURE: it lets undocumented or
+unintended user-visible behaviour persist indefinitely. Both phases must
+be evidenced in the report.
+
+### Orphan candidate handling
+
+Every Phase B orphan candidate MUST be brought to the user for a
+disposition decision before the audit closes. Do NOT auto-classify.
+Record the decision and rationale against each candidate in the report.
+
 ## Dependencies
 
 Reading these skills is REQUIRED to understand and execute this skill:

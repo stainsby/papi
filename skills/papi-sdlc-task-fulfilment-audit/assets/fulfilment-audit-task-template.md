@@ -114,12 +114,48 @@ This audit does NOT:
 
 ### Audit Procedure
 
+This audit runs in two directions and reconciles the results. Both
+phases are MANDATORY (see the `papi-sdlc-task-fulfilment-audit` skill).
+
+#### Phase A — Top-down (story → surface)
+
 For each story in scope:
 
 - **Read the story** — understand the user story, goal, and outcome
 - **Check acceptance criteria** — list the specific criteria that must hold
-- **Veryfy user story**
-- **Classify the story:** Fully Met, Partially Met, or Not Met. Document reason if not fully met.
+- **Assume the role and exercise the story** end-to-end through the real
+  user-facing interface (UI / CLI / API); record evidence
+- **Classify the story:** Fully Met, Partially Met, or Not Met. Document
+  the reason if not fully met.
+
+#### Phase B — Bottom-up (surface → story)
+
+Enumerate the in-scope user-visible surface and map each unit back to a
+covering story. Anything with no covering story is an **orphan
+candidate** — do NOT auto-classify; bring each to the user.
+
+1. **Enumerate the user-visible surface**
+   - [ ] UI screens, views, flows, menu items
+   - [ ] CLI commands and subcommands
+   - [ ] Public API endpoints
+   - [ ] User-facing documented features / settings
+
+2. **Map each surface unit to a covering story**
+   - [ ] Covering story ID found: record it
+   - [ ] No covering story: record as **orphan candidate**
+
+3. **Capture orphan candidates**
+   - [ ] List every orphan candidate with location + brief description
+   - [ ] For each, propose a likely disposition (remove/hide, cover with
+         a new story, accept as known) — but do NOT decide
+   - [ ] Bring the list to the user for disposition decisions
+
+#### Phase C — Reconciliation
+
+- [ ] Merge Phase A gaps (story-not-met / partially-met) and Phase B
+      orphan candidates (surface-without-story) into one findings list
+- [ ] Confirm every orphan candidate has a recorded user disposition
+- [ ] Translate findings into follow-up tasks or story-catalogue updates
 
 ### Special Considerations
 
@@ -151,6 +187,17 @@ For each story in scope:
 **Gap Notes:** [Specific gaps, or "None"]
 
 [Repeat for each story in scope]
+
+### Bottom-up Orphan Candidates (Phase B)
+
+[List every user-visible surface unit that has no covering story. One
+row per unit. Bring this list to the user for disposition decisions
+before closing the audit.]
+
+| ID | Surface unit | Kind | Description | Proposed disposition | User decision | Rationale |
+|----|--------------|------|-------------|----------------------|---------------|-----------|
+| O1 | [screen/command/endpoint] | UI/CLI/API/doc | [what it does] | remove / cover / accept | [user] | [why] |
+| O2 | ... | ... | ... | ... | ... | ... |
 
 ## Audit Report
 
@@ -189,6 +236,17 @@ For each, note whether the gap requires:
 * Implementation work (create a follow-up task)
 * Story revision (the story needs updating)
 * Acceptance as a known limitation (document and defer)]
+
+### Reconciliation (Phase C)
+
+[Merge Phase A gaps (story not met / partially met) and Phase B orphan
+candidates (surface without story) into one consolidated findings list.
+The audit cannot close until every orphan candidate has a recorded user
+disposition.]
+
+| Finding | Source phase | Story / Surface unit | Disposition | Follow-up |
+|---------|--------------|----------------------|-------------|-----------|
+| [desc]  | A or B       | [id]                 | [agreed]    | [task / story update / none] |
 
 ### Recommendations
 
@@ -237,6 +295,9 @@ If none, state "No changes identified".]
 - [ ] Each story has a clear Fully Met / Partially Met / Not Met classification
 - [ ] Gap notes are specific and actionable for all non-Fully-Met stories
 - [ ] End-to-end verification has been performed where feasible
+- [ ] Phase B bottom-up sweep performed across the full user-visible surface
+- [ ] Every orphan candidate has a recorded user disposition
+- [ ] Phase C reconciliation table completed
 - [ ] Follow-up tasks have been created for critical gaps
 - [ ] Audit report is complete with summary and recommendations
 
