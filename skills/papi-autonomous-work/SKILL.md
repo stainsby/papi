@@ -33,6 +33,6 @@ At the end of an autonomous work session, you MUST declare that either:
 
 1. You have completed all work within the scope of the original request
   - if no scope was given (e.g. just "work autonomously"), this means declaring that THE ENTIRE PROJECT IS COMPLETED
-  - the project CANNOT be complete unless both compliance and fulfilment audits pass.
+  - the project CANNOT be complete unless the charter, fulfilment and compliance audits all pass, and acceptance testing passes.
 2  OR, you have progressed all tasks as far as possible without human interaction
   - you must detail every deferred blocking point that requires human interaction to proceed further

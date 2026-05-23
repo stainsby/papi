@@ -34,12 +34,7 @@ This audit:
   stories. The Charter is not assumed correct — it is one side of the
   comparison, not the reference. If reality has moved past the
   Charter, the audit should say so.
-- Does NOT grade individual stories for craft — that is the
-  `papi-sdlc-user-stories` skill's job.
-- Does NOT audit code, components, or capabilities — those are
-  covered by `papi-sdlc-task-compliance-audit` and
-  `papi-sdlc-task-fulfilment-audit`.
-- Does NOT execute anything (tests, demos, pipelines).
+- Does NOT write code or execute anything (tests, demos, pipelines).
 
 ## Two phases are mandatory
 

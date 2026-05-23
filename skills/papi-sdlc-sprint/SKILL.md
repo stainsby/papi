@@ -145,7 +145,10 @@ and includes the following mandatory gates:
   - A compliance audit (see `papi-sdlc-task-compliance-audit`) **verifies**
     that code matches specs.
   - A fulfilment audit (see `papi-sdlc-task-fulfilment-audit`) **verifies**
-    that the user stories are satisfied.
+    that user stories and the capabilities they cite are aligned (in both
+    directions).
+  - An acceptance test (see `papi-sdlc-task-acceptance-test`) **exercises**
+    each story through the real user interface in role.
 - After a sprint that fixes audit findings, a follow-up audit should be
   planned (not necessarily immediately, but before the next release).
 - Typical sprints shouldn't include full compliance or fulfilment audits as

@@ -33,7 +33,6 @@ COOLAPP                                     # The Project (Top-level)
 │       # depends on: COOLAPP.APP.SEARCH.CAP.ADVANCED_SEARCH
 ├── COOLAPP.USER_STORIES                    # BA-level user stories & fulfilment audit
 │   ├── CAP.STORY_CATALOGUE                 # The full set of use-case stories
-│   └── CAP.FULFILMENT_AUDIT               # How well the current system covers them
 └── COOLAPP.DOCS                            # Project documentation
     ├── COOLAPP.DOCS.README                 # Project README
     │   └── CAP.README
@@ -65,10 +64,9 @@ COOLAPP                                     # The Project (Top-level)
 `COOLAPP.USER_STORIES` is a **cross-cutting analysis component**. It does not implement any product feature; instead it holds the BA-level use cases for the entire project and provides a formal mechanism for auditing how well the implemented capabilities satisfy those stories.
 
 1.  **`CAP.STORY_CATALOGUE`:** The authoritative list of user stories, written at BA level (actor + goal + outcome). Stories reference the `COOLAPP.APP.*` capabilities that are expected to fulfil them, but do not own or duplicate those capabilities.
-2.  **`CAP.FULFILMENT_AUDIT`:** A structured audit report (or living document) produced by examining `COOLAPP.APP.*` capabilities against each story. For each story it records: *Fully Met*, *Partially Met*, or *Not Met*, with notes on gaps.
-3.  **Lifecycle:** The story catalogue evolves as product requirements change. The fulfilment audit is re-run whenever a significant batch of capabilities is delivered — typically at release boundaries. This makes coverage gaps visible before shipping.
-4.  **No sub-components by default:** Unless the story set is very large, keep `COOLAPP.USER_STORIES` flat. If stories naturally cluster by domain (e.g., `USER_STORIES.CHECKOUT`, `USER_STORIES.ACCOUNT`), sub-components may be added — but only when the grouping genuinely aids navigation.
-5.  **Relationship to releases:** A release spec may declare an _informative_ dependency on a story to show traceability ("this release fulfils story X"), but the story component never owns feature capabilities and can never block a release.
+2.  **Lifecycle:** The story catalogue evolves as product requirements change. The fulfilment audit is re-run whenever stories or capabilities shift materially — typically at release boundaries. This makes story↔capability drift visible before shipping. Acceptance testing — exercising each story through the real user interface — is a separate downstream activity covered by the `papi-sdlc-task-acceptance-test` skill.
+3.  **No sub-components by default:** Unless the story set is very large, keep `COOLAPP.USER_STORIES` flat. If stories naturally cluster by domain (e.g., `USER_STORIES.CHECKOUT`, `USER_STORIES.ACCOUNT`), sub-components may be added — but only when the grouping genuinely aids navigation.
+4.  **Relationship to releases:** A release spec may declare an _informative_ dependency on a story to show traceability ("this release fulfils story X"), but the story component never owns feature capabilities and can never block a release.
 
 **Why this works:**
 - Stories live in one authoritative place rather than scattered across tickets or wikis.

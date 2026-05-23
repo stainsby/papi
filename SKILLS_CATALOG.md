@@ -2,7 +2,7 @@
 
 Complete listing of all instructions and skills with their descriptions and contents.
 
-Generated: Fri 22 May 2026 13:37:17 AEST
+Generated: Fri 22 May 2026 20:24:49 AEST
 
 ## Instructions
 
@@ -85,6 +85,15 @@ Create or work with sprint tasks — plan, execute, verify, and close a bounded 
 Contents:
 - [assets/sprint-task-template.md](skills/papi-sdlc-sprint/assets/sprint-task-template.md)
 
+### papi-sdlc-task-acceptance-test
+
+Plan and perform user-acceptance testing for user stories - exercise each story end-to-end through the real user interface in the appropriate role, with evidence. [PAPI SDLC]
+
+[skills/papi-sdlc-task-acceptance-test/SKILL.md](skills/papi-sdlc-task-acceptance-test/SKILL.md)
+
+Contents:
+- [assets/acceptance-test-task-template.md](skills/papi-sdlc-task-acceptance-test/assets/acceptance-test-task-template.md)
+
 ### papi-sdlc-task-charter-audit
 
 Create or work with charter audit tasks that check alignment between the project's Charter and its user stories — both top-down and bottom-up. [PAPI SDLC]
@@ -123,7 +132,7 @@ Contents:
 
 ### papi-sdlc-task-fulfilment-audit
 
-Create or work with fulfilment audit tasks to assess how well implemented capabilities satisfy user stories. [PAPI SDLC]
+Create or work with fulfilment audit tasks that check forward and backward mappings between user stories and the capabilities declared in component specifications. [PAPI SDLC]
 
 [skills/papi-sdlc-task-fulfilment-audit/SKILL.md](skills/papi-sdlc-task-fulfilment-audit/SKILL.md)
 

@@ -82,11 +82,7 @@ This audit checks alignment between intent (Charter) and story-level
 work (user stories). Both sides are treated as mutable: a discrepancy
 may mean the stories need to change, or the Charter does.
 
-This audit does NOT:
-
-- Grade individual stories for craft (that's the user-stories skill's job)
-- Audit code, components, or capabilities (that's compliance / fulfilment)
-- Execute tests, demos, or pipelines
+This audit does NOT write code, or execute tests, demos, or pipelines
 
 ## Goals
 
