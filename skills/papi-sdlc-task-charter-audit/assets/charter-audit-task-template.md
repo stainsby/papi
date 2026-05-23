@@ -108,6 +108,15 @@ This audit does NOT write code, or execute tests, demos, or pipelines
 This audit runs in two directions and reconciles the results. Both
 phases are MANDATORY (see the `papi-sdlc-task-charter-audit` skill).
 
+#### Pre-pass — Template conformance
+
+Check the Charter file against the current `charter-template.md`.
+Record any structural drift (missing sections, renamed fields, stale
+guidance, undocumented additions) as findings with a disposition:
+update document / update template / accept with note. Run this before
+Phase A so that "format outdated" findings don't get confused with
+"content wrong" findings.
+
 #### Phase A — Top-down (Charter → stories)
 
 For each section of the Charter, ask whether the current story corpus
@@ -166,6 +175,17 @@ candidates**.
 - [ ] Translate actions into follow-on tasks or document updates
 
 ## Audit Execution
+
+### Pre-pass — Template Conformance Findings
+
+[Structural drift of the Charter file from `charter-template.md`.
+Record findings before doing Phase A so structural drift doesn't get
+confused with content findings.]
+
+| # | Where | Drift | Disposition | Follow-on |
+|---|-------|-------|-------------|-----------|
+| T1 | [section / field] | [missing / renamed / stale guidance / undocumented addition] | update document / update template / accept with note | [task ref] |
+| … | … | … | … | … |
 
 ### Phase A — Per-Section Findings
 
@@ -273,6 +293,10 @@ candidates.]
 - Findings resolved as "update Charter": F1
 - Findings resolved as "update stories": F2
 - Findings resolved as "accept with note": F3
+- Template conformance findings raised: T
+- Template conformance findings resolved as "update document": T1
+- Template conformance findings resolved as "update template": T2
+- Template conformance findings resolved as "accept with note": T3
 
 **Conclusion:**
 
@@ -292,6 +316,8 @@ What are the critical findings, and what changes have been agreed?]
 - [ ] Phase A and Phase B findings reconciled into one list (Phase C)
 - [ ] Each finding has an agreed action (update stories / update
       Charter / accept with note)
+- [ ] Pre-pass: Charter file checked against `charter-template.md`
+      and any structural drift recorded with a disposition
 - [ ] Follow-on tasks created for actions that require work
 - [ ] Charter and / or stories updated as agreed (or follow-on tasks
       created to do so)

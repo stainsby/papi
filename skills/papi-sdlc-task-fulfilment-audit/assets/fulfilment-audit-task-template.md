@@ -160,6 +160,22 @@ phases are MANDATORY (see the `papi-sdlc-task-fulfilment-audit` skill).
 **This audit examines; it does not execute.** Do not run, click,
 demo, or invoke any part of the product as part of this audit.
 
+#### Pre-pass — Template conformance
+
+Before Phase A, do a lightweight structural check of every in-scope
+source document against its current template:
+
+* Each in-scope user story file vs `user-story-template.md`
+* The user-stories index vs `user-stories-template.md`
+* Each component spec referenced by a cited or in-scope capability vs
+  `component-specification-template.md`
+
+Record any structural drift (missing sections, renamed fields, stale
+guidance, undocumented additions) as findings with a disposition:
+update document / update template / accept with note. Running this
+first separates "format outdated" from "content wrong" before Phase A
+goes deeper.
+
 #### Phase A — Top-down (story → capability)
 
 For each user story in scope:
@@ -282,6 +298,20 @@ The audit will produce a single document with:
 
 ## Audit Execution
 
+### Pre-pass — Template Conformance Findings
+
+[Structural drift of in-scope source documents from their current
+templates: user stories vs `user-story-template.md`, user-stories
+index vs `user-stories-template.md`, component specs vs
+`component-specification-template.md`. Record findings here before
+doing Phase A so structural drift doesn't get confused with content
+findings.]
+
+| # | Document | Template | Drift | Disposition | Follow-up |
+|---|----------|----------|-------|-------------|-----------|
+| T1 | [path] | user-story-template.md / user-stories-template.md / component-specification-template.md | [missing / renamed / stale guidance / undocumented addition] | update document / update template / accept with note | [task ref] |
+| … | … | … | … | … | … |
+
 ### Per-Story Findings (Phase A)
 
 | Story | Role | Title | Cited capabilities | Roles match | Classification | Gap notes |
@@ -356,6 +386,7 @@ a missing list is not.]
 * Orphan Capabilities Raised: Z
 * Role-Coverage Gaps Raised: R
 * Findings Resolved As — Update Stories: U, Update Specs: V, Accept-with-Note: W
+* Template Conformance Findings Raised: T (Update Document: T1, Update Template: T2, Accept-with-Note: T3)
 
 **Conclusion:**
 [Are stories and capabilities aligned for this scope? What actions
@@ -429,6 +460,7 @@ If none, state "No changes identified".]
 * [ ] Excluded-capabilities list provided (internal/composition caps included; empty is fine; missing is not)
 * [ ] Every orphan capability and every mismarked finding has a recorded user disposition
 * [ ] Phase C reconciliation table completed
+* [ ] Pre-pass: each in-scope user story and the stories index checked against their templates; each referenced spec checked against `component-specification-template.md`; drift recorded with a disposition
 * [ ] Follow-up tasks created for any gap requiring implementation or spec work
 * [ ] Audit report is complete with executive summary and recommendations
 

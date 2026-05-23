@@ -169,6 +169,16 @@ phases are MANDATORY (see the `papi-sdlc-task-compliance-audit` skill).
 or pipelines as part of this audit. Test code may be consulted as an
 investigative aid only.
 
+#### Pre-pass — Template conformance
+
+Before Phase A, do a lightweight structural check of every component
+spec referenced by an in-scope capability against
+`component-specification-template.md`. Record any structural drift
+(missing sections, renamed fields, stale guidance, undocumented
+additions) as findings with a disposition: update document / update
+template / accept with note. Running this first separates "format
+outdated" from "content wrong" before Phase A goes deeper.
+
 #### Phase A — Top-down (spec → code)
 
 For each component in scope:
@@ -297,6 +307,18 @@ The audit will produce a single document with:
    - Next audit recommendations
 
 ## Audit Execution
+
+### Pre-pass — Template Conformance Findings
+
+[Structural drift of in-scope component specs from
+`component-specification-template.md`. Record findings here before
+doing the per-component audit so structural drift doesn't get
+confused with content findings.]
+
+| # | Spec | Drift | Disposition | Follow-up |
+|---|------|-------|-------------|-----------|
+| T1 | [path] | [missing / renamed / stale guidance / undocumented addition] | update document / update template / accept with note | [task ref] |
+| … | … | … | … | … |
 
 ### Component: [CMP.XXX.YYY]
 
@@ -429,6 +451,7 @@ Valid reasons: breaking changes, incompatibility, intentional pinning]
 - Critical Issues: A
 - Major Issues: B
 - Minor Issues: C
+- Template Conformance Findings Raised: T (Update Document: T1, Update Template: T2, Accept-with-Note: T3)
 
 **Conclusion:**
 [Can the audited components be marked as complete in their edition tables?
@@ -505,6 +528,7 @@ If none, state "No changes identified".]
 - [ ] Excluded-artefacts list provided (empty is fine; missing is not)
 - [ ] Every orphan candidate has a recorded user disposition
 - [ ] Phase C reconciliation table completed
+- [ ] Pre-pass: each in-scope component spec checked against `component-specification-template.md`; drift recorded with a disposition
 - [ ] Audit report is complete with executive summary
 - [ ] Clear pass/fail determination made for each component
 - [ ] Edition tables have been updated with audit completion date

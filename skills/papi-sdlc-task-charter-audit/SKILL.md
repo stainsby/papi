@@ -38,7 +38,19 @@ This audit:
 
 ## Two phases are mandatory
 
-A charter audit MUST run in two directions and reconcile the results:
+Before the two phases, the audit MUST run a lightweight structural
+pre-pass:
+
+- **Pre-pass — Template conformance:** check the Charter file
+  against the current `papi-sdlc-charter` `charter-template.md`.
+  Record any structural drift (missing sections, renamed fields,
+  stale guidance, undocumented additions) as findings with a
+  disposition: **update document** / **update template** / **accept
+  with note**. This pass separates "format outdated" from "content
+  wrong" before Phase A goes deeper.
+
+A charter audit MUST then run in two directions and reconcile the
+results:
 
 - **Phase A — Top-down (Charter → stories):** for each section of the
   Charter, ask whether the current story corpus pulls toward it.

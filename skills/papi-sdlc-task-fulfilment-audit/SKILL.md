@@ -42,7 +42,21 @@ this audit.
 
 ## Two phases are mandatory
 
-A fulfilment audit MUST run in two directions and reconcile the
+Before the two phases, the audit MUST run a lightweight structural
+pre-pass:
+
+- **Pre-pass — Template conformance:** check that each in-scope user
+  story conforms to `papi-sdlc-user-stories`' `user-story-template.md`,
+  the user-stories index conforms to `user-stories-template.md`, and
+  each component spec referenced by a cited or in-scope capability
+  conforms to `papi-sdlc-component-specification`'s
+  `component-specification-template.md`. Record any structural drift
+  (missing sections, renamed fields, stale guidance, undocumented
+  additions) as findings with a disposition: **update document** /
+  **update template** / **accept with note**. This pass separates
+  "format outdated" from "content wrong" before Phase A goes deeper.
+
+A fulfilment audit MUST then run in two directions and reconcile the
 results:
 
 - **Phase A — Top-down (story → capability):** for each user story in

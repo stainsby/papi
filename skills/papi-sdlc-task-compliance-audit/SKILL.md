@@ -35,7 +35,19 @@ execution.
 
 ## Two phases are mandatory
 
-A compliance audit MUST run in two directions and reconcile the results:
+Before the two phases, the audit MUST run a lightweight structural
+pre-pass:
+
+- **Pre-pass — Template conformance:** check each component spec
+  referenced by an in-scope capability against the current
+  `papi-sdlc-component-specification`
+  `component-specification-template.md`. Record any structural drift
+  (missing sections, renamed fields, stale guidance, undocumented
+  additions) as findings with a disposition: **update document** /
+  **update template** / **accept with note**. This pass separates
+  "format outdated" from "content wrong" before Phase A goes deeper.
+
+A compliance audit MUST then run in two directions and reconcile the results:
 
 - **Phase A — Top-down (spec → code):** for each capability in scope, find
   its implementation, verify the contract against the spec, and confirm
