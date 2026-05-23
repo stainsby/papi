@@ -14,6 +14,7 @@ interfaces it involves, and falsifiable acceptance criteria.]
 
 **Epic/Release:** [epic or release ID/code/name]  
 **Status:** Draft / Ready / In Progress / Done  
+**Role:** [specific role name; must match the role in the narrative below and the role names declared on the cited capabilities' `**Users:**` field]  
 **Capabilities:** [capability ID(s) from the component spec this story helps fulfil]  
 
 ## Template

@@ -49,6 +49,11 @@ results:
   scope, take the `**Capabilities:**` field (and any in-body
   references) and check:
   - every cited capability ID exists in the relevant component spec
+  - every cited capability is **user-facing** (its `**Users:**` field
+    names one or more user-story role names; `internal` and
+    `composition` capabilities MUST NOT be cited directly by stories)
+  - the story's `**Role:**` appears in the `**Users:**` field of each
+    cited capability
   - the cited capabilities are plausibly aligned with what the story
     asks for
   - the union of cited capabilities is sufficient to cover the
@@ -56,37 +61,52 @@ results:
   - Classify the story as: **Covered**, **Partial**, **Missing**, or
     **Misaligned**.
 
-- **Phase B — Bottom-up (capability → story):** for each capability
-  in scope (across the relevant component specs), find the user
-  story (or stories) that cite it. Capabilities cited by no story
-  are **orphan candidates**.
+- **Phase B — Bottom-up (capability → story):** Phase B sweeps only
+  **user-facing capabilities**, i.e. those whose `**Users:**` field
+  names at least one role (capabilities marked `internal` or
+  `composition` are out of scope for this audit and belong in the
+  Excluded list).
 
-  An orphan capability is one of three kinds:
+  For each user-facing capability in scope, find the user story (or
+  stories) that cite it. Check:
+  - the capability is cited by at least one in-scope story
+  - for every role named in the capability's `**Users:**` field,
+    at least one citing story has that role in its `**Role:**` field
+
+  Capabilities failing the first check are **orphan candidates**.
+  Capabilities failing only the second check are **role-coverage
+  gaps** (the capability is in use, but not for every role it claims
+  to serve).
+
+  An orphan capability is one of two kinds:
   - *scope creep* — the capability exists but no user wants it
   - *missing story* — a user does want it, but the story hasn't
     been written
-  - *internal-only capability* — a legitimate sub-capability that
-    serves other capabilities, not users directly (these are fine
-    but must be explicitly marked, not silently accepted)
 
-- **Phase C — Reconciliation:** merge Phase A gaps and Phase B
-  orphan capabilities into a single findings list. For each
-  finding, record the agreed disposition:
-  - **Update stories** (add, change, fix capability links)
-  - **Update specs** (add, change, or remove capabilities)
-  - **Accept with note** (a deliberate, recorded exception, e.g.,
-    confirmed internal-only capability)
+  (A capability that is genuinely not user-facing should never reach
+  this list — if one does, the finding is *mismarked user-facing*:
+  update the spec to mark it `internal` or `composition`.)
 
-Running only Phase A is a CRITICAL FAILURE: it lets capabilities that
-serve no story persist in the specs unchallenged. Both phases must be
-evidenced in the report.
+- **Phase C — Reconciliation:** merge Phase A gaps, Phase B orphan
+  capabilities, and Phase B role-coverage gaps into a single
+  findings list. For each finding, record the agreed disposition:
+  - **Update stories** (add, change, fix capability links, add a
+    missing story for a role)
+  - **Update specs** (add, change, or remove capabilities; mark a
+    capability `internal` or `composition`; correct a `**Users:**`
+    role list)
+  - **Accept with note** (a deliberate, recorded exception)
+
+Running only Phase A is a CRITICAL FAILURE: it lets user-facing
+capabilities that serve no story persist in the specs unchallenged.
+Both phases must be evidenced in the report.
 
 ### Orphan candidate handling
 
 Every Phase B orphan capability MUST be brought to the user for a
 disposition decision before the audit closes. Do NOT auto-classify
-the orphan kind — the choice between scope creep, missing story, and
-internal-only is a strategic call that belongs with the user.
+the orphan kind — the choice between scope creep and missing story
+is a strategic call that belongs with the user.
 
 ## Relation to other audits
 

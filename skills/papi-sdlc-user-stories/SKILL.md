@@ -115,6 +115,7 @@ parent scope agree.
 - [ ] All criteria are assertable through the interface, not internal state
 - [ ] Story contains exactly one actor and one primary goal (split if not)
 - [ ] Capability link(s) recorded (component-spec capability ID)
+- [ ] `**Role:**` field set, matches the narrative actor, and matches a role name appearing in the cited capabilities' `**Users:**` field
 - [ ] Wording uses language the named role would recognise
 - [ ] No implementation / test / fulfilment / audit evidence in story body
 - [ ] Status (Draft / Ready / In Progress / Done) matches parent scope

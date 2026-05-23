@@ -8,6 +8,7 @@ exercise stories through their interface — that is a separate activity
 covered by the `papi-sdlc-task-acceptance-test` skill.]
 
 [Use this template only when appropriate:
+
 * If a more specific template exists, use that instead.
 * If no suitable template exists, propose creating a new one or updating
   an existing one.
@@ -16,6 +17,7 @@ covered by the `papi-sdlc-task-acceptance-test` skill.]
 [This template is derived from `basic-task-template.md`.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record
@@ -48,6 +50,7 @@ See the skill.
 ## Audit Scope
 
 [Define what is in scope. Typical choices:
+
 * All current user stories vs. all current component capabilities
 * A specific release / milestone slice of stories
 * A specific component's capabilities and the stories that should
@@ -58,15 +61,15 @@ See the skill.
 
 [List the user stories included in this audit, with IDs.]
 
-- **US-XX** - [Story title]
-- **US-YY** - [Story title]
+* **US-XX** - [Story title]
+* **US-YY** - [Story title]
 
 ### Component Specs in Scope
 
 [List the component specifications whose capabilities are in scope.]
 
-- **CMP.XXX.YYY** - [Component Name] - Edition [N]
-- **CMP.AAA.BBB** - [Component Name] - Edition [N]
+* **CMP.XXX.YYY** - [Component Name] - Edition [N]
+* **CMP.AAA.BBB** - [Component Name] - Edition [N]
 
 ## Parent task
 
@@ -77,7 +80,7 @@ See the skill.
 [List any prerequisite tasks. Charter audits often precede this one
 because Charter-level drift will change which stories should exist.]
 
-- [Task: Charter audit, if recently due]
+* [Task: Charter audit, if recently due]
 
 ## Subordinate and dependent tasks
 
@@ -104,20 +107,20 @@ This audit ensures fulfilment integrity by:
 
 This audit examines artefacts. It does NOT:
 
-- Execute tests, demos, or any part of the dev/release pipeline.
-- Click through the product or call APIs to verify stories work.
+* Execute tests, demos, or any part of the dev/release pipeline.
+* Click through the product or call APIs to verify stories work.
   (That is the role of the acceptance-test skill.)
-- Review code or implementation quality. (That is the role of the
+* Review code or implementation quality. (That is the role of the
   compliance audit.)
-- Re-evaluate whether the stories themselves are the right stories
+* Re-evaluate whether the stories themselves are the right stories
   to have. (That is the role of the charter audit.)
 
 ## Goals
 
-- Produce a fulfilment audit report with Phase A and Phase B findings.
-- Surface every orphan capability and obtain a user disposition.
-- Produce a reconciled findings list with agreed dispositions.
-- Identify any stories that need updating, any capabilities that need
+* Produce a fulfilment audit report with Phase A and Phase B findings.
+* Surface every orphan capability and obtain a user disposition.
+* Produce a reconciled findings list with agreed dispositions.
+* Identify any stories that need updating, any capabilities that need
   adding/changing/removing, and any deliberate exceptions.
 
 ## Who
@@ -128,14 +131,14 @@ This audit examines artefacts. It does NOT:
 
 ### User Stories
 
-- [USER_STORIES component spec](path/to/user_stories.md)
-- [Story US-XX](path/to/story/or/anchor)
-- ...
+* [USER_STORIES component spec](path/to/user_stories.md)
+* [Story US-XX](path/to/story/or/anchor)
+* ...
 
 ### Component Specifications
 
-- [CMP.XXX.YYY Specification](path/to/spec.md) - Edition N
-- [CMP.AAA.BBB Specification](path/to/spec.md) - Edition N
+* [CMP.XXX.YYY Specification](path/to/spec.md) - Edition N
+* [CMP.AAA.BBB Specification](path/to/spec.md) - Edition N
 
 ## Audit Plan
 
@@ -143,6 +146,7 @@ This audit examines artefacts. It does NOT:
 
 [This audit ensures that user stories and the capabilities cited by
 those stories are perfectly aligned. Any discrepancy must result in:
+
 1. Updating the story (e.g., fixing capability links, adding criteria), or
 2. Updating the spec (e.g., adding, changing or removing a capability), or
 3. A recorded accept-with-note exception (e.g., a capability confirmed
@@ -161,71 +165,96 @@ demo, or invoke any part of the product as part of this audit.
 For each user story in scope:
 
 1. **Read the story**
-   - [ ] Read the story's narrative, acceptance criteria, and any
+   * [ ] Read the story's narrative, acceptance criteria, and any
          linked notes.
-   - [ ] Read the `**Capabilities:**` field and any inline capability
+   * [ ] Read the `**Capabilities:**` field and any inline capability
          references in the body.
 
 2. **Verify each cited capability**
    For each capability ID cited by the story:
-   - [ ] Confirm the capability ID exists in a component spec in scope.
-   - [ ] Confirm the capability's description plausibly contributes
+   * [ ] Confirm the capability ID exists in a component spec in scope.
+   * [ ] Confirm the capability is **user-facing** — its `**Users:**`
+         field names one or more user-story role names. (Stories MUST
+         NOT cite `internal` or `composition` capabilities directly.)
+   * [ ] Confirm the story's `**Role:**` appears in the capability's
+         `**Users:**` field.
+   * [ ] Confirm the capability's description plausibly contributes
          to what this story needs.
-   - [ ] Note any obvious misalignment between capability description
+   * [ ] Note any obvious misalignment between capability description
          and story intent.
 
 3. **Verify collective coverage**
-   - [ ] Decide whether the cited capabilities, taken together, cover
+   * [ ] Decide whether the cited capabilities, taken together, cover
          what the story asks for.
-   - [ ] If anything the story asks for is not covered by any cited
+   * [ ] If anything the story asks for is not covered by any cited
          capability, record a gap.
 
 4. **Classify the story**
-   - [ ] **Covered** — every cited capability exists; aligned; full coverage.
-   - [ ] **Partial** — some coverage but at least one gap.
-   - [ ] **Missing** — story has no capability links, or cited
+   * [ ] **Covered** — every cited capability exists; aligned; full coverage.
+   * [ ] **Partial** — some coverage but at least one gap.
+   * [ ] **Missing** — story has no capability links, or cited
          capabilities do not exist, or coverage is essentially absent.
-   - [ ] **Misaligned** — cited capabilities exist but describe
+   * [ ] **Misaligned** — cited capabilities exist but describe
          something materially different from what the story asks for.
 
 #### Phase B — Bottom-up (capability → story)
 
-Enumerate the capabilities in scope and map each one back to the
-covering story (or stories). Capabilities with no covering story are
-**orphan candidates** — do NOT auto-classify; bring each to the user.
+Phase B sweeps only **user-facing capabilities** (those whose
+`**Users:**` field names at least one role). Capabilities marked
+`internal` or `composition` are out of scope; list them in the
+Excluded table with the reason. Within scope, capabilities not
+cited by any story are **orphan candidates** — do NOT auto-classify;
+bring each to the user.
 
-1. **Enumerate capabilities in scope**
-   - [ ] For each component spec in scope, list every capability
-         (CAP.\*) declared.
+1. **Enumerate user-facing capabilities in scope**
+   * [ ] For each component spec in scope, list every capability
+         (CAP.\*) whose `**Users:**` field names ≥1 role.
+   * [ ] List capabilities marked `internal` or `composition` in the
+         Excluded table; do not include them in Phase B mapping.
 
-2. **Map each capability to covering stories**
-   - [ ] For each capability, list the user stories (if any) that
-         cite it.
-   - [ ] Capability cited by ≥1 in-scope story: covered.
-   - [ ] Capability not cited by any in-scope story: **orphan
+2. **Map each user-facing capability to covering stories**
+   * [ ] For each user-facing capability, list the user stories (if
+         any) that cite it.
+   * [ ] Capability cited by ≥1 in-scope story: covered (subject to
+         role-coverage check below).
+   * [ ] Capability not cited by any in-scope story: **orphan
          candidate**.
 
-3. **Capture orphan candidates**
-   - [ ] List every orphan capability with ID + brief description.
-   - [ ] Propose a likely orphan kind (scope creep / missing story /
-         internal-only) — but do NOT decide.
-   - [ ] Bring the list to the user for disposition decisions.
+3. **Role-coverage check**
+   * [ ] For each role named in the capability's `**Users:**` field,
+         confirm at least one citing story has that role in its
+         `**Role:**` field.
+   * [ ] Any role not so covered is a **role-coverage gap**.
 
-4. **Excluded capabilities**
-   - [ ] List every capability (or capability pattern) intentionally
-         excluded from the sweep, with a stated reason (e.g., a
-         component spec explicitly out of scope for this audit).
-         An empty list is fine; a missing list is not.
+4. **Capture orphan candidates**
+   * [ ] List every orphan capability with ID + brief description.
+   * [ ] Propose a likely orphan kind (scope creep / missing story)
+         — but do NOT decide.
+   * [ ] If you suspect a capability is *mismarked* as user-facing
+         (i.e., should really be `internal` or `composition`), record
+         it as a *mismarked* finding instead of an orphan.
+   * [ ] Bring the list to the user for disposition decisions.
+
+5. **Excluded capabilities**
+   * [ ] List every capability (or capability pattern) excluded from
+         the sweep, with a stated reason. Capabilities marked
+         `internal` or `composition` go here automatically. Component
+         specs explicitly out of scope go here too. An empty list is
+         fine; a missing list is not.
 
 #### Phase C — Reconciliation
 
-- [ ] Merge Phase A gaps (story not adequately covered) and Phase B
-      orphan capabilities (capability with no covering story) into
-      one findings list.
-- [ ] Confirm every orphan capability has a recorded user disposition.
-- [ ] Translate each finding into one of:
-      - **Update stories** — add/change/fix story or its capability links
-      - **Update specs** — add/change/remove a capability
+* [ ] Merge Phase A gaps, Phase B orphan capabilities, Phase B
+      role-coverage gaps, and any *mismarked* findings into one
+      consolidated findings list.
+* [ ] Confirm every orphan capability and every mismarked finding
+      has a recorded user disposition.
+* [ ] Translate each finding into one of:
+      - **Update stories** — add/change/fix story, its capability
+        links, or its `**Role:**`; add a missing story for a role
+      - **Update specs** — add/change/remove a capability; mark a
+        capability `internal` or `composition`; correct a `**Users:**`
+        role list
       - **Accept with note** — recorded deliberate exception
 
 ### Audit Report Structure
@@ -233,61 +262,78 @@ covering story (or stories). Capabilities with no covering story are
 The audit will produce a single document with:
 
 1. **Executive Summary**
-   - Overall pass/fail status
-   - Counts of Covered / Partial / Missing / Misaligned stories
-   - Orphan capability count
-   - Recommendations
+   * Overall pass/fail status
+   * Counts of Covered / Partial / Missing / Misaligned stories
+   * Orphan capability count
+   * Recommendations
 
 2. **Per-Story Findings (Phase A)**
-   - Story ID, title, cited capabilities, classification, gap notes
+   * Story ID, title, cited capabilities, classification, gap notes
 
 3. **Per-Capability Findings (Phase B)**
-   - Capability ID, covering stories, orphan status, proposed kind
+   * Capability ID, covering stories, orphan status, proposed kind
 
 4. **Reconciliation (Phase C)**
-   - Consolidated findings with disposition and follow-up
+   * Consolidated findings with disposition and follow-up
 
 5. **Conclusion**
-   - Are stories and capabilities in alignment for the audited scope?
-   - Required actions before closure.
+   * Are stories and capabilities in alignment for the audited scope?
+   * Required actions before closure.
 
 ## Audit Execution
 
 ### Per-Story Findings (Phase A)
 
-| Story | Title | Cited capabilities | Classification | Gap notes |
-|-------|-------|--------------------|----------------|-----------|
-| US-XX | [title] | CAP.A, CAP.B | Covered / Partial / Missing / Misaligned | [notes] |
-| US-YY | ... | ... | ... | ... |
+| Story | Role | Title | Cited capabilities | Roles match | Classification | Gap notes |
+|-------|------|-------|--------------------|-------------|----------------|-----------|
+| US-XX | [role] | [title] | CAP.A, CAP.B | Yes / No | Covered / Partial / Missing / Misaligned | [notes] |
+| US-YY | ... | ... | ... | ... | ... | ... |
 
 ### Per-Capability Findings (Phase B)
 
-[Include every capability in scope. A capability with no covering
-story goes also into the orphan candidates table below.]
+[Include every **user-facing** capability in scope. A capability with no
+covering story goes also into the orphan candidates table below. Role-
+coverage gaps (capability cited but not by every claimed role) are flagged
+here.]
 
-| Capability | Description | Covering stories | Status |
-|------------|-------------|------------------|--------|
-| CAP.X.Y.Z  | [desc]      | US-XX, US-YY     | Covered |
-| CAP.A.B.C  | [desc]      | (none)           | Orphan candidate |
+| Capability | Users (roles) | Covering stories (role) | Roles covered | Status |
+|------------|---------------|--------------------------|---------------|--------|
+| CAP.X.Y.Z  | role-1, role-2 | US-XX (role-1), US-YY (role-2) | All | Covered |
+| CAP.A.B.C  | role-3        | (none)                   | None | Orphan candidate |
+| CAP.D.E.F  | role-1, role-4 | US-ZZ (role-1)          | role-1 only | Role-coverage gap |
 
 ### Orphan Capabilities (Phase B)
 
-[List every capability with no covering user story. Propose a likely
-orphan kind but do NOT decide; bring to the user.]
+[List every user-facing capability with no covering user story.
+Propose a likely orphan kind but do NOT decide; bring to the user.
+If you believe a capability is *mismarked* as user-facing, list it
+here with proposed kind `mismarked`.]
 
-| ID | Capability | Description | Proposed kind | User decision | Rationale |
-|----|------------|-------------|---------------|---------------|-----------|
-| O1 | CAP.A.B.C  | [desc]      | scope creep / missing story / internal-only | [user] | [why] |
-| O2 | ...        | ...         | ...           | ...           | ...       |
+| ID | Capability | Users (roles) | Description | Proposed kind | User decision | Rationale |
+|----|------------|---------------|-------------|---------------|---------------|-----------|
+| O1 | CAP.A.B.C  | role-3        | [desc]      | scope creep / missing story / mismarked | [user] | [why] |
+| O2 | ...        | ...           | ...         | ...           | ...           | ...       |
+
+### Role-Coverage Gaps (Phase B)
+
+[List every user-facing capability cited by at least one story but
+not by every role it claims to serve.]
+
+| ID | Capability | Claimed roles | Roles covered by stories | Roles missing |
+|----|------------|---------------|--------------------------|---------------|
+| RG1 | CAP.D.E.F | role-1, role-4 | role-1 | role-4 |
 
 ### Excluded Capabilities (Phase B)
 
-[List every capability (or capability pattern) intentionally excluded
-from the Phase B sweep, with a stated reason. An empty list is fine;
+[List every capability (or capability pattern) excluded from the
+Phase B sweep, with a stated reason. Capabilities marked `internal`
+or `composition` belong here automatically. An empty list is fine;
 a missing list is not.]
 
 | Pattern / ID | Reason for exclusion |
 |--------------|----------------------|
+| CAP.QQQ.INTERNAL_THING | Marked `internal` |
+| CAP.RRR.MVP   | Marked `composition` |
 | [e.g. CMP.ZZZ.*] | Component out of scope for this audit |
 
 ## Audit Report
@@ -300,14 +346,16 @@ a missing list is not.]
 **Overall Result:** [PASS / FAIL]
 
 **Statistics:**
-- Stories Audited: X
-- Covered: A
-- Partial: B
-- Missing: C
-- Misaligned: D
-- Capabilities Audited: Y
-- Orphan Capabilities Raised: Z
-- Findings Resolved As — Update Stories: U, Update Specs: V, Accept-with-Note: W
+* Stories Audited: X
+* Covered: A
+* Partial: B
+* Missing: C
+* Misaligned: D
+* User-Facing Capabilities Audited: Y
+* Capabilities Excluded (internal / composition / out-of-scope): Y_excl
+* Orphan Capabilities Raised: Z
+* Role-Coverage Gaps Raised: R
+* Findings Resolved As — Update Stories: U, Update Specs: V, Accept-with-Note: W
 
 **Conclusion:**
 [Are stories and capabilities aligned for this scope? What actions
@@ -338,6 +386,7 @@ has a recorded user disposition.]
 ### Next Steps
 
 [What needs to happen as a result of this audit?
+
 * Create follow-up tasks for story or spec updates
 * Update USER_STORIES and/or component specs in place
 * Schedule a compliance audit once spec changes are complete
@@ -356,6 +405,7 @@ has a recorded user disposition.]
 ### Process improvement
 
 [Note whether this audit suggests changes to:
+
 * USER_STORIES component or story format
 * Component specification or capability format
 * This audit task template
@@ -371,14 +421,16 @@ If none, state "No changes identified".]
 
 [Before marking this audit task complete, verify ALL of the following:]
 
-- [ ] All stories in scope have been classified (Covered / Partial / Missing / Misaligned)
-- [ ] Gap notes are specific and actionable for all non-Covered stories
-- [ ] Phase B bottom-up sweep performed across the full in-scope capability surface
-- [ ] Excluded-capabilities list provided (empty is fine; missing is not)
-- [ ] Every orphan capability has a recorded user disposition
-- [ ] Phase C reconciliation table completed
-- [ ] Follow-up tasks created for any gap requiring implementation or spec work
-- [ ] Audit report is complete with executive summary and recommendations
+* [ ] All stories in scope have been classified (Covered / Partial / Missing / Misaligned)
+* [ ] Each story's `**Role:**` matched against each cited capability's `**Users:**`
+* [ ] Gap notes are specific and actionable for all non-Covered stories
+* [ ] Phase B bottom-up sweep performed across all in-scope **user-facing** capabilities
+* [ ] Role-coverage check performed for every user-facing capability with multiple roles
+* [ ] Excluded-capabilities list provided (internal/composition caps included; empty is fine; missing is not)
+* [ ] Every orphan capability and every mismarked finding has a recorded user disposition
+* [ ] Phase C reconciliation table completed
+* [ ] Follow-up tasks created for any gap requiring implementation or spec work
+* [ ] Audit report is complete with executive summary and recommendations
 
 ## Addendum
 

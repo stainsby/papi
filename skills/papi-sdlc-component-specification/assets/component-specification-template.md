@@ -86,7 +86,10 @@ dependency graph, but write just CAP.STORAGE here since the component context is
 
 **Description:** [Detailed explanation of this capability, its purpose, and how it works. Max 1 to 3 paragraphs.]
 
-**Users:** [Who/what uses this capability - humans, agents, other components]
+**Users:** [Either one or more user-story role names (this is a user-facing
+capability and the named roles MUST match roles used by user stories), or
+`internal` (consumed only by other capabilities), or `composition` (bundles
+other capabilities, e.g. a release).]
 
 **Interface/Contract:**
 - **Input:** [Parameters, data structures, events]
