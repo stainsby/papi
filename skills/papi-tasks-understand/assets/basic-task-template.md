@@ -1,17 +1,19 @@
+# Task: [Short, clear task name]
+
 [Use this template for
-  - basic tasks that don't fit into more specific templates or
-  - as the basis for a new template.]
+
+- basic tasks that don't fit into more specific templates or
+- as the basis for a new template.]
 
 [This template is derived from `base-template.md`.]
 
 [This template is a guideline:
-* Unless otherwise specified, all parts are optional.
-* If you find yourself needing to deviate in a meaningful way, that may
+
+- Unless otherwise specified, all parts are optional.
+- If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change: inform your
   user and/or record the need under *Process improvement* in the *Improvement*
   section.]
-
-# Task: [Short, clear task name]
 
 ## Template
 
@@ -44,10 +46,11 @@ described here - these have a task template that is instantiated as needed,
 along with scheduling information for these tasks.]
 
 [Optional: Describe how subordinate work is organised over time:
-* externally driven constraints (deadlines, windows, dependencies)
-* internally driven structure (regular reviews/maintenance/planning and their frequency)
-* one-off vs recurring work patterns
-* interaction and precedence rules (how conflicts are resolved)]
+
+- externally driven constraints (deadlines, windows, dependencies)
+- internally driven structure (regular reviews/maintenance/planning and their frequency)
+- one-off vs recurring work patterns
+- interaction and precedence rules (how conflicts are resolved)]
 
 ## Context & Scope
 
@@ -157,12 +160,8 @@ These can be proposed as new tasks.]
 
 ### Process improvement
 
-[Note whether this task suggests changes to task templates,
+[Note whether this task suggests changes to PAPI task templates,
 processes, or ways of working. If none, state "No changes identified".]
-
-### Future Enhancements
-
-[Ideas for improving this task or expanding its scope.]
 
 ## Addendum
 

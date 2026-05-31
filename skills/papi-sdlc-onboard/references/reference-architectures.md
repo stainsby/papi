@@ -44,16 +44,17 @@ COOLAPP                                     # The Project (Top-level)
 
 `COOLAPP.RELEASE` and its sub-components contain no feature implementation code. They are pure **composition components** — their specifications declare which capabilities from `COOLAPP.APP` are included in that release.
 
-1.  **The Spec Files:**
+1. **The Spec Files:**
     - `COOLAPP.RELEASE` spec (`docs/components/coolapp/release/release.md`) describes the release management structure and lists sub-components.
     - `COOLAPP.RELEASE.MVP` spec (`docs/components/coolapp/release/mvp.md`) lists exactly which `COOLAPP.APP.*` capabilities constitute the MVP.
     - `COOLAPP.RELEASE.V2` spec adds additional capabilities on top.
-2.  **Dependencies are the point:** `COOLAPP.RELEASE.MVP` depends on `COOLAPP.APP.AUTH.CAP.LOGIN` and `COOLAPP.APP.SEARCH.CAP.BASIC_SEARCH`. This is the formal definition of what ships in the MVP.
-3.  **Testing:** Each release component has E2E/smoke tests that verify the *composed* set of capabilities works together. Feature-level tests live in `COOLAPP.APP.*`, not here.
-4.  **Bug Fixes:** A bug fix touches `COOLAPP.APP.AUTH` (a new Edition of that spec if the contract changes, otherwise just the code). The `COOLAPP.RELEASE.MVP` spec is unchanged — the dependency it declares is still `AUTH.CAP.LOGIN`, which now has a correct implementation.
-5.  **New Releases:** Adding V3 means creating a new `COOLAPP.RELEASE.V3` spec that declares its dependencies. `COOLAPP.RELEASE` itself gains a new sub-component entry, but its own spec stays thin.
+2. **Dependencies are the point:** `COOLAPP.RELEASE.MVP` depends on `COOLAPP.APP.AUTH.CAP.LOGIN` and `COOLAPP.APP.SEARCH.CAP.BASIC_SEARCH`. This is the formal definition of what ships in the MVP.
+3. **Testing:** Each release component has E2E/smoke tests that verify the *composed* set of capabilities works together. Feature-level tests live in `COOLAPP.APP.*`, not here.
+4. **Bug Fixes:** A bug fix touches `COOLAPP.APP.AUTH` (a new Edition of that spec if the contract changes, otherwise just the code). The `COOLAPP.RELEASE.MVP` spec is unchanged — the dependency it declares is still `AUTH.CAP.LOGIN`, which now has a correct implementation.
+5. **New Releases:** Adding V3 means creating a new `COOLAPP.RELEASE.V3` spec that declares its dependencies. `COOLAPP.RELEASE` itself gains a new sub-component entry, but its own spec stays thin.
 
 **Why this works:**
+
 - `RELEASE` sits at project level - releases are a project concern, not buried inside the app.
 - Feature components (`COOLAPP.APP.*`) have their own independent lifecycle, tested and specced without any knowledge of releases.
 - A release is nothing more than a formal declaration of which feature capabilities it composes.
@@ -63,13 +64,14 @@ COOLAPP                                     # The Project (Top-level)
 
 `COOLAPP.USER_STORIES` is a **cross-cutting analysis component**. It does not implement any product feature; instead it holds the BA-level use cases for the entire project and provides a formal mechanism for auditing how well the implemented capabilities satisfy those stories.
 
-1.  **`CAP.STORY_CATALOGUE`:** The authoritative list of user stories, written at BA level (actor + goal + outcome). Each story names its `**Role:**` and cites the user-facing `COOLAPP.APP.*` capabilities expected to fulfil it. Stories do not own or duplicate capabilities.
-2.  **`CAP.FULFILMENT_AUDIT`:** A doc-on-doc audit that checks story↔capability alignment in both directions. Phase A: each story's cited capabilities must exist, be marked user-facing, and list the story's role. Phase B: every **user-facing** capability (one whose `**Users:**` field names ≥1 user-story role) must be cited by at least one story for every role it claims to serve. Capabilities marked `internal` (consumed only by other caps) or `composition` (bundles other caps, e.g. a release) are out of scope. Findings resolve as *update stories*, *update specs*, or *accept-with-note*. The audit does NOT run the system — that is the role of `papi-sdlc-task-acceptance-test`.
-3.  **Lifecycle:** The story catalogue evolves as product requirements change. The fulfilment audit is re-run whenever stories or capabilities shift materially — typically at release boundaries. This makes story↔capability drift visible before shipping. Acceptance testing — exercising each story through the real user interface — is a separate downstream activity covered by the `papi-sdlc-task-acceptance-test` skill.
-4.  **No sub-components by default:** Unless the story set is very large, keep `COOLAPP.USER_STORIES` flat. If stories naturally cluster by domain (e.g., `USER_STORIES.CHECKOUT`, `USER_STORIES.ACCOUNT`), sub-components may be added — but only when the grouping genuinely aids navigation.
-5.  **Relationship to releases:** A release spec may declare an _informative_ dependency on a story to show traceability ("this release fulfils story X"), but the story component never owns feature capabilities and can never block a release.
+1. **`CAP.STORY_CATALOGUE`:** The authoritative list of user stories, written at BA level (actor + goal + outcome). Each story names its `**Role:**` and cites the user-facing `COOLAPP.APP.*` capabilities expected to fulfil it. Stories do not own or duplicate capabilities.
+2. **`CAP.FULFILMENT_AUDIT`:** A doc-on-doc audit that checks story↔capability alignment in both directions. Phase A: each story's cited capabilities must exist, be marked user-facing, and list the story's role. Phase B: every **user-facing** capability (one whose `**Users:**` field names ≥1 user-story role) must be cited by at least one story for every role it claims to serve. Capabilities marked `internal` (consumed only by other caps) or `composition` (bundles other caps, e.g. a release) are out of scope. Findings resolve as *update stories*, *update specs*, or *accept-with-note*. The audit does NOT run the system — that is the role of `papi-sdlc-task-acceptance-test`.
+3. **Lifecycle:** The story catalogue evolves as product requirements change. The fulfilment audit is re-run whenever stories or capabilities shift materially — typically at release boundaries. This makes story↔capability drift visible before shipping. Acceptance testing — exercising each story through the real user interface — is a separate downstream activity covered by the `papi-sdlc-task-acceptance-test` skill.
+4. **No sub-components by default:** Unless the story set is very large, keep `COOLAPP.USER_STORIES` flat. If stories naturally cluster by domain (e.g., `USER_STORIES.CHECKOUT`, `USER_STORIES.ACCOUNT`), sub-components may be added — but only when the grouping genuinely aids navigation.
+5. **Relationship to releases:** A release spec may declare an *informative* dependency on a story to show traceability ("this release fulfils story X"), but the story component never owns feature capabilities and can never block a release.
 
 **Why this works:**
+
 - Stories live in one authoritative place rather than scattered across tickets or wikis.
 - The audit is a first-class PAPI artefact — it has a spec, can be assigned, and has a completion state.
 - Separating story ownership from feature ownership means the BA can evolve stories independently of the engineering team.
@@ -78,12 +80,13 @@ COOLAPP                                     # The Project (Top-level)
 
 `COOLAPP.DOCS` owns human-facing project documentation — the kind of content that lives in a repository root and is read by contributors, users, or legal stakeholders, not by the runtime system.
 
-1.  **`COOLAPP.DOCS.README` / `CAP.README`:** The project's top-level `README.md`. Covers what the project is, how to get started, and where to find more detail. This sub-component is always present.
-2.  **`COOLAPP.DOCS.LICENSE` / `CAP.LICENSE`** *(optional):* The `LICENSE.md` (or `LICENSE`) file. Include this sub-component when the licence file itself must be tracked as a managed artefact (e.g., for open-source or dual-licence projects). For internal tools where there is no licence file, omit it.
-3.  **Other sub-components:** Additional sub-components may be added for substantive documentation artefacts — e.g., `COOLAPP.DOCS.ARCHITECTURE` for an architecture decision record index, `COOLAPP.DOCS.CHANGELOG` for a curated changelog. Only add sub-components when the content is significant enough to warrant its own lifecycle.
-4.  **Not a dumping ground:** `DOCS` is for *project-level* documentation. Feature-level documentation (inline docs, API references) belongs in the relevant `COOLAPP.APP.*` component. Do not move component specs here — they remain with their component.
+1. **`COOLAPP.DOCS.README` / `CAP.README`:** The project's top-level `README.md`. Covers what the project is, how to get started, and where to find more detail. This sub-component is always present.
+2. **`COOLAPP.DOCS.LICENSE` / `CAP.LICENSE`** *(optional):* The `LICENSE.md` (or `LICENSE`) file. Include this sub-component when the licence file itself must be tracked as a managed artefact (e.g., for open-source or dual-licence projects). For internal tools where there is no licence file, omit it.
+3. **Other sub-components:** Additional sub-components may be added for substantive documentation artefacts — e.g., `COOLAPP.DOCS.ARCHITECTURE` for an architecture decision record index, `COOLAPP.DOCS.CHANGELOG` for a curated changelog. Only add sub-components when the content is significant enough to warrant its own lifecycle.
+4. **Not a dumping ground:** `DOCS` is for *project-level* documentation. Feature-level documentation (inline docs, API references) belongs in the relevant `COOLAPP.APP.*` component. Do not move component specs here — they remain with their component.
 
 **Why this works:**
+
 - Documentation artefacts become first-class PAPI components — they get specs, owners, and completion states.
 - The README and LICENSE are no longer forgotten: if `CAP.README` is incomplete, the project's PAPI health reflects that.
 - Keeps the `APP` sub-tree clean by giving documentation a dedicated home at project level.
@@ -107,6 +110,7 @@ ECOMMERCE                           # The Project
 ```
 
 **Why this works:**
+
 - Clear boundaries between deployable artifacts.
 - `ECOMMERCE.STOREFRONT` depends on `ECOMMERCE.CATALOG.CAP.PRODUCT_LOOKUP`.
 - Both services depend on `ECOMMERCE.SHARED_MODELS.CAP.DATA_TYPES`.
@@ -128,6 +132,7 @@ DATA_PARSER                         # The Project / Package
 ```
 
 **Why this works:**
+
 - External consumers will depend on `X.LIB.DATA_PARSER.CAP.PARSE_CSV`.
 - Internal containment reflects the module structure of the code.
 
@@ -148,6 +153,7 @@ MYTOOL                              # The Project (Top-level)
 ```
 
 **Why this works:**
+
 - No release ceremony needed — the project *is* the thing being shipped.
 - Keeps the hierarchy shallow and easy to navigate.
 - If the project grows and release management becomes needed, `MYTOOL.RELEASE` can be added later.
@@ -165,6 +171,7 @@ BACKUP_SCRIPT                       # The Project and only component
 ```
 
 **Why this works:**
+
 - Overhead of sub-components is not justified for a single-file tool.
 - Still gets full PAPI traceability (spec, capabilities, tests) without artificial structure.
 - If the tool grows, sub-components can be introduced at that point.

@@ -3,6 +3,12 @@ name: papi-autonomous-work
 description: Perform work to complete tasks when asked to "work autonomously".
 ---
 
+## Deprecated
+
+This skill is DEPRECATED.
+Please flag to the user whenever this is used if they did no explicity
+request it.
+
 ## Inputs
 
 - the tasks to consider

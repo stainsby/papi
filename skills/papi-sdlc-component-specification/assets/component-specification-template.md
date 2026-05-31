@@ -1,15 +1,15 @@
+# Component: [Component Name]
 
 [Use this template to manage a specification for a component.]
 
 [This template is derived from `base-template.md`.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record that
   under *Process improvement* in the *Improvement* section.]
-
-# Component: [Component Name]
 
 ## Synopsis
 
@@ -36,18 +36,19 @@ the 3-5 most recent editions for historical reference.]
 [DO NOT change the status without permission]
 
 **Status definitions:**
-- **Spec Status:** Is this edition of the spec fully written/updated?
-  - States: `in progress`, `completed`
-- **Human Review:** Has a human reviewed and approved this edition?
-  - States: `pending`, `completed`
-  - **All new or updated specs should be human-reviewed BEFORE implementation starts**
-- **Implementation:** Has the implementation been completed for this edition?
-  - States: `not started`, `in progress`, `completed`
-- **Compliance Audit:** Has a compliance audit verified the implementation matches the spec?
-  - States: `not started`, `in progress`, `completed`
-  - See compliance audit task template for details
-- **Testing:** Has all required testing been completed and passed for this edition?
-  - States: `not started`, `in progress`, `completed`
+
+* **Spec Status:** Is this edition of the spec fully written/updated?
+  * States: `in progress`, `completed`
+* **Human Review:** Has a human reviewed and approved this edition?
+  * States: `pending`, `completed`
+  * **All new or updated specs should be human-reviewed BEFORE implementation starts**
+* **Implementation:** Has the implementation been completed for this edition?
+  * States: `not started`, `in progress`, `completed`
+* **Compliance Audit:** Has a compliance audit verified the implementation matches the spec?
+  * States: `not started`, `in progress`, `completed`
+  * See compliance audit task template for details
+* **Testing:** Has all required testing been completed and passed for this edition?
+  * States: `not started`, `in progress`, `completed`
 
 **NOTE: These actions in there column MUST be performed LEFT TO RIGHT unless otherwise approved by a human.**
 
@@ -61,11 +62,11 @@ the 3-5 most recent editions for historical reference.]
 
 ## Non-Functional Constraints
 
-- **Technology:** [e.g., Must use React 18, Node.js 18+]
-- **Performance:** [e.g., Response time < 100ms, handles 10k rows]
-- **Security:** [e.g., Must validate all inputs, enforce schema constraints]
-- **Compatibility:** [e.g., Modern browsers, Node.js 18+]
-- **Other:** [Any other constraints]
+* **Technology:** [e.g., Must use React 18, Node.js 18+]
+* **Performance:** [e.g., Response time < 100ms, handles 10k rows]
+* **Security:** [e.g., Must validate all inputs, enforce schema constraints]
+* **Compatibility:** [e.g., Modern browsers, Node.js 18+]
+* **Other:** [Any other constraints]
 
 ## Capabilities
 
@@ -92,11 +93,12 @@ capability and the named roles MUST match roles used by user stories), or
 other capabilities, e.g. a release).]
 
 **Interface/Contract:**
-- **Input:** [Parameters, data structures, events]
-- **Output:** [Return values, state changes, side effects]
-- **Preconditions:** [What must be true before calling]
-- **Postconditions:** [What is guaranteed after calling]
-- **Errors:** [What can go wrong and how it's signaled]
+
+* **Input:** [Parameters, data structures, events]
+* **Output:** [Return values, state changes, side effects]
+* **Preconditions:** [What must be true before calling]
+* **Postconditions:** [What is guaranteed after calling]
+* **Errors:** [What can go wrong and how it's signaled]
 
 **Implementation Notes:** [Optional: key implementation details, algorithms, patterns]
 
@@ -110,7 +112,8 @@ other capabilities, e.g. a release).]
 
 [Below we describe *Capability Tests* and *Capability Integration Tests* which are **MANDATORY** for EVERY capability provided by this component.
 We should not be lazy and skimp on testing here even if it's hard:
-- if this requires major tools to be brought in, or for testing scaffolding to be built, then if these are large or much work they can be sub-components,
+
+* if this requires major tools to be brought in, or for testing scaffolding to be built, then if these are large or much work they can be sub-components,
 . higher-level components may need human partticipants in testing: this is OK as long as the tests are well-defined, repeatable, and not just the product of laziness]
 
 ### Capability Tests
@@ -138,12 +141,14 @@ There should be a sub-section per capability. Correctness must examine whether t
 #### Ancestors
 
 **[Root Component Code]** - [Component Name] (Top-level)
-- **Synopsis:** [One-line summary]
-- **Depends on:** [Which of our capabilities]
+
+* **Synopsis:** [One-line summary]
+* **Depends on:** [Which of our capabilities]
 
 **[Ancestor Component Code]** - [Component Name]
-- **Synopsis:** [One-line summary]
-- **Depends on:** [capabilities]
+
+* **Synopsis:** [One-line summary]
+* **Depends on:** [capabilities]
 
 …etc…
 
@@ -170,8 +175,9 @@ session, it MUST be broken down into sub-components.]
 spec files — list here only what this component consumes from them.]
 
 **[Sub-Component Code]** - [Component Name]
-- **Synopsis:** [One-line summary]
-- **Capabilities consumed:** [capability codes, e.g., CAP.X, CAP.Y]
+
+* **Synopsis:** [One-line summary]
+* **Capabilities consumed:** [capability codes, e.g., CAP.X, CAP.Y]
 
 … etc. …
 
@@ -180,15 +186,15 @@ spec files — list here only what this component consumes from them.]
 [Other components (not sub-components) whose capabilities this component
 consumes.]
 
-- **`CMP.OTHER.COMPONENT`** - [Component Name]
-  - **Capabilities consumed:** [e.g., CAP.SOME_CAPABILITY, CAP.ANOTHER_CAPABILITY]
+* **`CMP.OTHER.COMPONENT`** - [Component Name]
+  * **Capabilities consumed:** [e.g., CAP.SOME_CAPABILITY, CAP.ANOTHER_CAPABILITY]
 
 … etc. …
 
 ### External Dependencies
 
-- [Library/Framework Name] - [What capabilities we consume from it - these might be informally specified here]
-- …
+* [Library/Framework Name] - [What capabilities we consume from it - these might be informally specified here]
+* …
 
 ## Capability Matrix
 
@@ -202,10 +208,11 @@ Component nodes (e.g., CMP.B) have edges to the capabilities they provide (e.g.,
 Capability nodes have edges to other capabilities they depend on.
 
 In this YAML:
-- The 'component:' field identifies which component provides the capabilities listed
-- Under 'dependencies:', each capability lists which OTHER components it depends on
+
+* The 'component:' field identifies which component provides the capabilities listed
+* Under 'dependencies:', each capability lists which OTHER components it depends on
   and which of their capabilities it needs
-- Example: CAP.STORAGE depends on CMP.OTHER's CAP.CACHE means there's an edge
+* Example: CAP.STORAGE depends on CMP.OTHER's CAP.CACHE means there's an edge
   from CAP.STORAGE to CAP.CACHE in the graph]
 
 [External components can simply list their capabilities here, with empty dependencies, unless

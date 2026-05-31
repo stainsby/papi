@@ -1,6 +1,6 @@
 ---
 name: papi-sdlc-charter
-description: Create or work with a Project Charter — the highest-level document for a project, saying why it exists, where it is going, and how it intends to get there. [PAPI SDLC]
+description: Create, understand, or work with the project charter. [PAPI SDLC]
 ---
 
 # SDLC Task - Project Charter
@@ -30,15 +30,13 @@ Reading these skills is REQUIRED to understand and execute this skill:
 
 ### One project, one Charter
 
-A project has exactly one Charter. If the project genuinely splits
-(separate purposes, separate teams, separate scopes), it is no longer
-one project — start a new Charter for the new project.
+A project has exactly one charter.
 
 ### Lower documents follow the Charter automatically
 
-The Charter applies to everything below it without being mentioned.
-Do NOT add a `**Charter:**` reference field to user stories, component
-specs, or tasks; the Charter is already assumed.
+The charter applies to everything below it without being mentioned.
+Do NOT add a charter reference field to other PAPI artefacts (user stories,
+component specs, tasks,…)—the charter is implied.
 
 ### Both the *where* and the *how* must be present
 
@@ -54,33 +52,9 @@ manifesto, a quality standard, or rules the project must follow. The
 list is informal; a link and one line of explanation per item is
 enough.
 
-### Charter content must be specific enough to test against
+## Actions
 
-Every section MUST be specific enough that a later decision can be
-held up against it and judged "in line" or "not in line". Vague
-Charter text is worse than no Charter, because it makes weak decisions
-look well-grounded.
-
-### Charter changes are visible
-
-Real changes to the Charter affect everything downstream. Charter
-updates MUST be deliberate, dated, and recorded — not silent.
-
-## Checklist when creating a Charter
-
-- [ ] Purpose stated clearly
-- [ ] Vision describes where the project is going, not how it will get
-      there
-- [ ] Ethos describes the way of working and lists short value
-      statements that future decisions can be tested against
-- [ ] Scope makes clear what is in and out of the project at this level
-- [ ] Higher-level alignment lists the bigger-picture documents the
-      project sits under (or states "None")
-- [ ] Success indicators are things you can see at project level (not
-      story-level acceptance criteria)
-- [ ] Every section is specific enough that a future decision can be
-      tested against it
-- [ ] Charter is dated and has a named owner
+Use the charter template.
 
 ## Skill artefacts
 

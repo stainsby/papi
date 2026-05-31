@@ -1,33 +1,31 @@
 ---
 name: papi-long-task
-description: Manage a task with many repeated steps, or a long running task with many steps, so that it is tracked and resumable over more than one seesion if needed.
+description: Manage a task with many repeated steps, or a long running task with many steps, so that it is tracked and resumable over more than one session if needed.
 ---
 
 # Long Task
 
 ## Inputs
 
-Typically one of these:
+Any of these:
 
 * A sub-task that is repeated many times possibly with a list of items such that the sub-task should be applied to each item.
 * A specification that generates such a list, either up front, or as the task progresses (dynamic list).
-* A long process with many steps that should be resumable over multiple sessions.
-
-An this optionally:
-
-* Something like "do this as a gated task" - see *Stepwise gated tasks*
-* SSomething like "track/use new/more/additional items in this file…" - see *Track additional items* below.
 
 ## Actions
 
-* Maintain the list of items or steps as a simple checklist if not already so managed.
-* For each item or step, execute the sub-task or step, and check it off the list.
-* If the list is generated dynamically, add new items to the list as they are generated.
-* Then perform the sub-taks for perform each item INDIVIDUALLY:
-  * INDIVIDUALLY is CRITICALLY IMPORTANT TO KEEP FOCUS AND NOT MISS DETAILS:
-  * slow and steady, one at a time
-  * do not try to 'batch' for performance/efficiency
-  * checkpoint after each aub-task
+Steps:
+
+1. If possible, initially create (and then maintain) the list of items or steps as a simple checklist.
+  * If the list is dynamic, this can just be wahtever is known initially.
+2. For each item:
+  (a) Perform the sub-task for THIS item BEFORE moving to the next item:
+    * THIS is CRITICALLY IMPORTANT TO KEEP FOCUS AND NOT MISS DETAILS:
+    * slow and steady, one at a time
+    * do not try to 'batch' for performance/efficiency
+    * checkpoint after each aub-task
+  (b) Check the item off on the list.
+  (c) Add any newly discovered items to the list if the list is dynamic.
 
 ## Stepwise gated tasks
 

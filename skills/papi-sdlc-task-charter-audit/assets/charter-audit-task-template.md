@@ -1,3 +1,5 @@
+# Task: Charter Audit - [Scope Name]
+
 [TO CREATE A NEW CHARTER AUDIT TASK: **COPY** THIS TEMPLATE, THEN **EDIT** THE COPY
 **ONE SECTION AT A TIME**, FOLLOWING THE INSTRUCTIONS IN EACH SECTION]
 
@@ -5,6 +7,7 @@
 the user stories — in both directions.]
 
 [Use this template only when appropriate:
+
 * If a more specific template exists, use that instead.
 * If no suitable template exists, propose creating a new one or updating an
   existing one.
@@ -13,12 +16,11 @@ the user stories — in both directions.]
 [This template is derived from `basic-task-template.md`.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record that
   under *Process improvement* in the *Improvement* section.]
-
-# Task: Charter Audit - [Scope Name]
 
 **Audit Date:** YYYY-MM-DD
 **Status:** [Proposed, In Progress, Completed]
@@ -52,9 +54,9 @@ See the skill.
 [List the user stories in scope. Usually all stories, unless a specific
 subset is being audited.]
 
-- US-XX: [Story title]
-- US-YY: [Story title]
-- …
+* US-XX: [Story title]
+* US-YY: [Story title]
+* …
 
 (or: "All stories in the catalogue")
 
@@ -86,11 +88,11 @@ This audit does NOT write code, or execute tests, demos, or pipelines
 
 ## Goals
 
-- Confirm the story corpus pulls toward each part of the Charter
-- Identify stories that don't fit under any part of the Charter
-- Surface any Charter drift — places where the Charter no longer
+* Confirm the story corpus pulls toward each part of the Charter
+* Identify stories that don't fit under any part of the Charter
+* Surface any Charter drift — places where the Charter no longer
   describes the project the stories are building
-- Produce a findings list with an agreed disposition per finding
+* Produce a findings list with an agreed disposition per finding
 
 ## Who
 
@@ -98,8 +100,8 @@ This audit does NOT write code, or execute tests, demos, or pipelines
 
 ## References
 
-- [Charter](path/to/CHARTER.md)
-- [User stories index](path/to/USER_STORIES.md)
+* [Charter](path/to/CHARTER.md)
+* [User stories index](path/to/USER_STORIES.md)
 
 ## Audit Plan
 
@@ -125,16 +127,16 @@ matching.
 
 For each Charter section in turn:
 
-- **Purpose** — do the stories collectively serve this purpose?
-- **Vision** — are the stories pointing the project toward this
+* **Purpose** — do the stories collectively serve this purpose?
+* **Vision** — are the stories pointing the project toward this
   destination?
-- **Ethos** — do the stories respect the way of working and the
+* **Ethos** — do the stories respect the way of working and the
   listed value statements? Any stories that pull against the ethos?
-- **Scope** — are the stories all within the declared scope? Any
+* **Scope** — are the stories all within the declared scope? Any
   drifting out?
-- **Higher-level alignment** — do the stories respect the
+* **Higher-level alignment** — do the stories respect the
   bigger-picture documents the project sits under?
-- **Success indicators** — are the stories shaping the project so
+* **Success indicators** — are the stories shaping the project so
   that these indicators are likely to be achievable?
 
 For each section, classify the situation as: **Covered**, **Partial**,
@@ -148,31 +150,31 @@ of the Charter it serves. Stories that fit nowhere are **orphan
 candidates**.
 
 1. **Map stories to Charter sections**
-   - [ ] For each story (or group), record the Charter section(s) it
+   * [ ] For each story (or group), record the Charter section(s) it
          serves
-   - [ ] Stories that don't fit anywhere → record as **orphan
+   * [ ] Stories that don't fit anywhere → record as **orphan
          candidate**
 
 2. **Classify each orphan candidate** (proposed, not decided):
-   - *scope creep* — outside the Charter's Scope
-   - *ethos violation* — would have us work against the Ethos
-   - *Charter-drift signal* — reasonable work, but the Charter no
+   * *scope creep* — outside the Charter's Scope
+   * *ethos violation* — would have us work against the Ethos
+   * *Charter-drift signal* — reasonable work, but the Charter no
      longer describes what the stories are building
 
 3. **Bring orphan candidates to the user**
-   - [ ] List every orphan candidate with description and proposed
+   * [ ] List every orphan candidate with description and proposed
          kind
-   - [ ] For each, the user decides the disposition (update stories /
+   * [ ] For each, the user decides the disposition (update stories /
          update Charter / accept with note)
 
 #### Phase C — Reconciliation
 
-- [ ] Merge Phase A findings (gaps, partials, contradictions) and
+* [ ] Merge Phase A findings (gaps, partials, contradictions) and
       Phase B orphan candidates into a single findings list
-- [ ] Confirm every orphan candidate has a recorded user disposition
-- [ ] For each finding, record the agreed action: update stories /
+* [ ] Confirm every orphan candidate has a recorded user disposition
+* [ ] For each finding, record the agreed action: update stories /
       update Charter / accept with note
-- [ ] Translate actions into follow-on tasks or document updates
+* [ ] Translate actions into follow-on tasks or document updates
 
 ## Audit Execution
 
@@ -284,19 +286,19 @@ candidates.]
 
 **Statistics:**
 
-- Charter sections audited: X
-- Sections fully covered: A
-- Sections partial / missing / contradicted: B
-- Stories audited: Y
-- Orphan candidates raised: O
-- Findings overall: F
-- Findings resolved as "update Charter": F1
-- Findings resolved as "update stories": F2
-- Findings resolved as "accept with note": F3
-- Template conformance findings raised: T
-- Template conformance findings resolved as "update document": T1
-- Template conformance findings resolved as "update template": T2
-- Template conformance findings resolved as "accept with note": T3
+* Charter sections audited: X
+* Sections fully covered: A
+* Sections partial / missing / contradicted: B
+* Stories audited: Y
+* Orphan candidates raised: O
+* Findings overall: F
+* Findings resolved as "update Charter": F1
+* Findings resolved as "update stories": F2
+* Findings resolved as "accept with note": F3
+* Template conformance findings raised: T
+* Template conformance findings resolved as "update document": T1
+* Template conformance findings resolved as "update template": T2
+* Template conformance findings resolved as "accept with note": T3
 
 **Conclusion:**
 
@@ -310,16 +312,16 @@ What are the critical findings, and what changes have been agreed?]
 
 ## Completion Checklist
 
-- [ ] All Charter sections assessed (Phase A)
-- [ ] All stories mapped or marked as orphan candidates (Phase B)
-- [ ] Every orphan candidate has a recorded user disposition
-- [ ] Phase A and Phase B findings reconciled into one list (Phase C)
-- [ ] Each finding has an agreed action (update stories / update
+* [ ] All Charter sections assessed (Phase A)
+* [ ] All stories mapped or marked as orphan candidates (Phase B)
+* [ ] Every orphan candidate has a recorded user disposition
+* [ ] Phase A and Phase B findings reconciled into one list (Phase C)
+* [ ] Each finding has an agreed action (update stories / update
       Charter / accept with note)
-- [ ] Pre-pass: Charter file checked against `charter-template.md`
+* [ ] Pre-pass: Charter file checked against `charter-template.md`
       and any structural drift recorded with a disposition
-- [ ] Follow-on tasks created for actions that require work
-- [ ] Charter and / or stories updated as agreed (or follow-on tasks
+* [ ] Follow-on tasks created for actions that require work
+* [ ] Charter and / or stories updated as agreed (or follow-on tasks
       created to do so)
 
 ## Improvement

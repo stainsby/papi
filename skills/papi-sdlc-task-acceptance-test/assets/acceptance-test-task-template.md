@@ -1,3 +1,5 @@
+# Task: Acceptance Test - [Scope Name]
+
 [TO CREATE A NEW ACCEPTANCE-TEST TASK: **COPY** THIS TEMPLATE, THEN **EDIT** THE COPY
 **ONE SECTION AT A TIME**, FOLLOWING THE INSTRUCTIONS IN EACH SECTION]
 
@@ -7,6 +9,7 @@ with evidence. This is NOT an audit. It performs the system; it does
 not examine artefacts.]
 
 [Use this template only when appropriate:
+
 * If a more specific template exists, use that instead.
 * If no suitable template exists, propose creating a new one or
   updating an existing one.
@@ -15,12 +18,11 @@ not examine artefacts.]
 [This template is derived from `basic-task-template.md`.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that
   may indicate a need for a new/updated template or process change;
   record that under *Process improvement* in the *Improvement* section.]
-
-# Task: Acceptance Test - [Scope Name]
 
 **Test Scope:** [Which stories / which release / which role(s)]
 **Test Date:** YYYY-MM-DD
@@ -46,6 +48,7 @@ See the skill.
 ## Test Scope
 
 [Define what is being acceptance-tested. Typically:
+
 * All current user stories in their named roles
 * A specific release / milestone slice of stories
 * A specific role or persona's slice of stories]
@@ -54,8 +57,8 @@ See the skill.
 
 [List the user stories included in this acceptance test, with IDs and roles.]
 
-- **US-XX** - [Story title] - Role: [role name]
-- **US-YY** - [Story title] - Role: [role name]
+* **US-XX** - [Story title] - Role: [role name]
+* **US-YY** - [Story title] - Role: [role name]
 
 ## Parent task
 
@@ -66,9 +69,9 @@ See the skill.
 [Acceptance testing typically requires the fulfilment and compliance
 audits to have passed. List them here if recently performed.]
 
-- [Task: Fulfilment audit covering these stories]
-- [Task: Compliance audit covering the supporting capabilities]
-- [Task: Implementation tasks for the relevant capabilities]
+* [Task: Fulfilment audit covering these stories]
+* [Task: Compliance audit covering the supporting capabilities]
+* [Task: Implementation tasks for the relevant capabilities]
 
 ## Subordinate and dependent tasks
 
@@ -93,16 +96,16 @@ This acceptance test verifies, through the real user interface, that:
 
 This test is NOT:
 
-- An audit of stories vs. capabilities (that is the fulfilment audit).
-- An audit of capabilities vs. code (that is the compliance audit).
-- A substitute for automated tests in the dev pipeline.
+* An audit of stories vs. capabilities (that is the fulfilment audit).
+* An audit of capabilities vs. code (that is the compliance audit).
+* A substitute for automated tests in the dev pipeline.
 
 ## Goals
 
-- Produce an acceptance test report with one Pass / Partial / Fail /
+* Produce an acceptance test report with one Pass / Partial / Fail /
   Blocked result per story, each backed by evidence.
-- Surface any role-discipline breaches.
-- Identify any blocking issues preventing release sign-off.
+* Surface any role-discipline breaches.
+* Identify any blocking issues preventing release sign-off.
 
 ## Who
 
@@ -113,18 +116,18 @@ assisted the agent in reaching the interface.]
 
 ### User Stories
 
-- [USER_STORIES component spec](path/to/user_stories.md)
-- [Story US-XX](path/to/story/or/anchor)
-- ...
+* [USER_STORIES component spec](path/to/user_stories.md)
+* [Story US-XX](path/to/story/or/anchor)
+* ...
 
 ### Interfaces Used
 
 [List the actual user-facing interfaces exercised — URLs of the UI,
 CLI invocations, API endpoints, document locations, etc.]
 
-- [Production-equivalent UI URL]
-- [CLI binary and version]
-- [API base URL]
+* [Production-equivalent UI URL]
+* [CLI binary and version]
+* [API base URL]
 
 ## Test Plan
 
@@ -147,23 +150,23 @@ sign-off.]
 For each story in scope:
 
 1. **Identify role and interface**
-   - [ ] Note the named role.
-   - [ ] Note the real-world interface available to that role.
+   * [ ] Note the named role.
+   * [ ] Note the real-world interface available to that role.
 
 2. **Perform the story in role**
-   - [ ] Attempt each acceptance criterion through the named interface.
-   - [ ] Do NOT consult code, specs, or internal artefacts.
-   - [ ] Capture evidence at each step.
+   * [ ] Attempt each acceptance criterion through the named interface.
+   * [ ] Do NOT consult code, specs, or internal artefacts.
+   * [ ] Capture evidence at each step.
 
 3. **Classify the result**
-   - [ ] **Pass** — story performed end-to-end with evidence.
-   - [ ] **Partial** — some steps performed; specific blocker(s) noted.
-   - [ ] **Fail** — story cannot be performed in role.
-   - [ ] **Blocked** — could not test (environment, access, ...); explain.
+   * [ ] **Pass** — story performed end-to-end with evidence.
+   * [ ] **Partial** — some steps performed; specific blocker(s) noted.
+   * [ ] **Fail** — story cannot be performed in role.
+   * [ ] **Blocked** — could not test (environment, access, ...); explain.
 
 4. **Record any role-discipline breaches**
-   - [ ] Note any moment the tester stepped outside the role.
-   - [ ] A breach means the story does NOT count as Pass.
+   * [ ] Note any moment the tester stepped outside the role.
+   * [ ] A breach means the story does NOT count as Pass.
 
 ## Test Execution
 
@@ -194,12 +197,12 @@ is not.]
 **Overall Result:** [PASS / FAIL]
 
 **Statistics:**
-- Stories Tested: X
-- Pass: A
-- Partial: B
-- Fail: C
-- Blocked: D
-- Role-Discipline Breaches: E
+* Stories Tested: X
+* Pass: A
+* Partial: B
+* Fail: C
+* Blocked: D
+* Role-Discipline Breaches: E
 
 **Conclusion:**
 [Is the audited scope ready for release from a user-experience
@@ -209,6 +212,7 @@ standpoint? What blockers remain?]
 
 [List Fail or Partial stories with significant blockers. For each,
 note whether the fix needs:
+
 * Implementation work (create a follow-up task)
 * Spec change (signal to a future fulfilment or compliance audit)
 * Story revision (story does not match what users actually need)
@@ -223,6 +227,7 @@ note whether the fix needs:
 ### Next Steps
 
 [What needs to happen as a result of this acceptance test?
+
 * Create implementation tasks for blockers
 * Update stories if the test revealed they were wrong
 * Schedule a re-test after fixes
@@ -241,6 +246,7 @@ note whether the fix needs:
 ### Process improvement
 
 [Note whether this test suggests changes to:
+
 * Story format or acceptance-criteria style
 * Role / persona definitions
 * This acceptance-test task template
@@ -256,12 +262,12 @@ If none, state "No changes identified".]
 
 [Before marking this task complete, verify ALL of the following:]
 
-- [ ] All stories in scope have been classified (Pass / Partial / Fail / Blocked)
-- [ ] Evidence has been captured and linked for every attempted story
-- [ ] All role-discipline breaches recorded (or list explicitly empty)
-- [ ] Notes for Partial and Fail results are specific and actionable
-- [ ] Follow-up tasks created for blockers
-- [ ] Report is complete with executive summary and recommendations
+* [ ] All stories in scope have been classified (Pass / Partial / Fail / Blocked)
+* [ ] Evidence has been captured and linked for every attempted story
+* [ ] All role-discipline breaches recorded (or list explicitly empty)
+* [ ] Notes for Partial and Fail results are specific and actionable
+* [ ] Follow-up tasks created for blockers
+* [ ] Report is complete with executive summary and recommendations
 
 ## Addendum
 

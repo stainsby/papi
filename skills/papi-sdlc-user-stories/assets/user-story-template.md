@@ -1,3 +1,5 @@
+# User Story: [ID] — [title]
+
 [Use this template for user stories — a single actor goal, the system
 interfaces it involves, and falsifiable acceptance criteria.]
 
@@ -9,8 +11,6 @@ interfaces it involves, and falsifiable acceptance criteria.]
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record that
   under *Notes* in this document.]
-
-# User Story: [ID] — [title]
 
 **Epic/Release:** [epic or release ID/code/name]  
 **Status:** Draft / Ready / In Progress / Done  

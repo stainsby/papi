@@ -1,3 +1,5 @@
+# Task: Compliance Audit - [Component/Scope Name]
+
 [TO CREATE A NEW COMPLIANCE AUDIT TASK: **COPY** THIS TEMPLATE, THEN **EDIT** THE COPY
 **ONE SECTION AT A TIME**, FOLLOWING THE INSTRUCTIONS IN EACH SECTION]
 
@@ -7,6 +9,7 @@ artefacts must be examined in detail to determine if they at least attempt
 to implement the capabilities of the specifications.]
 
 [Use this template only when appropriate:
+
 * If a more specific template exists, use that instead.
 * If no suitable template exists, propose creating a new one or updating an
   existing one.
@@ -15,12 +18,11 @@ to implement the capabilities of the specifications.]
 [This template is derived from `basic-task-template.md`.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record that
   under *Process improvement* in the *Improvement* section.]
-
-# Task: Compliance Audit - [Component/Scope Name]
 
 **Audit Scope:** [Single component code OR multiple component codes OR entire system]  
 **Audit Date:** YYYY-MM-DD  
@@ -47,6 +49,7 @@ See the skill.
 ## Audit Scope
 
 [Define what is being audited. This can be:
+
 * A single component and all its capabilities
 * Multiple related components
 * An entire system/subsystem
@@ -69,14 +72,14 @@ Otherwise, a single audit task is sufficient.]
 
 [List all components included in this audit scope]
 
-- **CMP.XXX.YYY** - [Component Name] - Edition [N]
-- **CMP.AAA.BBB** - [Component Name] - Edition [N]
+* **CMP.XXX.YYY** - [Component Name] - Edition [N]
+* **CMP.AAA.BBB** - [Component Name] - Edition [N]
 
 ### External Components to Audit (Optional)
 
 [List any external components/libraries to audit for version compliance]
 
-- **X.LIB.NAME** - [Library Name] - Specified version vs Latest stable
+* **X.LIB.NAME** - [Library Name] - Specified version vs Latest stable
 
 ## Parent task
 
@@ -86,8 +89,8 @@ Otherwise, a single audit task is sufficient.]
 
 [List implementation tasks that must be complete before audit can proceed]
 
-- [Task: Implementation of CMP.XXX.YYY]
-- [Task: Testing of CMP.XXX.YYY]
+* [Task: Implementation of CMP.XXX.YYY]
+* [Task: Testing of CMP.XXX.YYY]
 
 ## Subordinate and dependent tasks
 
@@ -102,24 +105,25 @@ Otherwise, a single audit task is sufficient.]
 ## Context & Scope
 
 This audit ensures implementation integrity by:
+
 1. Verifying all claimed capabilities are actually implemented
 2. Checking that implementations match specification contracts
 3. Confirming capability code linkage in source code
 4. (Optional) Ensuring external dependencies are current
 
 This audit examines artefacts. It does NOT:
-- Execute tests, demos, or any normal dev/release pipeline step
+* Execute tests, demos, or any normal dev/release pipeline step
   (test execution is a dev/release workflow concern, not a compliance one)
-- Evaluate code quality or style (unless specified as non-functional constraint)
-- Test performance unless specified in component constraints
-- Review design decisions (those belong in spec reviews)
+* Evaluate code quality or style (unless specified as non-functional constraint)
+* Test performance unless specified in component constraints
+* Review design decisions (those belong in spec reviews)
 
 ## Goals
 
-- Produce a compliance audit report documenting all findings
-- Identify any gaps between specification and implementation
-- Confirm component can be marked as 'completed' in its edition table
-- (For external components) Document version status and any upgrade considerations
+* Produce a compliance audit report documenting all findings
+* Identify any gaps between specification and implementation
+* Confirm component can be marked as 'completed' in its edition table
+* (For external components) Document version status and any upgrade considerations
 
 ## Who
 
@@ -132,15 +136,15 @@ This audit examines artefacts. It does NOT:
 
 [Link to all component specifications being audited, noting the specific edition]
 
-- [CMP.XXX.YYY Specification](path/to/spec.md) - Edition N
-- [CMP.AAA.BBB Specification](path/to/spec.md) - Edition N
+* [CMP.XXX.YYY Specification](path/to/spec.md) - Edition N
+* [CMP.AAA.BBB Specification](path/to/spec.md) - Edition N
 
 ### Implementation Locations
 
 [Link to implementation code locations]
 
-- [Component XXX.YYY Implementation](path/to/code/)
-- [Component AAA.BBB Implementation](path/to/code/)
+* [Component XXX.YYY Implementation](path/to/code/)
+* [Component AAA.BBB Implementation](path/to/code/)
 
 ### Test Locations (reference only)
 
@@ -148,8 +152,8 @@ This audit examines artefacts. It does NOT:
 links exist so the auditor can consult test code as an investigative
 aid and so test files appear in the Phase B artefact sweep.]
 
-- [Component XXX.YYY Tests](path/to/tests/)
-- [Component AAA.BBB Tests](path/to/tests/)
+* [Component XXX.YYY Tests](path/to/tests/)
+* [Component AAA.BBB Tests](path/to/tests/)
 
 ## Audit Plan
 
@@ -157,6 +161,7 @@ aid and so test files appear in the Phase B artefact sweep.]
 
 [This audit ensures that implementation, tests, and specifications are
 perfectly aligned. Any discrepancies must be documented and either:
+
 1. Implementation updated to match specification, or
 2. Specification updated to reflect intentional changes (creating new edition)]
 
@@ -184,43 +189,43 @@ outdated" from "content wrong" before Phase A goes deeper.
 For each component in scope:
 
 1. **Specification Review**
-   - [ ] Read complete component specification for edition being audited
-   - [ ] Extract all capability codes and their interface contracts
-   - [ ] Note all non-functional constraints
+   * [ ] Read complete component specification for edition being audited
+   * [ ] Extract all capability codes and their interface contracts
+   * [ ] Note all non-functional constraints
 
 2. **Capability Implementation Verification**
    For each capability:
-   - [ ] Locate implementation in source code
-   - [ ] Verify code references capability code (in comments, docstrings, or metadata)
-   - [ ] Check interface matches specification (inputs, outputs, preconditions, postconditions)
-   - [ ] Verify error handling matches specification
-   - [ ] Confirm implementation satisfies described functionality
+   * [ ] Locate implementation in source code
+   * [ ] Verify code references capability code (in comments, docstrings, or metadata)
+   * [ ] Check interface matches specification (inputs, outputs, preconditions, postconditions)
+   * [ ] Verify error handling matches specification
+   * [ ] Confirm implementation satisfies described functionality
 
 3. **Capability Matrix Verification**
-   - [ ] Verify all dependencies listed in capability matrix exist
-   - [ ] Check that consumed capabilities are actually used in implementation
-   - [ ] Confirm no unlisted dependencies exist
+   * [ ] Verify all dependencies listed in capability matrix exist
+   * [ ] Check that consumed capabilities are actually used in implementation
+   * [ ] Confirm no unlisted dependencies exist
 
 4. **Capabilities DAG Validation**
-   - [ ] Run the DAG validation script (see `papi-sdlc-validate-capabilities-dag` skill) against the project's component specifications directory
-   - [ ] Confirm zero issues: no cycles, no orphans, no invalid references
-   - [ ] If issues found: resolve in the affected specification files before proceeding
+   * [ ] Run the DAG validation script (see `papi-sdlc-validate-capabilities-dag` skill) against the project's component specifications directory
+   * [ ] Confirm zero issues: no cycles, no orphans, no invalid references
+   * [ ] If issues found: resolve in the affected specification files before proceeding
 
 5. **Non-Functional Constraints Verification**
-   - [ ] Verify technology constraints are met
-   - [ ] Check performance constraints (examine for evidence; do not run)
-   - [ ] Verify security constraints
-   - [ ] Confirm compatibility constraints
-   - [ ] If the spec mandates test-coverage or test-kind constraints,
+   * [ ] Verify technology constraints are met
+   * [ ] Check performance constraints (examine for evidence; do not run)
+   * [ ] Verify security constraints
+   * [ ] Confirm compatibility constraints
+   * [ ] If the spec mandates test-coverage or test-kind constraints,
          verify by examining for existence and linkage (do not execute)
 
 6. **External Dependencies Audit** (Optional)
    For each external component:
-   - [ ] Identify current version in use
-   - [ ] Look up latest stable version (MUST SEARCH, not from memory)
-   - [ ] Document version discrepancy if any
-   - [ ] Explain reason for not using latest (if applicable)
-   - [ ] Note any security vulnerabilities in current version
+   * [ ] Identify current version in use
+   * [ ] Look up latest stable version (MUST SEARCH, not from memory)
+   * [ ] Document version discrepancy if any
+   * [ ] Explain reason for not using latest (if applicable)
+   * [ ] Note any security vulnerabilities in current version
 
 #### Phase B — Bottom-up (code → spec)
 
@@ -232,32 +237,32 @@ covering capability. Anything with no covering capability is an
 — or would normally be — under version control, regardless of kind.
 
 1. **Enumerate the artefact surface** (non-exhaustive prompt list)
-   - [ ] Source files / modules / public functions / classes
-   - [ ] Tests (unit, integration, E2E, fixtures, test data)
-   - [ ] Scripts (build, ops, migration, utility, dev tooling)
-   - [ ] Config and schema files (app config, lint/format, editor,
+   * [ ] Source files / modules / public functions / classes
+   * [ ] Tests (unit, integration, E2E, fixtures, test data)
+   * [ ] Scripts (build, ops, migration, utility, dev tooling)
+   * [ ] Config and schema files (app config, lint/format, editor,
          environment templates)
-   - [ ] CI/CD definitions (workflow files, pipeline configs)
-   - [ ] Infrastructure-as-code (Terraform, K8s manifests, Docker/Compose)
-   - [ ] Dependency manifests and lockfiles
-   - [ ] Data assets (seed data, sample inputs, fixtures, migration output)
-   - [ ] Static assets (images, fonts, media, icons)
-   - [ ] Component-level docs (READMEs, design notes, ADRs, changelogs)
-   - [ ] Licence, contributor and meta files
-   - [ ] Any other in-scope tracked file not covered above
+   * [ ] CI/CD definitions (workflow files, pipeline configs)
+   * [ ] Infrastructure-as-code (Terraform, K8s manifests, Docker/Compose)
+   * [ ] Dependency manifests and lockfiles
+   * [ ] Data assets (seed data, sample inputs, fixtures, migration output)
+   * [ ] Static assets (images, fonts, media, icons)
+   * [ ] Component-level docs (READMEs, design notes, ADRs, changelogs)
+   * [ ] Licence, contributor and meta files
+   * [ ] Any other in-scope tracked file not covered above
 
 2. **Map each unit to a covering capability**
-   - [ ] Capability ID found in code/comments/metadata: record it
-   - [ ] No capability ID found: record as **orphan candidate**
+   * [ ] Capability ID found in code/comments/metadata: record it
+   * [ ] No capability ID found: record as **orphan candidate**
 
 3. **Capture orphan candidates**
-   - [ ] List every orphan candidate with location + brief description
-   - [ ] For each, propose a likely disposition (remove, cover with new
+   * [ ] List every orphan candidate with location + brief description
+   * [ ] For each, propose a likely disposition (remove, cover with new
          capability/spec edition, accept as known) — but do NOT decide
-   - [ ] Bring the list to the user for disposition decisions
+   * [ ] Bring the list to the user for disposition decisions
 
 4. **Excluded artefacts**
-   - [ ] List every artefact (or artefact pattern) intentionally
+   * [ ] List every artefact (or artefact pattern) intentionally
          excluded from the sweep, with a stated reason (e.g., vendored
          third-party code covered by the external-dependencies audit,
          generated files reproducible from sources). An empty list is
@@ -265,46 +270,46 @@ covering capability. Anything with no covering capability is an
 
 #### Phase C — Reconciliation
 
-- [ ] Merge Phase A gaps (specified-but-missing/incorrect) and Phase B
+* [ ] Merge Phase A gaps (specified-but-missing/incorrect) and Phase B
       orphan candidates (present-but-unspecified) into one findings list
-- [ ] Confirm every orphan candidate has a recorded user disposition
-- [ ] Translate findings into follow-up tasks or spec/edition updates
+* [ ] Confirm every orphan candidate has a recorded user disposition
+* [ ] Translate findings into follow-up tasks or spec/edition updates
 
 ### Audit Report Structure
 
 The audit will produce a single document with:
 
 1. **Executive Summary**
-   - Overall pass/fail status
-   - Critical issues count
-   - Warning issues count
-   - Recommendations
+   * Overall pass/fail status
+   * Critical issues count
+   * Warning issues count
+   * Recommendations
 
 2. **Component-by-Capability Findings**
    For each capability:
-   - Compliance status (Pass/Fail/Partial)
-   - Evidence of implementation
-   - Issues found (if any)
-   - Investigative notes (e.g., test code consulted) — optional
+   * Compliance status (Pass/Fail/Partial)
+   * Evidence of implementation
+   * Issues found (if any)
+   * Investigative notes (e.g., test code consulted) — optional
 
 3. **Issues Log**
-   - Issue ID
-   - Severity (Critical/Major/Minor)
-   - Capability affected
-   - Description
-   - Recommendation
+   * Issue ID
+   * Severity (Critical/Major/Minor)
+   * Capability affected
+   * Description
+   * Recommendation
 
 4. **External Dependencies Status** (if applicable)
-   - Library name
-   - Current version
-   - Latest stable version
-   - Status (Current/Outdated)
-   - Upgrade recommendation
+   * Library name
+   * Current version
+   * Latest stable version
+   * Status (Current/Outdated)
+   * Upgrade recommendation
 
 5. **Conclusion**
-   - Can component edition be marked complete? (Yes/No)
-   - Required actions before completion
-   - Next audit recommendations
+   * Can component edition be marked complete? (Yes/No)
+   * Required actions before completion
+   * Next audit recommendations
 
 ## Audit Execution
 
@@ -336,22 +341,22 @@ confused with content findings.]
 **Status:** [Pass/Fail/Partial]
 
 **Specification Contract:**
-- Input: [from spec]
-- Output: [from spec]
-- Preconditions: [from spec]
-- Postconditions: [from spec]
+* Input: [from spec]
+* Output: [from spec]
+* Preconditions: [from spec]
+* Postconditions: [from spec]
 
 **Implementation Evidence:**
-- Location: [file path:line number]
-- Capability code referenced: [Yes/No]
-- Contract compliance: [Pass/Fail - note discrepancies]
+* Location: [file path:line number]
+* Capability code referenced: [Yes/No]
+* Contract compliance: [Pass/Fail - note discrepancies]
 
 **Investigative notes:** [OMIT unless relevant. Note any test code,
 fixtures, or other artefacts consulted as an aid to understanding the
 implementation. This audit does not execute tests.]
 
 **Issues:**
-- [List any issues found, or "None"]
+* [List any issues found, or "None"]
 
 ##### CAP.XXX.YYY.CAPABILITY2 - [Capability Name]
 
@@ -362,25 +367,25 @@ implementation. This audit does not execute tests.]
 **Status:** [Pass/Fail]
 
 **Findings:**
-- [All dependencies accounted for: Yes/No]
-- [No unlisted dependencies: Yes/No]
-- [All consumed capabilities exist: Yes/No]
+* [All dependencies accounted for: Yes/No]
+* [No unlisted dependencies: Yes/No]
+* [All consumed capabilities exist: Yes/No]
 
 **Issues:**
-- [List any issues, or "None"]
+* [List any issues, or "None"]
 
 #### Non-Functional Constraints Verification
 
 **Status:** [Pass/Fail]
 
 **Findings:**
-- Technology constraints: [Pass/Fail - details]
-- Performance constraints: [Pass/Fail - details]
-- Security constraints: [Pass/Fail - details]
-- Compatibility constraints: [Pass/Fail - details]
+* Technology constraints: [Pass/Fail - details]
+* Performance constraints: [Pass/Fail - details]
+* Security constraints: [Pass/Fail - details]
+* Compatibility constraints: [Pass/Fail - details]
 
 **Issues:**
-- [List any issues, or "None"]
+* [List any issues, or "None"]
 
 #### Component Summary
 
@@ -446,12 +451,12 @@ Valid reasons: breaking changes, incompatibility, intentional pinning]
 **Overall Result:** [PASS/FAIL]
 
 **Statistics:**
-- Components Audited: X
-- Capabilities Audited: Y
-- Critical Issues: A
-- Major Issues: B
-- Minor Issues: C
-- Template Conformance Findings Raised: T (Update Document: T1, Update Template: T2, Accept-with-Note: T3)
+* Components Audited: X
+* Capabilities Audited: Y
+* Critical Issues: A
+* Major Issues: B
+* Minor Issues: C
+* Template Conformance Findings Raised: T (Update Document: T1, Update Template: T2, Accept-with-Note: T3)
 
 **Conclusion:**
 [Can the audited components be marked as complete in their edition tables?
@@ -498,6 +503,7 @@ disposition.]
 ### Next Steps
 
 [What needs to happen as a result of this audit?
+
 * Fix critical/major issues
 * Create follow-up tasks
 * Update edition tables
@@ -508,6 +514,7 @@ disposition.]
 ### Process improvement
 
 [Note whether this audit suggests changes to:
+
 * Component specification template
 * Audit task template
 * Implementation processes
@@ -520,19 +527,19 @@ If none, state "No changes identified".]
 
 [Before marking this audit task complete, verify ALL of the following:]
 
-- [ ] All components in scope have been audited
-- [ ] All capabilities have been verified against specifications
-- [ ] All issues have been logged with severity and recommendations
-- [ ] External dependencies checked (if applicable)
-- [ ] Phase B bottom-up sweep performed across the full in-scope surface
-- [ ] Excluded-artefacts list provided (empty is fine; missing is not)
-- [ ] Every orphan candidate has a recorded user disposition
-- [ ] Phase C reconciliation table completed
-- [ ] Pre-pass: each in-scope component spec checked against `component-specification-template.md`; drift recorded with a disposition
-- [ ] Audit report is complete with executive summary
-- [ ] Clear pass/fail determination made for each component
-- [ ] Edition tables have been updated with audit completion date
-- [ ] Any follow-up tasks have been created
+* [ ] All components in scope have been audited
+* [ ] All capabilities have been verified against specifications
+* [ ] All issues have been logged with severity and recommendations
+* [ ] External dependencies checked (if applicable)
+* [ ] Phase B bottom-up sweep performed across the full in-scope surface
+* [ ] Excluded-artefacts list provided (empty is fine; missing is not)
+* [ ] Every orphan candidate has a recorded user disposition
+* [ ] Phase C reconciliation table completed
+* [ ] Pre-pass: each in-scope component spec checked against `component-specification-template.md`; drift recorded with a disposition
+* [ ] Audit report is complete with executive summary
+* [ ] Clear pass/fail determination made for each component
+* [ ] Edition tables have been updated with audit completion date
+* [ ] Any follow-up tasks have been created
 
 ## Addendum
 

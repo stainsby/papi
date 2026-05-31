@@ -1,3 +1,5 @@
+# Task: Fulfilment Audit - [Scope Name]
+
 [TO CREATE A NEW FULFILMENT AUDIT TASK: **COPY** THIS TEMPLATE, THEN **EDIT** THE COPY
 **ONE SECTION AT A TIME**, FOLLOWING THE INSTRUCTIONS IN EACH SECTION]
 
@@ -22,8 +24,6 @@ covered by the `papi-sdlc-task-acceptance-test` skill.]
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record
   that under *Process improvement* in the *Improvement* section.]
-
-# Task: Fulfilment Audit - [Scope Name]
 
 **Audit Scope:** [User stories vs. component capabilities for: scope description]
 **Audit Date:** YYYY-MM-DD

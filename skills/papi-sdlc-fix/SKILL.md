@@ -1,6 +1,6 @@
 ---
 name: papi-sdlc-fix
-description: Create or work with defect fix tasks — diagnose a defect, plan the fix, and identify improvements to leave the affected area in a better state. [PAPI]
+description: Create or work with defect fix tasks, where the defect may be in code, a specification, documentation, tooling, or a process. [PAPI SDLC]
 ---
 
 # SDLC Task - Fix
@@ -72,22 +72,6 @@ condition no longer occurs.
 Use proper TDD: write a failing test that directly captures the observed
 evidence, then implement the fix to make that test pass. This ensures the
 fix is verifiable and prevents regressions.
-
-## Checklist when creating a fix task
-
-- [ ] Root cause identified and documented (not just the symptom)
-- [ ] Severity assessed: critical correctness / usability / consistency / cosmetic
-- [ ] Scope stated: which artefacts are affected — spec, code, tests, docs, or combination
-- [ ] Related consistency issues identified and scoped in (or explicitly noted
-      as out of scope with a follow-on task reference)
-- [ ] Related clarity improvements identified and included
-- [ ] Unnecessary extra-step patterns eliminated where the fix makes this possible
-- [ ] All affected artefact updates listed in Goals and Approach
-- [ ] Acceptance criteria are concrete and testable — directly inverting the
-      observed evidence
-- [ ] TDD approach was planned and used
-- [ ] Regression/verification tests included in Approach where applicable
-- [ ] Dependencies on other fix tasks noted
 
 ## Skill artefacts
 

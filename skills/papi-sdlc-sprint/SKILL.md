@@ -1,6 +1,6 @@
 ---
 name: papi-sdlc-sprint
-description: Create or work with sprint tasks — plan, execute, verify, and close a bounded cycle of development work with post-completion quality gates. [PAPI SDLC]
+description: Create or work with sprint-like tasks — plan, execute, verify, and close a bounded cycle of development work . [PAPI SDLC]
 ---
 
 # SDLC Task - Sprint
@@ -23,13 +23,14 @@ Reading these skills is REQUIRED to understand and execute this skill:
 
 - PAPI skill `papi-tasks-understand`
 - PAPI skill `papi-templates-understand`
+- PAPI skill `papi-long-task`
 
 Read these as needed:
 
 - PAPI skill `papi-sdlc-task-compliance-audit`
 - PAPI skill `papi-sdlc-validate-capabilities-dag`
 
-Also, consider this to be a controlled by the `papi-long-task` skill.
+Use the `papi-long-task` skill.
 
 ## When to use this skill
 
@@ -47,7 +48,7 @@ Use this skill when:
 A sprint proceeds through four phases. Each phase has mandatory activities
 and exit criteria.
 
-### Phase 1 — Planning
+### Planning
 
 1. **Define scope**: list the sub-tasks, grouped by theme or dependency.
 2. **Sequence**: identify dependencies between sub-tasks and define execution
@@ -61,7 +62,7 @@ and exit criteria.
    these explicitly. At least one automated test must exercise the real round
    trip across each identified boundary by the end of the sprint.
 
-Please note, where creating individual tasks, do not link them to the sprint
+When creating individual tasks, do not link them to the sprint
 either by name or by content UNLESS there is a special reason. The sprint can
 list tasks, not visa-versa. At time we may dynamically reallocate tasks
 between sprints, so task-to-sprint links are discouraged. Thus, sub-task
@@ -70,105 +71,19 @@ names here generally DON'T refer to the sprint.
 **IMPORTANT: To create sub-tasks ONE AT A TIME, following the PAPI copy first,
 and edit section-by-section method for EACH one.**
 
-### Phase 2 — Execution
+### Execution
 
-1. Work sub-tasks in the sequenced order.
-2. Follow the SDLC workflow within each sub-task (spec -> tests -> code ->
-   refactor).
-3. After each sub-task completes:
-   - Run the full automated test suite and confirm it passes.
-   - Update the sprint status table.
-4. If a sub-task reveals new issues:
-   - Minor and directly related: fold into the current sub-task.
-   - Significant or out of scope: create a new sub-task or note as a
-     follow-on. Do not expand sprint scope without human approval.
+Work sub-tasks in the sequenced order. After each sub-task completes,
+update the sprint status table. If a sub-task reveals new issues:
 
-### Phase 3 — Verification (Post-Implementation)
+- Minor and directly related: fold into the current sub-task.
+- Significant or out of scope: create a new sub-task or note as a
+  follow-on. Do not expand sprint scope without human approval.
+
+### Verification (Post-Implementation)
 
 After all sub-tasks are complete, run the full verification checklist before
-declaring the sprint complete. The checklist is in the sprint task template
-and includes the following mandatory gates:
-
-#### Gate 1 — Automated Tests
-
-- All unit tests pass.
-- All integration tests pass.
-- All browser/E2E tests pass (both mock-based and, if applicable,
-  tests against a real server).
-
-#### Gate 2 — Manual Smoke Test
-
-- If the sprint includes UI or user-facing changes: perform a brief manual
-  walkthrough of the affected workflows using the actual user interface (not
-  tool-level calls or mock data).
-- Record what was tested and the outcome.
-- This gate exists because automated tests that use mocked boundaries cannot
-  catch integration-level defects that only manifest in a real environment.
-
-#### Gate 3 — Capabilities DAG Validation
-
-- Use the `papi-sdlc-validate-capabilities-dag` skill: run the DAG
-  validation script against the project's component specifications directory.
-- Confirm zero issues (no cycles, no orphans, no invalid references).
-
-#### Gate 4 — Compliance Spot-Check
-
-- For each component specification modified during the sprint: verify the
-  spec is in sync with the code.
-- Verify capability codes referenced in new or modified code are correct.
-- This is a lightweight check, not a full compliance audit (see
-  `papi-sdlc-task-compliance-audit` skill). If the spot-check reveals
-  significant drift, create a compliance audit task as a follow-on.
-
-#### Gate 5 — Integration Boundary Check
-
-- For every integration boundary identified in Phase 1: confirm at least one
-  automated test exercises the real round trip (not mocks).
-- If no such test exists, either add one (as a sub-task) or document the gap
-  and create a follow-on task.
-
-### Phase 4 — Close
-
-1. Complete the Reflect and Improvement sections of the sprint document.
-2. Record process improvement observations:
-   - Did this sprint reveal gaps in testing, specification, or process?
-   - Should any templates, skills, or instructions be updated?
-   - Were there recurring issues that suggest a systemic problem?
-3. Move the sprint task (and all sub-tasks) to the completed directory.
-4. If the sprint addressed audit findings: note that a follow-up audit should
-   be scheduled to confirm the findings are resolved.
-
-## Relationship to Audits
-
-- Sprints and audits are complementary but distinct:
-  - A sprint **delivers** changes.
-  - A compliance audit (see `papi-sdlc-task-compliance-audit`) **verifies**
-    that code matches specs.
-  - A fulfilment audit (see `papi-sdlc-task-fulfilment-audit`) **verifies**
-    that user stories and the capabilities they cite are aligned (in both
-    directions).
-  - An acceptance test (see `papi-sdlc-task-acceptance-test`) **exercises**
-    each story through the real user interface in role.
-- After a sprint that fixes audit findings, a follow-up audit should be
-  planned (not necessarily immediately, but before the next release).
-- Typical sprints shouldn't include full compliance or fulfilment audits as
-  sub-tasks. The sprint's Gate 4 (compliance spot-check) is sufficient
-  for in-sprint verification. Full audits are separate tasks created
-  using their respective skills.
-
-## Anti-Patterns to Avoid
-
-1. **Mock-only verification**: declaring the sprint complete because all
-   unit/mock-based tests pass, without verifying real integration. This is
-   the single most common failure mode and the reason this skill exists.
-2. **Skipping the manual smoke test**: automated tests can only catch what
-   they are designed to catch. A 30-second manual walkthrough after
-   completing UI work has repeatedly caught critical defects that passed
-   all automated checks.
-3. **Scope creep without approval**: adding tasks to a sprint mid-flight
-   without human approval. Create follow-on tasks instead.
-4. **Closing without reflection**: the Reflect and Improvement sections are
-   not optional. Every sprint teaches something about the process.
+declaring the sprint complete. 
 
 ## Skill artefacts
 

@@ -1,3 +1,5 @@
+# Task: [Fix — short description of the defect]
+
 [Use this template for defect fix tasks — a reported or observed defect, bug,
 or unintended behaviour that needs to be corrected, with improvements to leave
 the affected area in a better state.]
@@ -8,12 +10,11 @@ root-cause analysis, and Goals must address both the defect and related
 improvements — not the symptom alone.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record that
   under *Process improvement* in the *Improvement* section.]
-
-# Task: [Fix — short description of the defect]
 
 **External Tracking:** [e.g., JIRA-123, GitHub Issue #456, audit finding ref, or "None"]  
 **Impacted Components:** [List CMP codes affected, or "Multiple"]  
@@ -67,6 +68,7 @@ This task follows the strict SDLC sequence — do NOT deviate without explicit p
 8. **Refactor** — improve structure while keeping tests passing.
 
 **TDD Loop:**
+
 1. Write/update tests to reproduce the defect (RED)
 2. Confirm tests fail for the right reason
 3. Implement fix — minimum code needed to pass (GREEN)
@@ -78,16 +80,13 @@ This task follows the strict SDLC sequence — do NOT deviate without explicit p
 ## Observed Behaviour (Evidence)
 
 [REQUIRED before writing the plan. Capture the exact observed behaviour:
-- What was done (inputs, steps, call made, action taken)
-- What actually happened (error message verbatim, incorrect output, missing field, wrong state, etc.)
-- What was expected to happen instead
+
+* What was done (inputs, steps, call made, action taken)
+* What actually happened (error message verbatim, incorrect output, missing field, wrong state, etc.)
+* What was expected to happen instead
 
 This evidence is the acceptance test in reverse: the fix is complete when this
 behaviour no longer occurs.]
-
-```
-[Paste exact error messages, output, or observations here]
-```
 
 ## Root Cause
 
@@ -102,9 +101,10 @@ originates. If root cause is unknown at the time of task creation, mark as
 it will and will not address.
 
 State explicitly:
-- Which artefact(s) contain the defect: spec / code / tests / documentation / process
-- What related improvements are in scope (directly caused by or revealed by this defect)
-- What is explicitly out of scope (with a follow-on task reference if applicable)]
+
+* Which artefact(s) contain the defect: spec / code / tests / documentation / process
+* What related improvements are in scope (directly caused by or revealed by this defect)
+* What is explicitly out of scope (with a follow-on task reference if applicable)]
 
 ## Goals
 
@@ -135,7 +135,7 @@ State explicitly:
 [List ALL component specifications that are impacted by this fix.
 For each: code, name, one-line summary, link to spec file.]
 
-- **CMP.XXX.YYY** - [Component Name] - [One-line summary] - [Link to spec]
+* **CMP.XXX.YYY** - [Component Name] - [One-line summary] - [Link to spec]
 
 ### Other References
 
@@ -164,17 +164,18 @@ set of affected artefacts. If root cause is already confirmed, state
 ### Acceptance Criteria
 
 [Testable criteria that MUST be met. Include:
-- The specific defect behaviour no longer occurs (invert the Evidence)
-- Any improvements in scope are delivered
-- All affected artefacts updated]
 
-- [ ] [The observed behaviour described in Evidence no longer occurs]
-- [ ] [Root cause artefact corrected]
-- [ ] [Clarity/consistency improvements delivered — describe specifically]
-- [ ] All existing tests pass
-- [ ] Regression test(s) added and passing
-- [ ] All affected specifications updated and in sync
-- [ ] All affected documentation updated
+* The specific defect behaviour no longer occurs (invert the Evidence)
+* Any improvements in scope are delivered
+* All affected artefacts updated]
+
+* [ ] [The observed behaviour described in Evidence no longer occurs]
+* [ ] [Root cause artefact corrected]
+* [ ] [Clarity/consistency improvements delivered — describe specifically]
+* [ ] All existing tests pass
+* [ ] Regression test(s) added and passing
+* [ ] All affected specifications updated and in sync
+* [ ] All affected documentation updated
 
 ### Testing Strategy
 
@@ -187,16 +188,16 @@ Describe: test location, what it exercises, what it asserts.]
 
 #### Related Test Categories
 
-- [ ] **Unit Tests** — [If applicable: describe]
-- [ ] **Integration Tests** — [If applicable: describe]
-- [ ] **Smoke Tests** — [End-to-end path verification, if applicable]
-- [ ] **Browser/E2E Tests** — [If applicable to UI components]
+* [ ] **Unit Tests** — [If applicable: describe]
+* [ ] **Integration Tests** — [If applicable: describe]
+* [ ] **Smoke Tests** — [End-to-end path verification, if applicable]
+* [ ] **Browser/E2E Tests** — [If applicable to UI components]
 
 #### Coverage Requirements
 
-- All tests MUST pass before task completion.
-- At least one regression test MUST be added that would have caught this defect.
-- Deleting any test requires EXPLICIT HUMAN permission.
+* All tests MUST pass before task completion.
+* At least one regression test MUST be added that would have caught this defect.
+* Deleting any test requires EXPLICIT HUMAN permission.
 
 ### Constraints
 
@@ -270,11 +271,10 @@ of working. If none, state "No changes identified".]
 
 [Before marking this task complete, verify ALL of the following:]
 
-- [ ] The observed behaviour described in Evidence no longer occurs
-- [ ] Root cause artefact corrected
-- [ ] All acceptance criteria met
-- [ ] At least one regression test added and passing
-- [ ] Full test suite passes
-- [ ] All affected component specifications updated and in sync
-- [ ] All affected documentation updated
-- [ ] Follow-on tasks created for any out-of-scope issues identified
+* [ ] The observed behaviour described in Evidence no longer occurs
+* [ ] Root cause artefact corrected
+* [ ] All acceptance criteria met
+* [ ] Regression tests added where appropriate
+* [ ] Full test suite passes
+* [ ] All affected documentation, at all levels (charter down to specs), updated
+* [ ] Follow-on tasks created for any out-of-scope issues identified

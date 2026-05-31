@@ -1,13 +1,14 @@
+# [Document Title]
+
 [Use this template for creating structured documents of any kind, where no more specific template exists, OR as a basis for a new template.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are OPTIONAL.
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change: inform your
   user and/or record the need under *Process improvement* in the *Improvement*
   section.]
-
-# [Document Title]
 
 ## Template
 
@@ -87,13 +88,9 @@ guidelines, contracts, research, industry best practices, and so on.]
 
 [How changes to this document should be proposed and approved.]
 
-
-
 [ --- MAIN CONTENT SECTIONS GO HERE:
 EVERYTHING BEFORE THIS CONTENT IS FRONT MATTER,
 EVERYTHING AFTER THIS IS END MATTER --- ]
-
-
 
 ## Improvement
 

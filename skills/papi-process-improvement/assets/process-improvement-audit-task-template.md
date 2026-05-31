@@ -1,7 +1,10 @@
+# Task: Process Improvement Audit - [Scope/Period]
+
 [Use this template to systematically review completed tasks and other output documents
 to identify process improvement opportunities and propose corrective actions.]
 
 [When to use this template:
+
 * To systematically review completed work for process improvement insights
 * To mine "Process improvement" sections and other indicators from completed tasks
 * To identify recurring issues, template gaps, and process documentation needs
@@ -11,12 +14,11 @@ to identify process improvement opportunities and propose corrective actions.]
 [This template is derived from `basic-task-template.md`.]
 
 [This template is a guideline:
+
 * Unless otherwise specified, all parts are optional.
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record that
   under *Process improvement* in the *Improvement* section.]
-
-# Task: Process Improvement Audit - [Scope/Period]
 
 **Audit Period:** [e.g., "2026-01 to 2026-02" or "Sprint 5" or "Component XYZ tasks"]  
 **Documents Reviewed:** [Number of tasks/documents]  
@@ -40,6 +42,7 @@ or "Audit Component X implementation tasks to improve future component work".]
 ## Goals
 
 [What this audit aims to achieve. Typically:
+
 * Identify process improvement opportunities from completed work
 * Categorize and prioritize identified issues
 * Propose concrete action tasks to address root causes
@@ -51,6 +54,7 @@ or "Audit Component X implementation tasks to improve future component work".]
 
 [List or describe the set of documents to audit.
 Examples:
+
 * All tasks in docs/tasks/completed/ from [date range]
 * All completed tasks tagged with [specific component/area]
 * Recent template instantiations to verify template clarity
@@ -60,6 +64,7 @@ Examples:
 
 [Specify what indicators suggest process improvement needs.
 Common sources:
+
 * Explicit "Process improvement" sections in completed tasks
 * Comments about template inadequacy or confusion
 * Recurring deviations or workarounds
@@ -75,6 +80,7 @@ Common sources:
 
 [High-level overview of the audit results.
 Example:
+
 * Documents reviewed: X
 * Process improvement comments found: Y
 * Categories identified: Z
@@ -83,6 +89,7 @@ Example:
 ### Categorized Findings
 
 [Group findings by category. Common categories:
+
 * Template improvements needed
 * Process documentation gaps
 * Skill/instruction clarifications needed
@@ -116,6 +123,7 @@ Example:
 
 **Proposed Task:**
 [Either link to a created task document, or outline what the task would entail:
+
 * Title: [Task name]
 * Template to use: [Which task template]
 * Key actions: [Bullet list of what needs to be done]
@@ -128,6 +136,7 @@ Example:
 ## Priority Ranking
 
 [Rank the proposed actions by priority, considering:
+
 * Impact on work quality/efficiency
 * Frequency of the problem
 * Effort required to implement
@@ -161,6 +170,7 @@ Example:
 
 [What happens after this audit is complete.
 Typically:
+
 * Create the proposed action tasks
 * Prioritize them in the backlog
 * Schedule their implementation

@@ -1,3 +1,5 @@
+# Charter: [Project Name]
+
 [Use this template for the Project Charter — the highest-level document
 for a project, saying why it exists, where it is going, and how it
 intends to get there.]
@@ -10,8 +12,6 @@ intends to get there.]
 * If you find yourself needing to deviate in a meaningful way, that may
   indicate a need for a new/updated template or process change; record that
   under *Notes* in this document.]
-
-# Charter: [Project Name]
 
 **Status:** Draft / Active / Superseded  
 **Last reviewed:** YYYY-MM-DD  
@@ -78,9 +78,7 @@ Examples of the kinds of things that go here:
 * A company or organisation vision the project is one expression of
 * A community manifesto or shared way of working the project signs up to
 * A quality standard or set of rules the project must follow
-
-* [name] — [link] — [what this project takes from it]
-* …
+]
 
 ## Success indicators
 
@@ -103,13 +101,7 @@ Some examples to draw from:
 * "We have not had to apologise to a user for a regression in six months."
 * "Outside contributors open PRs without needing hand-holding."
 * "Findings are reproduced by at least one independent group."
-* "Users return without being prompted."]
-
-* [indicator 1]
-* [indicator 2]
-* …
+* "Users return without being prompted."
+]
 
 ## Notes
-
-[OMIT unless relevant. Anything that doesn't fit above: dependencies,
-constraints, open questions, things deliberately put off.]

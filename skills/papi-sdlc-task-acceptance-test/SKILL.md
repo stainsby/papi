@@ -12,16 +12,6 @@ user-facing interface** (UI, CLI, API, document, etc.) in the named
 role, and records evidence that the story can in fact be performed
 end-to-end.
 
-This is **not an audit**. PAPI audits (charter, fulfilment, compliance)
-examine artefacts for drift between adjacent layers. An acceptance
-test instead **performs** the system: it asks whether the experience
-the user is supposed to get actually exists and works.
-
-It typically runs **after** a successful fulfilment audit (stories
-↔ capabilities aligned) and a successful compliance audit
-(capabilities ↔ code aligned). If those audits have not passed,
-acceptance testing usually has nothing useful to say yet.
-
 **This needs the PAPI long task skill.**
 
 ## Role discipline

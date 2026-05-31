@@ -1,12 +1,12 @@
 ---
 name: papi-sdlc-onboard
-description: Start a new project that will use, or onboard an existing project into, the PAPI methodology by establishing its component hierarchy and reference architecture. [PAPI SDLC]
+description: Start a new project that will be managed by the PAPI methodology. [PAPI SDLC]
 ---
 
 # SDLC Task - Onboard
 
 - Read and use the reference architectures to determine the best component hierarchy for the project.
-- For existing projects, use this in conjunction with the `papi-sdlc-assimilate` skill.
+- For existing projects, use the `papi-sdlc-assimilate` skill.
 
 ## Dependencies
 
@@ -17,8 +17,8 @@ Reading these skills is REQUIRED to understand and execute this skill:
 
 Read these as needed:
 
-- PAPI skill `papi-sdlc-assimilate` (peer)
-- PAPI skill `papi-sdlc-charter` (peer)
+- PAPI skill `papi-sdlc-assimilate`
+- PAPI skill `papi-sdlc-charter`
 
 ## Charter
 
