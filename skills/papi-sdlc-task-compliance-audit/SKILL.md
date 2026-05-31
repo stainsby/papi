@@ -104,7 +104,7 @@ Reading these skills is REQUIRED to understand and execute this skill:
 ## Outputs
 
 - some artefact produced during the audit may be valuable to maintain for future audits (scripts, test data etc.)
-  - if so, these shoudl be tracked a PAPI components
+  - if so, these should be tracked as PAPI components
 
 ## Skill artefacts
 

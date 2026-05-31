@@ -120,11 +120,57 @@ For any external software component to be adopted:
 - External software components MUST be considered when designing tests for integration and system behaviour, especially where their capabilities lie on critical paths.
 - Environment or platform constraints relevant to external software components SHOULD be recorded in their specification documents.
 
-## 7. Environments
+## 7. User-Facing Components
+
+User-facing components are the components that present capabilities directly
+to an external actor across a system boundary. They are the dual of external
+software components (§6): where external components sit *below* us and we
+depend on them, user-facing components sit *at the edge* and actors depend on
+them. This makes them a distinct class, just as external components are.
+
+### 7.1 What Makes a Component User-Facing
+
+- An actor is any role outside the system that initiates interaction: a human
+  at a screen, a machine calling an API, an operator at a command line, or an
+  agent. The user interface (`UI`) component is the canonical example, but a
+  service (`SRV`) exposing a public API, or an application (`APP`) offering a
+  CLI, are equally user-facing.
+- User-facing is a **cross-cutting trait, not a code prefix.** Any boundary
+  component may carry it regardless of its `UI` / `SRV` / `APP` / … prefix.
+  Reach for `UI` when the boundary is a genuine user interface; otherwise keep
+  the prefix that best describes the component.
+- The trait is recorded at the capability level: a capability is
+  **user-facing** when its `**Users:**` field cites one or more user stories.
+  A component is user-facing when it owns at least one such capability.
+
+### 7.2 The Reference Points Up, Never Down
+
+- User stories are upstream statements of intent and MUST NOT reference
+  components, capabilities, or any other solution structure.
+- Every user-facing capability MUST cite at least one user story in its
+  `**Users:**` field, recording the role it serves; that role MUST match the
+  cited story's `**Role:**` field.
+- This is the only place the story↔capability link is stored. It mirrors how
+  external components are referenced only from the internal components that
+  depend on them — never the other way around.
+
+### 7.3 Documentation and Audit
+
+- User-facing capabilities are exercised end-to-end through their real
+  interface by the acceptance-test activity (`papi-sdlc-task-acceptance-test`),
+  with the appropriate role discipline.
+- Alignment between user-facing capabilities and the stories they cite is
+  verified by the fulfilment audit (`papi-sdlc-task-fulfilment-audit`), which
+  sweeps every user-facing capability and every story in both directions.
+- Capabilities that serve only other capabilities are marked `internal`, and
+  capabilities that merely bundle others (e.g. a release) are marked
+  `composition`; neither is user-facing and neither cites stories.
+
+## 8. Environments
 
 Environments are the distinct contexts in which software and agents operate.
 
-### 7.1 Environment Types
+### 8.1 Environment Types
 
 - **Execution environments**: Concrete contexts where code is executed, such as local machine processes, containers, server processes, or agent runtimes.
 - **Runtime environments**: Combinations of language runtime, libraries, configuration, and operating system under which components and capabilities are executed.
@@ -133,7 +179,7 @@ Environments are the distinct contexts in which software and agents operate.
 - **Production environments**: Used to run software for actual end users or production workloads.
 - **Agent environments**: Contexts in which AI agents operate, including their available tools, instructions, and access to code and documentation.
 
-### 7.2 Environment Requirements and Constraints
+### 8.2 Environment Requirements and Constraints
 
 Internal software components:
 
@@ -166,7 +212,7 @@ General:
 - Environments that involve external software components SHOULD explicitly document any dependency on external systems, services, or agents in the dependencies section of component specifications.
 - Changes to components or tasks that depend on specific environments SHOULD include updates to any environment-related documentation or configuration referenced in component specs or tasks.
 
-## 8. Subcomponents and Containment
+## 9. Subcomponents and Containment
 
 - Components are organised by containment, and may have sub-components (children).
 - For projects with many components, specifications MUST be organised in a file hierarchy reflecting the containment structure under `docs/components/`.

@@ -21,10 +21,11 @@ It is the middle rung of the PAPI audit ladder:
 
 The fulfilment audit asks two questions:
 
-1. For every user story, do the capabilities it cites actually exist,
-   and do they (together) cover what the story needs?
-2. For every capability in scope, is there a user story that needs
-   it — or is the capability an orphan?
+1. For every user story, does at least one user-facing capability cite
+   it, and do the citing capabilities together cover what the story
+   needs?
+2. For every user-facing capability in scope, are the stories it cites
+   real and correctly attributed — or is the capability an orphan?
 
 The output is a findings list with a disposition for each finding:
 update the stories, update the component specs, or accept-with-note.
@@ -60,37 +61,38 @@ A fulfilment audit MUST then run in two directions and reconcile the
 results:
 
 - **Phase A — Top-down (story → capability):** for each user story in
-  scope, take the `**Capabilities:**` field (and any in-body
-  references) and check:
-  - every cited capability ID exists in the relevant component spec
-  - every cited capability is **user-facing** (its `**Users:**` field
-    names one or more user-story role names; `internal` and
-    `composition` capabilities MUST NOT be cited directly by stories)
-  - the story's `**Role:**` appears in the `**Users:**` field of each
-    cited capability
-  - the cited capabilities are plausibly aligned with what the story
+  scope, gather the user-facing capabilities whose `**Users:**` field
+  cites that story, and check:
+  - at least one capability cites the story (a story cited by none is
+    unfulfilled)
+  - every citing capability is **user-facing** (its `**Users:**` field
+    cites one or more user stories; `internal` and `composition`
+    capabilities MUST NOT cite stories)
+  - the story's `**Role:**` matches the role recorded against it in
+    each citing capability's `**Users:**` field
+  - the citing capabilities are plausibly aligned with what the story
     asks for
-  - the union of cited capabilities is sufficient to cover the
+  - the union of citing capabilities is sufficient to cover the
     story's narrative and acceptance criteria
   - Classify the story as: **Covered**, **Partial**, **Missing**, or
     **Misaligned**.
 
 - **Phase B — Bottom-up (capability → story):** Phase B sweeps only
   **user-facing capabilities**, i.e. those whose `**Users:**` field
-  names at least one role (capabilities marked `internal` or
+  cites at least one user story (capabilities marked `internal` or
   `composition` are out of scope for this audit and belong in the
   Excluded list).
 
-  For each user-facing capability in scope, find the user story (or
-  stories) that cite it. Check:
-  - the capability is cited by at least one in-scope story
-  - for every role named in the capability's `**Users:**` field,
-    at least one citing story has that role in its `**Role:**` field
+  For each user-facing capability in scope, resolve the user stories
+  it cites. Check:
+  - every story it cites exists and is in scope
+  - the role recorded against each cited story matches that story's
+    own `**Role:**` field
 
-  Capabilities failing the first check are **orphan candidates**.
-  Capabilities failing only the second check are **role-coverage
-  gaps** (the capability is in use, but not for every role it claims
-  to serve).
+  Capabilities citing no real in-scope story are **orphan
+  candidates**. Capabilities whose cited stories exist but carry a
+  mismatched role are **role-coverage gaps** (the capability is in
+  use, but misattributes who it serves).
 
   An orphan capability is one of two kinds:
   - *scope creep* — the capability exists but no user wants it
@@ -170,7 +172,7 @@ Read these as needed:
   if not, use the one in `assets`.
 - Copy the template verbatim and edit it section by section.
 - For Phase A, work through each story in turn; record findings
-  against the capabilities it cites.
+  against the capabilities that cite it.
 - For Phase B, work through each capability in scope; record the
   covering story (or stories). Anything not covered goes to the
   orphan candidates table.

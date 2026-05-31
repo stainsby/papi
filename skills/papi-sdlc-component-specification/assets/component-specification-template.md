@@ -75,7 +75,13 @@ If this component has sub-components, their capabilities belong in THEIR OWN
 specification files, NOT here. This file should only reference sub-component
 capabilities in the Sub-Components section below.]
 
-[For an external component, it is sufficient to define high-level, somewhat hand-waving capabilites as needed by by other components.]
+[For an external component, it is sufficient to define high-level, somewhat hand-waving capabilities as needed by other components.]
+
+[If this is a **user-facing** component — it presents capabilities directly to
+an external actor (a human at a UI, a machine calling an API, an operator at a
+CLI, or an agent) — each such capability MUST cite the user stories it fulfils
+in its `**Users:**` field. See the component model's *User-Facing Components*
+section. User stories never reference capabilities; the link is stored here.]
 
 [Capability codes are scoped by this component. If this component is CMP.B and
 you define CAP.STORAGE below, it is implicitly CMP.B.CAP.STORAGE in the global
@@ -87,10 +93,16 @@ dependency graph, but write just CAP.STORAGE here since the component context is
 
 **Description:** [Detailed explanation of this capability, its purpose, and how it works. Max 1 to 3 paragraphs.]
 
-**Users:** [Either one or more user-story role names (this is a user-facing
-capability and the named roles MUST match roles used by user stories), or
-`internal` (consumed only by other capabilities), or `composition` (bundles
-other capabilities, e.g. a release).]
+**Users:** [Either one or more user stories that this capability fulfils
+(this makes it a user-facing capability), or `internal` (consumed only by
+other capabilities), or `composition` (bundles other capabilities, e.g. a
+release).
+
+For a user-facing capability, cite each story by its ID and record the
+role it serves, e.g. `US-014 (authenticated administrator)`. The link
+between stories and capabilities lives HERE, on the component side — user
+stories never reference capabilities. The recorded role MUST match the
+cited story's `**Role:**` field.]
 
 **Interface/Contract:**
 
@@ -114,7 +126,7 @@ other capabilities, e.g. a release).]
 We should not be lazy and skimp on testing here even if it's hard:
 
 * if this requires major tools to be brought in, or for testing scaffolding to be built, then if these are large or much work they can be sub-components,
-. higher-level components may need human partticipants in testing: this is OK as long as the tests are well-defined, repeatable, and not just the product of laziness]
+. higher-level components may need human participants in testing: this is OK as long as the tests are well-defined, repeatable, and not just the product of laziness]
 
 ### Capability Tests
 
@@ -128,7 +140,7 @@ There should be a sub-section per capability. Correctness must cover ALL state g
 [MANDATORY FOR **ALL** CAPABILITIES PROVIDED BY THIS COMPONENT.]
 
 [These are integration tests that verify the correct interaction between this component's capabilities and the capabilities of other components it depends on.
-There should be a sub-section per capability. Correctness must examine whether the other comonent's capabilities we state that we depend on here are used and used correctly.]
+There should be a sub-section per capability. Correctness must examine whether the other component's capabilities we state that we depend on here are used and used correctly.]
 
 ## Context
 

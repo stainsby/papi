@@ -2,7 +2,7 @@
 
 Complete listing of all instructions and skills with their descriptions and contents.
 
-Generated: Fri 22 May 2026 20:24:49 AEST
+Generated: Sun 31 May 2026 15:47:31 AEST
 
 ## Instructions
 
@@ -18,7 +18,7 @@ Perform work to complete tasks when asked to "work autonomously".
 
 ### papi-long-task
 
-Manage a task with many repeated steps, or a long running task with many steps, so that it is tracked and resumable over more than one seesion if needed.
+Manage a task with many repeated steps, or a long running task with many steps, so that it is tracked and resumable over more than one session if needed.
 
 [skills/papi-long-task/SKILL.md](skills/papi-long-task/SKILL.md)
 
@@ -42,7 +42,7 @@ Contents:
 
 ### papi-sdlc-charter
 
-Create or work with a Project Charter — the highest-level document for a project, saying why it exists, where it is going, and how it intends to get there. [PAPI SDLC]
+Create, understand, or work with the project charter. [PAPI SDLC]
 
 [skills/papi-sdlc-charter/SKILL.md](skills/papi-sdlc-charter/SKILL.md)
 
@@ -60,7 +60,7 @@ Contents:
 
 ### papi-sdlc-fix
 
-Create or work with defect fix tasks — diagnose a defect, plan the fix, and identify improvements to leave the affected area in a better state. [PAPI]
+Create or work with defect fix tasks, where the defect may be in code, a specification, documentation, tooling, or a process. [PAPI SDLC]
 
 [skills/papi-sdlc-fix/SKILL.md](skills/papi-sdlc-fix/SKILL.md)
 
@@ -69,7 +69,7 @@ Contents:
 
 ### papi-sdlc-onboard
 
-Start a new project that will use, or onboard an existing project into, the PAPI methodology by establishing its component hierarchy and reference architecture. [PAPI SDLC]
+Start a new project that will be managed by the PAPI methodology. [PAPI SDLC]
 
 [skills/papi-sdlc-onboard/SKILL.md](skills/papi-sdlc-onboard/SKILL.md)
 
@@ -78,7 +78,7 @@ Contents:
 
 ### papi-sdlc-sprint
 
-Create or work with sprint tasks — plan, execute, verify, and close a bounded cycle of development work with post-completion quality gates. [PAPI SDLC]
+Create or work with sprint-like tasks — plan, execute, verify, and close a bounded cycle of development work . [PAPI SDLC]
 
 [skills/papi-sdlc-sprint/SKILL.md](skills/papi-sdlc-sprint/SKILL.md)
 

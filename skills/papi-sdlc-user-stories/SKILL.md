@@ -83,12 +83,15 @@ fulfilment status, or audit findings. Those belong in task, testing,
 release, or audit artefacts. The story's only lifecycle signal is its
 **Status** field.
 
-### Stories link to capabilities
+### Stories know nothing about component specifications
 
-Every story must cite the capability (or capabilities) from the component
-specification that it helps fulfil. A story with no capability link
-indicates either a missing spec entry or an out-of-scope story — resolve
-before marking **Ready**.
+A user story is an upstream statement of intent and MUST NOT reference
+component specifications, capability codes, or any other solution
+structure. The dependency points the other way: the user-facing
+components that fulfil a story reference *it* from their capability
+`**Users:**` fields (see the `papi-sdlc-component-specification` skill),
+never the reverse. This keeps stories stable when the architecture is
+refactored.
 
 ### Stories are written in the actor's language
 
@@ -100,8 +103,8 @@ story and recognise their own world? If not, rewrite.
 
 A story's **Status** must be consistent with the scope of its parent
 epic/release. Stories outside current scope stay **Draft** (or are
-removed). Do not mark a story **Ready** unless its capability link and
-parent scope agree.
+removed). Do not mark a story **Ready** unless its scope agrees with
+that of its parent epic/release.
 
 ## Checklist when creating a user story
 
@@ -114,8 +117,8 @@ parent scope agree.
 - [ ] At least one negative or boundary acceptance criterion included
 - [ ] All criteria are assertable through the interface, not internal state
 - [ ] Story contains exactly one actor and one primary goal (split if not)
-- [ ] Capability link(s) recorded (component-spec capability ID)
-- [ ] `**Role:**` field set, matches the narrative actor, and matches a role name appearing in the cited capabilities' `**Users:**` field
+- [ ] `**Role:**` field set, matches the narrative actor, and matches a role defined in the parent user-stories document
+- [ ] Story body is free of capability codes and component-spec references
 - [ ] Wording uses language the named role would recognise
 - [ ] No implementation / test / fulfilment / audit evidence in story body
 - [ ] Status (Draft / Ready / In Progress / Done) matches parent scope

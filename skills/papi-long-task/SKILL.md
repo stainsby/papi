@@ -23,7 +23,7 @@ Steps:
     * THIS is CRITICALLY IMPORTANT TO KEEP FOCUS AND NOT MISS DETAILS:
     * slow and steady, one at a time
     * do not try to 'batch' for performance/efficiency
-    * checkpoint after each aub-task
+    * checkpoint after each sub-task
   (b) Check the item off on the list.
   (c) Add any newly discovered items to the list if the list is dynamic.
 

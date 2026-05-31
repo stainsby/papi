@@ -65,15 +65,15 @@ and to user-facing ('interface') components.]
 
 ### Architecture
 
-[Using the PAPI architectures reference, collaborate wit hthe user to
-chosse the architecure to use.]
+[Using the PAPI architectures reference, collaborate with the user to
+choose the architecture to use.]
 
 ---
 
 ## Phase 2: Construction
 
-Take the results from *Discovery* and contruct the PAPI artefacts to match
-the chosen PAPI architexture. Use the PAPI charter, fulfilment and compliance
+Take the results from *Discovery* and construct the PAPI artefacts to match
+the chosen PAPI architecture. Use the PAPI charter, fulfilment and compliance
 audits to ensure nothing was missed.
 
 Keep iterating between *Discovery* and this, collaborating with the user,

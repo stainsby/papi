@@ -6,7 +6,7 @@ description: Audit completed tasks and documents to identify process improvement
 ## Deprecated
 
 This skill is DEPRECATED.
-Please flag to the user whenever this is used if they did no explicity
+Please flag to the user whenever this is used if they did not explicitly
 request it.
 
 # Process Improvement - Audit
